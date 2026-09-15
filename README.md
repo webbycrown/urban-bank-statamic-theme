@@ -4,10 +4,6 @@ Urban Bank is a banking and finance starter kit for Statamic 5. It is built for 
 
 Visitors can browse products and send inquiries. This kit is a marketing site. It does not include an internet-banking dashboard.
 
-**Live demo:** https://urban-bank-statamic.webbydemo.in/  
-**Banners:** `/theme-banners.html`  
-Control Panel: `/cp` — `admin@example.com` / `password`
-
 ## Pages of Urban Bank
 
 The starter kit includes a complete set of pages for a bank marketing site:
