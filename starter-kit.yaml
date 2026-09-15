@@ -8,4 +8,5 @@ export_paths:
   - resources/forms
   - resources/views
   - public/assets
+  - public/theme-banners.html
   - README.md

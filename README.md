@@ -1,30 +1,107 @@
-# Urban Bank Statamic theme
+# Urban Bank - Statamic Starter Kit
 
-Banking starter kit with accounts, cards, loans, team, careers, offers, and AJAX contact forms.
+Urban Bank is a banking and finance starter kit for Statamic 5. It is built for credit unions, digital banks, and card or loan brands that need a dark mint-and-lime marketing site — accounts, cards, loans, team, careers, offers, and contact forms.
 
-```
+Visitors can browse products and send inquiries. This kit is a marketing site. It does not include an internet-banking dashboard.
+
+**Live demo:** https://urban-bank-statamic.webbydemo.in/  
+**Banners:** `/theme-banners.html`  
+Control Panel: `/cp` — `admin@example.com` / `password`
+
+## Pages of Urban Bank
+
+The starter kit includes a complete set of pages for a bank marketing site:
+
+- **Home Pages**: 3 variants (`/`, `/home-two`, `/home-three`)
+- **Banner**: Domain home with bank information and sitemap (`/banner`)
+- **About**
+- **Features**:
+  - Feature listing
+  - Feature detail (`/feature/{slug}`)
+  - Credit cards
+  - Business loans
+  - Mobile banking
+- **Team**:
+  - Team listing
+  - Team detail (`/team/{slug}`)
+- **Career**:
+  - Career listing
+  - Career detail (`/career/{slug}`)
+- **Offers**:
+  - Offers listing
+  - Offer detail (`/offers/{slug}`)
+- **Blog**:
+  - Blog listing
+  - Blog two
+  - Blog three
+  - Blog detail (`/blog/{slug}`)
+- **Pricing**
+- **FAQ** and FAQ two
+- **Contact**
+- **Login**: create account, sign in, forgot password
+- **Privacy Policy** and Terms
+- **Presentation**: card index of every layout
+- **Theme banners**: marketplace images and listing copy
+
+## Collections
+
+Organize your content with built-in collections:
+
+- **Pages**: Site structure and static layouts.
+- **Blogs**: Bank notes, fees, and product stories.
+- **Features**: Cards, loans, and app write-ups.
+- **Team**: Named staff and roles.
+- **Careers**: Open seats with apply forms.
+- **Offers**: Checking perks and seasonal plans.
+
+## Features of Urban Bank
+
+- **Three homes**: Card hero, phone mock, and a third native-scroll layout.
+- **Product pages**: Credit cards, business loans, and mobile banking.
+- **AJAX forms**: Contact, newsletter, comments, careers, and account forms return success and field errors.
+- **Bank palette**: Dark `#101521`, mint `#64DCB6`, lime `#F7FBA4`.
+- **Responsive layout**: Desktop, laptop, tablet, and mobile.
+- **Statamic 5 ready**: Built for Statamic 5.x.
+
+## Control Panel Forms
+
+- Contact
+- Newsletter
+- Comment
+- Career
+- Register
+- Sign in
+- Forgot password
+
+## Installation
+
+Follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit) to get started with Urban Bank.
+Make sure you're running **Statamic 5.x** for compatibility.
+
+### Installing into an existing site
+
+```bash
 php please starter-kit:install webbycrown/urban-bank-statamic-theme
 ```
 
-## Demo
+### Installing via the Statamic CLI Tool
 
-- Site: http://localhost:8024
-- Control Panel: http://localhost:8024/cp
-- Login: `admin@example.com` / `password`
+If you have the [Statamic CLI Tool](https://github.com/statamic/cli) installed, create a new Statamic installation with Urban Bank in one command:
 
 ```bash
-cd /home/akash/statamic/demo/urban-bank
-docker compose up -d
+statamic new my-site webbycrown/urban-bank-statamic-theme
 ```
 
-Domain-style banner (all bank information and sitemap): `/banner`
+## Changelog
 
-## Pages
+### v1.0.0
 
-Home, Home Two, Home Three, Banner, About, Feature, Feature detail, Credit cards, Business loans, Mobile banking, Team, Career, Contact, Pricing, Login, Blog layouts, Offers, FAQ, Privacy, Terms, Presentation.
+- Initial release
+- Three home layouts, product pages, team, careers, offers, and blog
+- AJAX contact, newsletter, comment, career, and account forms
+- Marketplace banners and listing fields
 
-Collections: blogs, team, features, offers, careers.
-
-Forms: contact, newsletter, comment, career, signup, sign in, forgot password. All submit over AJAX with success and error messages.
-
-This kit is a marketing site. It does not include an internet-banking dashboard.
+---
+<div align="center">
+  <strong>Made with ❤️ by <a href="https://www.webbycrown.com/custom-statamic-development-services-company/">WebbyCrown Solutions</a></strong>
+</div>

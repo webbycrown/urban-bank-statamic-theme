@@ -9,3 +9,4 @@
 *.log
 /storage/forms/**/*.yaml
 SETUP.md
+/public/assets/images/marketplace/*.zip
