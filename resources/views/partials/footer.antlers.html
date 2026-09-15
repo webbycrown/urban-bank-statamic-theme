@@ -1,0 +1,60 @@
+<!-- start_bw_footer -->
+	<footer class="bw_footer">
+		<div class="bw_container">
+			<div class="bw_footer_main_wrap">
+				<div class="bw_footer_col frist">
+					<div class="bw_footer_wrap">
+						<h5 class="bw_footer_title">Company</h5>
+						<ul>
+								<li><a href="/">Home</a></li>
+								<li><a href="/about">About us</a></li>
+								<li><a href="/contact">Contact</a></li>
+								<li><a href="/career">Career</a></li>
+								<li><a href="/privacy-policy">Privacy Policy</a></li>
+								<li><a href="/terms">Terms Of Service</a></li>
+							</ul>
+					</div>
+					<div class="bw_footer_wrap">
+						<h5 class="bw_footer_title">Useful link</h5>
+						<ul>
+								<li><a href="/feature">Feature</a></li>
+								<li><a href="/blog">Blog</a></li>
+								<li><a href="/pricing">Pricing</a></li>
+								<li><a href="/offers">Offers</a></li>
+								<li><a href="/team">Team</a></li>
+								<li><a href="/presentation">Pages</a></li>
+							</ul>
+					</div>
+					<div class="bw_footer_wrap">
+						<h5 class="bw_footer_title">Support</h5>
+						<ul>
+								<li><a href="mailto:support@urbanbank.com">support@urbanbank.com</a></li>
+								<li><a href="/faq">FAQ’s</a></li>
+								<li><a href="/login">Login</a></li>
+							</ul>
+					</div>
+				</div>
+				<div class="bw_footer_col second">
+					<div class="bw_mf_email_wrap">
+						<h4>Join our account</h4>
+						{{ form:newsletter action="/!/forms/newsletter" class="js-theme-form mf_email_box" }}
+							<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+							<div class="stay-connect-success" hidden><p>Thanks — you are on the list.</p></div>
+							<div class="stay-connect-fields">
+								<input class="bw_custom_input" type="email" name="email" placeholder="Enter your email address" value="{{ old:email }}" required>
+								<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+								<button type="submit" class="bw_custom_buttom"><span class="btn-label">Subscribe</span><span class="btn-loading" hidden>Sending…</span></button>
+							</div>
+						{{ /form:newsletter }}
+					</div>
+				</div>
+			</div>
+			<div class="bw_copy_right_content">
+				<div class="bw_footer_logo_content">
+					<a href="/"><img src="/assets/image/footer_logo.png" alt="FOoter_Logo"></a>
+				</div>
+				<p>@Urbanbank,All right reserved</p>
+			</div>
+		</div>
+	</footer>	
+	<!-- close_bw_footer -->

@@ -1,0 +1,12 @@
+title: Features
+template: features/show
+layout: layout
+revisions: false
+route: '/feature/{slug}'
+date: true
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

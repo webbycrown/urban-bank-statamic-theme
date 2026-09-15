@@ -1,0 +1,12 @@
+title: Team
+template: team/show
+layout: layout
+revisions: false
+route: '/team/{slug}'
+date: true
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

@@ -1,0 +1,389 @@
+/* Urban Bank — form + viewport layout (mobile / tablet / laptop / desktop) */
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+   max-width: 100%;
+   height: auto;
+}
+
+.bw_container,
+.bw_hero_wrap,
+.bw_hero_content,
+.bw_hero_card,
+.bw_hero_two_wrap,
+.bw_feature_box,
+.bw_about_wrap,
+.bw_money_wrap,
+.bw_money_images,
+.bw_contact_form,
+.bw_join_contact_content,
+.bw_pricing_card_box,
+.bw_blog_card_box,
+.bw_footer .bw_container {
+   min-width: 0;
+   max-width: 100%;
+}
+
+.bw_join_contact_content {
+   overflow-x: clip;
+}
+
+.bw_store_btn,
+.bw_copy_right_content,
+.bw_header_contant,
+.bw_top_header_content,
+.bw_phone_email,
+.bw_team_btn {
+   flex-wrap: wrap;
+}
+
+.js-honeypot {
+   position: absolute !important;
+   left: 0 !important;
+   top: 0 !important;
+   width: 1px !important;
+   height: 1px !important;
+   margin: 0 !important;
+   padding: 0 !important;
+   opacity: 0 !important;
+   pointer-events: none;
+   overflow: hidden;
+}
+
+/* Contact + blog comment: keep the 2-col grid after AJAX field wrappers */
+.bw_contact_page_section form .stay-connect-fields,
+.bw_grid-detail-2_hero_section .bw_grid_detail_form .bw_contact_form form .stay-connect-fields {
+   display: contents;
+}
+
+.bw_contact_page_section form .stay-connect-alert,
+.bw_contact_page_section form .stay-connect-success,
+.bw_grid-detail-2_hero_section .bw_grid_detail_form .bw_contact_form form .stay-connect-alert,
+.bw_grid-detail-2_hero_section .bw_grid_detail_form .bw_contact_form form .stay-connect-success,
+.bw_contact_page_section form textarea.bw_custom_input {
+   grid-column: 1 / -1;
+}
+
+/* Join / stay-connected email row */
+.bw_join_contact_content .js-theme-form {
+   position: relative;
+   z-index: 1;
+   max-width: 560px;
+   margin: 0 auto;
+}
+
+.bw_join_contact_content .stay-connect-fields {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.bw_join_contact_content .bw_custom_input {
+   flex: 1 1 auto;
+   min-width: 0;
+   width: 100%;
+   background: #fff;
+   color: #101521;
+   border: 1px solid #000;
+}
+
+.bw_join_contact_content .stay-connect-alert,
+.bw_join_contact_content .stay-connect-success {
+   color: #101521;
+}
+
+.bw_join_contact_content button.bw_custom_buttom,
+.bw_join_contact_content .bw_custom_buttom {
+   flex: 0 0 auto;
+   white-space: nowrap;
+}
+
+/* Footer newsletter row */
+.mf_email_box {
+   flex-wrap: wrap;
+   position: relative;
+}
+
+.mf_email_box .stay-connect-alert,
+.mf_email_box .stay-connect-success {
+   flex: 1 0 100%;
+   margin: 0 0 10px;
+}
+
+.mf_email_box .stay-connect-fields {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   gap: 8px;
+   min-width: 0;
+}
+
+.mf_email_box .stay-connect-fields .bw_custom_input {
+   background: transparent;
+   border: 0;
+   border-radius: 0;
+   padding: 0;
+   flex: 1 1 auto;
+   min-width: 0;
+   width: 100%;
+   color: var(--text_paragraph_color);
+}
+
+.mf_email_box .stay-connect-fields .bw_custom_buttom {
+   flex: 0 0 auto;
+   white-space: nowrap;
+}
+
+.bw_login_page_section .stay-connect-fields {
+   display: flex;
+   flex-direction: column;
+}
+
+.bw_login_page_section form {
+   max-width: min(592px, 100%);
+}
+
+.bw_career_popup .bw_career_popup_wrap,
+.bw_career_popup .bw_container {
+   max-width: 100%;
+}
+
+.bw_money_images iframe {
+   width: 100%;
+   min-height: 280px;
+}
+
+.bw_pricing_card_box,
+.bw_pricing_card_box_2 {
+   overflow: hidden;
+}
+
+.bw_team_section .bw_team_wrap,
+.bw_team_detail_box {
+   max-width: 100%;
+}
+
+.bw_team_section .bw_team_wrap,
+.bw_partners_section_two,
+.bw_testimonial_slider,
+.swiper {
+   overflow: hidden;
+}
+
+/* Laptop 1366 */
+@media (max-width: 1366px) {
+   .bw_all_menu {
+      grid-gap: 22px;
+   }
+
+   .bw_mega_menu {
+      gap: 0 10px;
+      padding: 8px 16px 18px;
+   }
+}
+
+/* Small laptop / large tablet landscape */
+@media (max-width: 1199px) {
+   .bw_all_menu {
+      grid-gap: 16px;
+   }
+
+   .bw_all_menu li,
+   .bw_all_menu li a {
+      font-size: 14px;
+   }
+
+   .bw_mega_menu {
+      grid-template-columns: repeat(2, 1fr);
+      max-height: 70vh;
+      overflow-y: auto;
+   }
+
+   .bw_header_two .bw_mega_menu {
+      overflow-y: auto;
+   }
+}
+
+@media (max-width: 1024px) {
+   .bw_all_menu {
+      grid-gap: 12px;
+   }
+
+   .bw_all_menu_btn {
+      grid-gap: 12px;
+   }
+
+   .bw_blog_page_wrap {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .bw_pricing_page_section .bw_pricing_page_wrap {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .bw_join_contact_content {
+      padding: 70px 40px;
+   }
+
+   .bw_footer_main_wrap {
+      flex-wrap: wrap;
+      gap: 30px;
+   }
+
+   .bw_footer_col.second {
+      justify-content: flex-start;
+   }
+
+   .bw_mf_email_wrap {
+      max-width: 100%;
+   }
+
+   .bw_top_header_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+
+   .bw_phone_email {
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+   .bw_contact_page_section .bw_container {
+      flex-direction: column;
+   }
+
+   .bw_contact_page_section .bw_about_hero_title,
+   .bw_contact_page_section .bw_contact_form {
+      max-width: 100%;
+      margin: 0 0 24px;
+   }
+
+   .bw_hero_two_wrap {
+      flex-wrap: wrap;
+   }
+
+   .bw_hero_two_wrap .bw_mobile_wrap,
+   .bw_hero_two_wrap .bw_content_wrap {
+      max-width: 100%;
+      width: 100%;
+   }
+
+   .bw_career_popup .user__details .input__box_group {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 767px) {
+   .bw_title {
+      word-break: break-word;
+   }
+
+   .bw_join_contact_content .stay-connect-fields,
+   .mf_email_box .stay-connect-fields {
+      flex-direction: column;
+      align-items: stretch;
+   }
+
+   .bw_join_contact_content button.bw_custom_buttom,
+   .bw_join_contact_content .bw_custom_buttom,
+   .mf_email_box .stay-connect-fields .bw_custom_buttom {
+      width: 100%;
+      justify-content: center;
+   }
+
+   .bw_bank_special_offers_wrap,
+   .bw_pricing_page_section .bw_pricing_page_wrap,
+   .bw_blog_page_wrap,
+   .bw_blog_page_list .bw_blog_page_wrap {
+      grid-template-columns: 1fr;
+   }
+
+   .bw_copy_right_content {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+   }
+
+   .bw_footer .bw_container {
+      padding: 28px 16px 0;
+   }
+
+   .bw_join_contact_content {
+      padding: 40px 20px;
+   }
+
+   .bw_partners_box {
+      width: calc(50% - 10px);
+   }
+}
+
+/* Large phone / small tablet */
+@media (max-width: 575px) {
+   .bw_footer_wrap {
+      width: calc(50% - 10px);
+   }
+
+   .bw_offerings_section .bw_feature_wrap .bw_feature_box {
+      width: 100%;
+   }
+
+   .bw_join_contact_content {
+      padding: 32px 16px;
+      border-radius: 10px;
+   }
+
+   .bw_login_page_section form {
+      padding: 24px 16px;
+   }
+
+   .bw_header_logo_content img,
+   .bw_footer_logo_content img {
+      max-width: 140px;
+   }
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+   .bw_container {
+      padding-left: 12px;
+      padding-right: 12px;
+   }
+
+   .bw_partners_box {
+      width: 100%;
+   }
+
+   .bw_footer_wrap {
+      width: 100%;
+   }
+
+   .bw_store_btn {
+      justify-content: center;
+   }
+
+   .bw_app_download {
+      width: 100%;
+      justify-content: center;
+   }
+
+   .bw_custom_buttom,
+   .bw_join_contact_content button {
+      max-width: 100%;
+   }
+}

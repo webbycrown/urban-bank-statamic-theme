@@ -1,0 +1,14 @@
+tree:
+  -
+    entry: home
+    children:
+      -
+        entry: home-two
+      -
+        entry: home-three
+  -
+    entry: about
+  -
+    entry: feature
+  -
+    entry: contact

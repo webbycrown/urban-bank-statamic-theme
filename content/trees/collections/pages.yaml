@@ -1,0 +1,45 @@
+tree:
+  -
+    entry: home
+  -
+    entry: home-two
+  -
+    entry: home-three
+  -
+    entry: about
+  -
+    entry: feature
+  -
+    entry: feature-credit-cards
+  -
+    entry: feature-business-loans
+  -
+    entry: feature-mobile-banking
+  -
+    entry: team
+  -
+    entry: career
+  -
+    entry: contact
+  -
+    entry: pricing
+  -
+    entry: login
+  -
+    entry: blog
+  -
+    entry: blog-two
+  -
+    entry: blog-three
+  -
+    entry: offers
+  -
+    entry: faq
+  -
+    entry: faq-two
+  -
+    entry: privacy-policy
+  -
+    entry: terms
+  -
+    entry: presentation

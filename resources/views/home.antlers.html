@@ -1,0 +1,450 @@
+<div class="bw_content">
+
+
+					<!-- start_bw_home_hero_section -->
+					<section class="bw_home_hero_section bw_padding_y">
+						<div class="bw_container">
+							<div class="bw_hero_wrap">
+								<div class="bw_hero_content">
+									<h1 class="bw_title" data-aos="fade-right" data-aos-duration="1500">Smart <span class="bw_title_gradient">Investment</span> <span class="bw_title_sm">with</span> Urban bank</h1>
+									<p data-aos="fade-right" data-aos-duration="1500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+									<div class="bw_store_btn">
+										<a data-aos="zoom-in" data-aos-duration="1500" class="bw_custom_buttom"  href="/about">Learn more</a>
+										<a data-aos="zoom-in" data-aos-duration="1500" class="bw_app_download" href="https://www.apple.com/app-store/" target="_blank" rel="noopener">
+											<div class="bw_app_download_icon">
+												<i class="fa-brands fa-apple"></i>
+											</div>
+											<div class="bw_app_download_name">
+												<h6>Download on the</h6>
+												<h5>App Store</h5>
+											</div>
+										</a>
+										<a class="bw_app_download" href="https://play.google.com/store" target="_blank" rel="noopener">
+											<div class="bw_app_download_icon">
+												<i class="fa-brands fa-google-play"></i>
+											</div>
+											<div class="bw_app_download_name">
+												<h6>Get it on</h6>
+												<h5>Google Play</h5>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="bw_hero_card">
+									<div class="bw_hero_custom_card preload" >
+										<div class="creditcard">
+											<div class="front">
+												<div class="bw_hero_bankname">
+													<h4>urban bank</h4>
+													<span class="material-symbols-sharp">wifi</span>
+												</div>
+												<div class="bw_hero_custom_card_chip">
+													<img src="/assets/image/chip.png" alt="chip">
+												</div>
+												<div class="bw_hero_custom_card_number">
+													<h5 id="svgnumber" class="card_number">.... .... .... 5241</h5>
+													<h6 id="svgexpire" class="expiration_number">00/00</h6>
+												</div>
+												<h6 id="svgname">Ghoghari Dharmesh</h6>
+											</div>
+											<div class="back">
+												<div class="creditcard_back_line"></div>
+												<div class="creditcard_back_cvv">
+													<div id="svgnameback">Ghoghari Dharmesh</div>
+													<div id="svgsecurity">000</div>
+												</div>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been, scrambled it to make a type specimen book.</p>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+											</div>
+										</div>
+									</div>
+									<div class="bw_hero_counter_app" data-aos="fade-right" data-aos-duration="1500">
+										<h3><span class="counter">80</span> <span>%</span></h3>
+										<strong>User use the app</strong>
+									</div>
+									<div class="bw_hero_counter_people" data-aos="fade-up" data-aos-duration="1500">
+										<h3><span class="counter">24,300,659</span></h3>
+										<strong>People trust us</strong>
+									</div>
+									<a class="bw_custom_popup bw_custom_buttom" href="#bw_card_popup">Add Card Detail</a>
+								</div>
+							</div>
+						</div>	
+					</section>
+
+					<!-- start_bw_team_popup -->
+					<div id="bw_card_popup" class="white-popup-block mfp-hide">
+						<div class="bw_card_popup">
+							<input class="bw_custom_input" id="name" maxlength="20" type="text" name="Card Name" placeholder="Card Name">
+							<input class="bw_custom_input"  id="cardnumber" type="text" pattern="[0-9]*" name="Card Number" placeholder="Card Number">
+							<input class="bw_custom_input" id="expirationdate" type="text" pattern="[0-9]*" name="Expiration (mm/yy)" placeholder="Expiration (mm/yy)">
+							<input class="bw_custom_input" id="securitycode" type="text" pattern="[0-9]*" name="Security Code" placeholder="Security Code">
+							<a class="bw_custom_buttom" href="javascript:;">Submit</a>
+						</div>
+					</div>
+					<!-- close_bw_team_popup -->
+
+					<!-- close_bw_home_hero_section -->
+
+
+					<!-- start_bw_about_section -->
+					<section class="bw_about_section bw_padding_y" data-aos="zoom-in" data-aos-duration="1500">
+						<div class="bw_container">
+							<div class="bw_about_wrap_main">
+								<div class="bw_about_wrap_border"></div>
+								<div class="bw_about_wrap">
+									<div class="bw_about_content">
+										<h3 class="bw_sub_title_2">About Us</h3>
+										<h2 class="bw_sub_title" >Grow our investment in year <span class="bw_title_gradient">1996 to 2021</span></h2>
+									</div>
+									<div class="bw_about_charts">
+										<canvas id="bw_about_charts"></canvas>
+										<script>
+											var ctx = document.getElementById('bw_about_charts').getContext('2d');
+											var gradient = ctx.createLinearGradient(0, 0, 0, 450);
+											gradient.addColorStop(0, 'rgba(247, 251, 164, 0.28)');
+											gradient.addColorStop(0.5, 'rgba(247, 251, 164, 0.28)');
+											gradient.addColorStop(1, 'rgba(217, 217, 217, 0.0)');
+
+											let gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+											gradientStroke.addColorStop(0, '#F7FBA4');
+											gradientStroke.addColorStop(1, '#64DCB6');
+
+											var myChart = new Chart(ctx, {
+												type: 'line',
+												data: {
+													labels: ['0', '100', '150', '200', '300', '400'],
+													datasets: [{
+														backgroundColor: gradient,
+														label: 'Numbers',
+														fill: true,
+														data: [0, 50, 40, 100, 70, 120],
+														pointRadius: 5,
+														pointBorderColor: [
+															'rgb(255 255 255)'
+															],
+														pointBackgroundColor: gradientStroke,
+														borderWidth: 3,
+														borderColor: [
+															'rgba(247, 251, 164, 1)',
+															'rgba(217, 217, 217, 1)'
+															],
+													}]
+												},
+												options: {
+													display: false,
+													scales: {
+														y: {
+															display: false,
+															beginAtZero: true
+														},
+														x: {
+															display: false,
+															beginAtZero: true
+														},
+													},
+													tension: 0.4,
+													plugins: {
+														legend: {
+															display: false
+														}
+													}
+												},
+											});
+										</script>
+										
+									</div>
+								</div>
+							</div>
+						</div>	
+					</section>
+					<!-- close_bw_about_section -->
+
+					<!-- start_bw_feature_section -->
+					<section class="bw_feature_section bw_padding_y">
+						<div class="bw_container">
+							<div class="bw_feature_content">
+								<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">Feature</h3>
+								<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">Best feature provide by Urban</h2>
+							</div>
+							<div class="bw_feature_wrap">
+								<div class="bw_feature_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									<h4><a href="/feature/multi-device">Multi Device</a></h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
+								<div class="bw_feature_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									<h4><a href="/feature/multi-device">Multi Platform</a></h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
+								<div class="bw_feature_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									<h4><a href="/feature/multi-device">Multi Currency</a></h4>
+									<p>Hold and send more than one currency from a single Urban account.</p>
+								</div>
+								<div class="bw_feature_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									<h4><a href="/feature-credit-cards">Credit cards</a></h4>
+									<p>Issue Urban cards, set spend limits, and track rewards from the same app you already use.</p>
+								</div>
+								<div class="bw_feature_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									<h4><a href="/feature-business-loans">Business loans</a></h4>
+									<p>Short-term and term loans for registered businesses with a clear schedule and no hidden fees.</p>
+								</div>
+								<div class="bw_feature_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									<h4><a href="/feature-mobile-banking">Mobile banking</a></h4>
+									<p>Transfer, deposit, and pay bills from the Urban app on iOS and Android.</p>
+								</div>
+							</div>
+						</div>		
+					</section>
+					<!-- close_bw_feature_section -->
+
+					<!-- start_bw_video_section -->
+					<section class="bw_video_section bw_padding_y">
+						<div class="bw_container">
+							<div class="bw_video_content">
+								<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">Stretagy</h3>
+								<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">Learn how we work</h2>
+							</div>
+							<div class="bw_video_wrap"  data-aos="zoom-in" data-aos-duration="1500">
+								<div class="bw_video_Slider">    
+									<div id="before" class="before">
+										<video><source src="/assets/image/video.mp4" type="video/mp4"></video>
+										</div>
+										<div class="slider scroller">
+											<div class="bw_video_play_btn_border">
+												<a class="popup-vimeo" href="/assets/image/video.mp4"><i class="fa-solid playpause fa-play"></i><i class=" play fa-solid fa-pause"></i></a>
+											</div>
+										</div>
+										<div id="after" class="after"></div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- close_bw_video_section -->
+
+						<!-- start_bw_digitalize_section -->
+						<section class="bw_digitalize_section bw_padding_y">
+							<div class="bw_container">
+								<div class="bw_digitalize_wrap">
+									<div class="bw_digitalize_images" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+										<img src="/assets/image/mockup_app.png" alt="">
+									</div>
+									<div class="bw_digitalize_content">
+										<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">Digitalize</h3>
+										<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">Meet your banking future starting from with <span class="bw_title_gradient">Urban</span></h2>
+										<a data-aos="fade-up" data-aos-duration="1500" class="bw_custom_buttom" href="/about">Learn more</a>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- close_bw_digitalize_section -->
+
+						<!-- start_bw_testimonial_section -->
+						<section class="bw_testimonial_section bw_padding_y">
+							<div class="bw_container">
+								<div class="bw_testimonial_wrap">
+									<div class="bw_testimonial_content">
+										<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">Testimonial</h3>
+										<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">Satisfied Our Customers</h2>
+									</div>
+									<div class="bw_testimonial_slider" data-aos="fade-up" data-aos-duration="1500">
+										<div class="swiper mySwiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="bw_testimonial_box">
+														<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+														<div class="bw_testimonial_user">
+															<div class="bw_testimonial_user_border">
+																<div class="bw_images_cover">
+																	<img src="/assets/image/user.jpg" alt="">
+																</div>
+															</div>
+															<h4><a href="javascript:;">Luise Moore</a></h4>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="bw_testimonial_box">
+														<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+														<div class="bw_testimonial_user">
+															<div class="bw_testimonial_user_border">
+																<div class="bw_images_cover">
+																	<img src="/assets/image/user.jpg" alt="">
+																</div>
+															</div>
+															<h4><a href="javascript:;">Luise Moore</a></h4>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="bw_testimonial_box">
+														<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+														<div class="bw_testimonial_user">
+															<div class="bw_testimonial_user_border">
+																<div class="bw_images_cover">
+																	<img src="/assets/image/user.jpg" alt="">
+																</div>
+															</div>
+															<h4><a href="javascript:;">Luise Moore</a></h4>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- close_bw_testimonial_section -->
+
+						<!-- start_bw_partners_section -->
+						<section class="bw_partners_section bw_padding_y">
+							<div class="bw_container">
+								<div class="bw_partners_main">
+									<div class="bw_partners_content bw_title_wrap_center">
+										<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">Partners</h3>
+										<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">Meet our trusted partners</h2>
+									</div>
+									<div class="bw_partners_wrap">
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											<img src="/assets/image/logo_slider_1.png" alt="">
+										</div>
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											<img src="/assets/image/logo_slider_2.png" alt="">
+										</div>
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											<img src="/assets/image/logo_slider_3.png" alt="">
+										</div>
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											<img src="/assets/image/logo_slider_4.png" alt="">
+										</div>
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											<img src="/assets/image/logo_slider_5.png" alt="">
+										</div>
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											<img src="/assets/image/logo_slider_6.png" alt="">
+										</div>
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											<img src="/assets/image/logo_slider_7.png" alt="">
+										</div>
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											<img src="/assets/image/logo_slider_8.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- close_bw_partners_section -->
+
+						<!-- start_bw_blog_section -->
+						<section class="bw_blog_section bw_padding_y">
+							<div class="bw_container">
+								<div class="bw_blog_content">
+									<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">Blog</h3>
+									<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">Get more news & resources</h2>
+								</div>
+								<div class="bw_blog_wrap" data-aos="fade-up" data-aos-duration="1500">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="bw_blog_card_box">
+													<div class="bw_blog_card_cont">
+														<div class="bw_blog_badge">
+															<span>Bank</span>
+														</div>
+														<h5><a href="/blog/clear-fees-before-you-send">Et harum quidem rerum facilis est et expedita distinctio</a></h5>
+														<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+													</div>
+													<a class="bw_custom_buttom" href="/blog/clear-fees-before-you-send">Learn more</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="bw_blog_card_box">
+													<div class="bw_blog_badge">
+														<span>Bank</span>
+													</div>
+													<h5><a href="/blog/clear-fees-before-you-send">Et harum quidem rerum facilis est et expedita distinctio</a></h5>
+													<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+													<a class="bw_custom_buttom" href="/blog/clear-fees-before-you-send">Learn more</a>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="bw_blog_card_box">
+													<div class="bw_blog_badge">
+														<span>Bank</span>
+													</div>
+													<h5><a href="/blog/clear-fees-before-you-send">Et harum quidem rerum facilis est et expedita distinctio</a></h5>
+													<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+													<a class="bw_custom_buttom" href="/blog/clear-fees-before-you-send">Learn more</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bw_arrow_wrap" data-aos="fade-up" data-aos-duration="1500">
+									<div class="swiper-button-prev" ><img src="/assets/image/arrow-left.svg" alt=""></div>
+									<div class="swiper-button-next" ><img src="/assets/image/arrow-right.svg" alt=""></div>
+								</div>
+							</div>	
+						</section>
+						<!-- close_bw_blog_section -->
+
+						<!-- start_bw_join_contact_section -->
+						<section class="bw_join_contact_section bw_career_contact_section bw_padding_y" data-aos="fade-right" data-aos-duration="1500">
+							<div class="bw_container">
+								<div class="bw_join_contact_content">
+									<h2 class="bw_sub_title">Connect your finance with urban bank</h2>
+									{{ partial:partials/join-form }}
+									<svg-path-elements class="line_canvas" id="FIVE" count="25"></svg-path-elements>
+								</div>
+							</div>
+						</section>
+						<!-- close_bw_join_contact_section -->
+
+						<!-- start_bw_faq_section -->
+						<section class="bw_faq_section bw_padding_y">
+							<div class="bw_container">
+								<div class="bw_faq_wrap">
+									<div class="bw_faq_content bw_title_wrap_center">
+										<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">FAQ</h3>
+										<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">Our FAQ’s</h2>
+									</div>
+									<div class="accordion">
+										<div class="accordion-item" data-aos="fade-up" data-aos-duration="1500">
+											<div class="accordion-tabs acco-active">
+												<h5><span class="accordion-title">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</span><span class="material-symbols-sharp accordion_icon">remove</span></h5>
+											</div>
+											<div class="accordion-content">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+											</div>
+										</div>
+										<div class="accordion-item" data-aos="fade-up" data-aos-duration="1500">
+											<div class="accordion-tabs">
+												<h5><span class="accordion-title">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</span><span class="material-symbols-sharp accordion_icon">add</span></h5>
+											</div>
+											<div class="accordion-content" style="display: none;">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+											</div>
+										</div>
+										<div class="accordion-item" data-aos="fade-up" data-aos-duration="1500">
+											<div class="accordion-tabs">
+												<h5><span class="accordion-title">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</span><span class="material-symbols-sharp accordion_icon">add</span></h5>
+											</div>
+											<div class="accordion-content" style="display: none;">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+											</div>
+										</div>
+										<div class="accordion-item" data-aos="fade-up" data-aos-duration="1500">
+											<div class="accordion-tabs">
+												<h5><span class="accordion-title">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</span><span class="material-symbols-sharp accordion_icon">add</span></h5>
+											</div>
+											<div class="accordion-content" style="display: none;">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- close_bw_faq_section -->
+					</div>

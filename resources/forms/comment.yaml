@@ -1,0 +1,8 @@
+title: Comment
+honeypot: honeypot
+email:
+  -
+    to: admin@example.com
+    reply_to: '{{ email }}'
+    subject: 'New Urban Bank comment from {{ name }}'
+    html: emails/comment

@@ -1,0 +1,46 @@
+<head>
+	<title>{{ title ?? site:name }} — {{ site:name }}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="csrf-token" content="{{ csrf_token }}">
+	<link rel="icon" href="/assets/image/five-icon.png" type="image/gif">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+	<link rel="stylesheet" href="/assets/css/aos.css">
+	<link rel="stylesheet" href="/assets/css/all.min.css">
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/error.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/theme-responsive.css">
+	<style>
+		.is-hidden { display: none !important; }
+		.js-theme-form.is-loading [type="submit"] { opacity: .7; pointer-events: none; }
+		.stay-connect-alert { display: none; margin: 12px 0; color: #F7FBA4; font-size: 15px; line-height: 1.4; }
+		.stay-connect-alert.is-visible { display: block; }
+		.stay-connect-success { display: none; margin: 12px 0; color: #64DCB6; font-size: 16px; line-height: 1.5; }
+		.stay-connect-success.is-visible { display: block; }
+		.stay-connect-success p { margin: 0; color: #64DCB6; }
+		.js-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+		button.bw_custom_buttom { border: 0; cursor: pointer; }
+		.bw_main_body, .bw_main_body .page, .bw_main_body main { pointer-events: auto; }
+	</style>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/aos.js"></script>
+	<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="/assets/js/swiper-bundle.min.js"></script>
+	{{ if body_class != "index-2" && body_class != "index-3" }}
+	<script src="/assets/js/jquery.mixitup.min.js"></script>
+	<script src="/assets/js/waypoints.min.js"></script>
+	<script src="/assets/js/jquery.ripples-min.js"></script>
+	<script src="/assets/js/all.min.js"></script>
+	<script src="/assets/js/jquery.counterup.min.js"></script>
+	<script src="/assets/js/chart.min.js"></script>
+	<script src="/assets/js/imask.min.js"></script>
+	{{ /if }}
+</head>

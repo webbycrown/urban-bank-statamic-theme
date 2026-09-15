@@ -1,0 +1,18 @@
+{{ form:comment action="/!/forms/comment" class="js-theme-form" }}
+	<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+	<div class="stay-connect-success" hidden>
+		<p>Thanks — your comment was sent. We will review it shortly.</p>
+	</div>
+	<div class="stay-connect-fields">
+		<input class="bw_custom_input bw_custom_input-1" type="text" name="name" placeholder="Name" value="{{ old:name }}" required>
+		<input class="bw_custom_input bw_custom_input-2" type="email" name="email" placeholder="Email" value="{{ old:email }}" required>
+		<input class="bw_custom_input bw_custom_input-3" type="text" name="phone" placeholder="Phone" value="{{ old:phone }}">
+		<input class="bw_custom_input bw_custom_input-4" type="text" name="subject" placeholder="Subject" value="{{ old:subject }}">
+		<textarea class="bw_custom_input" name="message" placeholder="Your Comments" required>{{ old:message }}</textarea>
+		<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+		<button type="submit" class="bw_custom_buttom bw_flex_btn">
+			<span class="btn-label">Post Comment <span class="material-symbols-sharp">chevron_right</span></span>
+			<span class="btn-loading" hidden>Sending…</span>
+		</button>
+	</div>
+{{ /form:comment }}

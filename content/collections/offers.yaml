@@ -1,0 +1,12 @@
+title: Offers
+template: offers/show
+layout: layout
+revisions: false
+route: '/offers/{slug}'
+date: true
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

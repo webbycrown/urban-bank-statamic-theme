@@ -1,0 +1,11 @@
+/node_modules
+/vendor
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea
+.vscode
+*.log
+/storage/forms/**/*.yaml
+SETUP.md

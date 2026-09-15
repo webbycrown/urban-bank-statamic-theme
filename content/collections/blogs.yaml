@@ -1,0 +1,12 @@
+title: Blogs
+template: blogs/show
+layout: layout
+revisions: false
+route: '/blog/{slug}'
+date: true
+sort_dir: desc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

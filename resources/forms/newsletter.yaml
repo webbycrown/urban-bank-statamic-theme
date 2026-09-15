@@ -1,0 +1,8 @@
+title: Newsletter
+honeypot: honeypot
+email:
+  -
+    to: admin@example.com
+    reply_to: '{{ email }}'
+    subject: 'Urban Bank newsletter signup'
+    html: emails/newsletter

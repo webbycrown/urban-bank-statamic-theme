@@ -1,0 +1,32 @@
+<div class="bw_content">
+
+
+					<!-- start_bw_feature_page_section -->
+					<section class="bw_feature_page_section bw_padding_y">
+						<div class="bw_container">
+							<div class="bw_feature_page_content bw_title_wrap_center">
+								<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">Feature</h3>
+								<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">Best feature provide by Urban</h2>
+							</div>
+							<div class="bw_feature_page_wrap">
+								{{ collection:features sort="order:asc" }}
+								<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									<div class="bw_feature_page_icon">
+										<img src="/assets/{{ image }}" alt="{{ title }}">
+									</div>
+									<div class="bw_feature_page_text">
+										<h4><a href="{{ url }}">{{ title }}</a></h4>
+										<p>{{ excerpt }}</p>
+									</div>
+								</div>
+								{{ /collection:features }}
+							</div>
+							<div class="bw_feature_page_btn"  data-aos="fade-up" data-aos-duration="1500">
+								<a class="bw_custom_buttom bw_flex_btn bw_load_more" href="/feature-credit-cards">Load more <span class="material-symbols-outlined">refresh</span></a>
+							</div>
+						</div>		
+					</section>
+					<!-- close_bw_feature_page_section -->
+
+
+				</div>

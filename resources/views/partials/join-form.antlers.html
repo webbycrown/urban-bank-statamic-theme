@@ -1,0 +1,19 @@
+{{ form:newsletter action="/!/forms/newsletter" class="js-theme-form" }}
+	<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+	<div class="stay-connect-success" hidden>
+		<p>Thanks — you are on the list. We will email Urban Bank updates to this address.</p>
+	</div>
+	<div class="stay-connect-fields">
+		<input class="bw_custom_input" type="email" name="email" placeholder="{{ placeholder ?? 'Enter your email' }}" value="{{ old:email }}" required>
+		<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+		<button type="submit" class="bw_custom_buttom">
+			<span class="btn-label">{{ button ?? 'Send' }}
+				<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M28.6269 13.6397L13.08 14.1826" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M28.6271 13.64L9.86763 23.4931L13.0802 14.1829L9.22601 5.11948L28.6271 13.64Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</span>
+			<span class="btn-loading" hidden>Sending…</span>
+		</button>
+	</div>
+{{ /form:newsletter }}

@@ -1,0 +1,11 @@
+title: Urban Bank Theme
+user: webbycrown
+repo: webbycrown/urban-bank-statamic-theme
+export_paths:
+  - routes
+  - content
+  - resources/blueprints
+  - resources/forms
+  - resources/views
+  - public/assets
+  - README.md

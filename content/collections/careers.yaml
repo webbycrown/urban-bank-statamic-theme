@@ -1,0 +1,12 @@
+title: Careers
+template: careers/show
+layout: layout
+revisions: false
+route: '/career/{slug}'
+date: true
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

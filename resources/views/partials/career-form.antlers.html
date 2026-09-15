@@ -1,0 +1,55 @@
+{{ form:career action="/!/forms/career" class="js-theme-form" files="true" }}
+	<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+	<div class="stay-connect-success" hidden>
+		<p>Thanks — we received your application and will reply if there is a match.</p>
+	</div>
+	<div class="stay-connect-fields user__details">
+		<div class="input__box_group">
+			<div class="input__box">
+				<span class="details">Full Name</span>
+				<input type="text" name="first_name" placeholder="Enter your full name" value="{{ old:first_name }}" required>
+			</div>
+			<div class="input__box">
+				<span class="details">Last Name</span>
+				<input type="text" name="last_name" placeholder="Enter your last name" value="{{ old:last_name }}" required>
+			</div>
+		</div>
+		<div class="input__box_group">
+			<div class="input__box">
+				<span class="details">Email</span>
+				<input type="email" name="email" placeholder="Enter your Email id" value="{{ old:email }}" required>
+			</div>
+			<div class="input__box">
+				<span class="details">Mobile Number</span>
+				<div class="wb_mobile_number">
+					<input type="tel" name="phone" placeholder="Enter your Mobile Number" value="{{ old:phone }}" required>
+					<p>+91</p>
+				</div>
+			</div>
+		</div>
+		<div class="input__box_group input__box_group_status">
+			<div class="input__box">
+				<span class="details">Work Status</span>
+				<input type="text" name="work_status" placeholder="I am Experienced" value="{{ old:work_status }}" required>
+			</div>
+			<div class="input__box">
+				<span class="details"></span>
+				<input type="text" name="role" placeholder="Role you are applying for" value="{{ old:role }}">
+			</div>
+		</div>
+		<div class="input__box_group input__box_group_resume">
+			<div class="input__box">
+				<span class="details">Upload Resume</span>
+				<div class="input_file_wrap">
+					<p>Choose File</p>
+					<input type="file" name="resume" accept=".pdf,.doc,.docx">
+				</div>
+			</div>
+		</div>
+		<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+		<button type="submit" class="bw_custom_buttom bw_flex_btn">
+			<span class="btn-label">Apply Now <span class="material-symbols-sharp">chevron_right</span></span>
+			<span class="btn-loading" hidden>Sending…</span>
+		</button>
+	</div>
+{{ /form:career }}

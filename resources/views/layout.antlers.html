@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial:partials/head }}
+<body class="{{ body_class }}">
+	{{ if header_style == "two" }}
+	{{ partial:partials/header-two }}
+	{{ else }}
+	{{ partial:partials/menubar }}
+	{{ partial:partials/header }}
+	{{ /if }}
+	<div class="bw_main_body">
+		<div data-scroll class="page">
+			<main>
+				{{ template_content }}
+			</main>
+		</div>
+		{{ unless hide_footer }}
+		{{ partial:partials/footer }}
+		{{ /unless }}
+	</div>
+	{{ partial:partials/scripts }}
+</body>
+</html>

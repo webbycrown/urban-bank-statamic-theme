@@ -1,0 +1,13 @@
+{
+    "name": "webbycrown/urban-bank-statamic-theme",
+    "type": "statamic-starter-kit",
+    "description": "Banking starter kit with accounts, cards, loans, team, careers, offers, and AJAX contact forms.",
+    "require": {
+        "statamic/cms": "*"
+    },
+    "extra": {
+        "statamic": {
+            "starter-kit": true
+        }
+    }
+}
