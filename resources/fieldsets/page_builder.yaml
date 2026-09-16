@@ -1,0 +1,605 @@
+title: Page builder
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: Theme sections
+      instructions: One page template. Add any section to this page and drag to reorder.
+      button_label: Add section
+      collapse: accordion
+      sets:
+        content:
+          display: Content
+          sets:
+            home_hero:
+              display: Home hero (card)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: hero_lead
+                  field:
+                    type: text
+                    display: Lead word
+                -
+                  handle: hero_accent
+                  field:
+                    type: text
+                    display: Accent word
+                -
+                  handle: hero_rest
+                  field:
+                    type: text
+                    display: Rest of title
+                -
+                  handle: hero_text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: counter_app
+                  field:
+                    type: text
+                    display: App counter
+                -
+                  handle: counter_app_label
+                  field:
+                    type: text
+                    display: App counter label
+                -
+                  handle: counter_app_suffix
+                  field:
+                    type: text
+                    display: App counter suffix
+                -
+                  handle: counter_people
+                  field:
+                    type: text
+                    display: People counter
+                -
+                  handle: counter_people_label
+                  field:
+                    type: text
+                    display: People counter label
+                -
+                  handle: card_holder
+                  field:
+                    type: text
+                    display: Card holder
+                -
+                  handle: card_name
+                  field:
+                    type: text
+                    display: Card name
+                -
+                  handle: card_number
+                  field:
+                    type: text
+                    display: Card number
+                -
+                  handle: card_expire
+                  field:
+                    type: text
+                    display: Card expire
+                -
+                  handle: card_cvv
+                  field:
+                    type: text
+                    display: Card CVV
+                -
+                  handle: card_chip
+                  field:
+                    type: assets
+                    display: Chip image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: card_icon
+                  field:
+                    type: text
+                    display: Card icon
+                -
+                  handle: show_card_wifi
+                  field:
+                    type: toggle
+                    display: Show wifi icon
+                    default: true
+                -
+                  handle: card_button
+                  field:
+                    type: text
+                    display: Card button label
+
+            home_hero_two:
+              display: Home hero (phone)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: hero_lead
+                  field:
+                    type: text
+                    display: Lead word
+                -
+                  handle: hero_accent
+                  field:
+                    type: text
+                    display: Accent word
+                -
+                  handle: hero_rest
+                  field:
+                    type: text
+                    display: Rest of title
+                -
+                  handle: hero_text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: ui_kicker
+                  field:
+                    type: text
+                    display: UI kicker
+                -
+                  handle: ui_badge
+                  field:
+                    type: text
+                    display: UI badge
+                -
+                  handle: mobile_image
+                  field:
+                    type: assets
+                    display: Phone image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: download_label
+                  field:
+                    type: text
+                    display: Download label
+                -
+                  handle: download_count
+                  field:
+                    type: text
+                    display: Download count
+
+            about_hero:
+              display: About hero
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                    automatic_line_breaks: true
+
+            career_intro:
+              display: Career intro
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                    automatic_line_breaks: true
+
+            hero_banner:
+              display: Simple banner
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+
+            text_section:
+              display: Text section
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Text
+                    automatic_line_breaks: true
+
+            legal_copy:
+              display: Legal / long copy
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Text
+                    automatic_line_breaks: true
+
+            image_text:
+              display: Image and text
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: markdown
+                    display: Text
+                    automatic_line_breaks: true
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+
+            growth_chart:
+              display: Growth chart (home)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: chart_points
+                  field:
+                    type: grid
+                    display: Chart points
+                    fields:
+                      -
+                        handle: label
+                        field:
+                          type: text
+                          display: Label
+                      -
+                        handle: value
+                        field:
+                          type: text
+                          display: Value
+
+            about_chart:
+              display: Growth chart (about)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: chart_points
+                  field:
+                    type: grid
+                    display: Chart points
+                    fields:
+                      -
+                        handle: label
+                        field:
+                          type: text
+                          display: Label
+                      -
+                        handle: value
+                        field:
+                          type: text
+                          display: Value
+
+            about_two:
+              display: About (home two)
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: section_text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: about_chart_image
+                  field:
+                    type: assets
+                    display: Chart image
+                    container: assets
+                    max_files: 1
+
+            video:
+              display: Video
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: home
+                    options:
+                      home: Home slider
+                      two: Home two
+                -
+                  import: section_heading
+                -
+                  handle: video_file
+                  field:
+                    type: assets
+                    display: Video
+                    container: assets
+                    max_files: 1
+                -
+                  handle: poster
+                  field:
+                    type: assets
+                    display: Poster image
+                    container: assets
+                    max_files: 1
+
+            digitalize:
+              display: Digitalize
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: home
+                    options:
+                      home: Home
+                      two: Home two
+                -
+                  import: section_heading
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+
+            pages_index:
+              display: Pages index
+              fields:
+                -
+                  import: section_heading
+
+        listings:
+          display: Listings
+          sets:
+            features:
+              display: Features
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: page
+                    options:
+                      home: Home cards
+                      page: Feature page + load more
+                      two: Home two
+                -
+                  import: section_heading
+                -
+                  handle: show_load_more
+                  field:
+                    type: toggle
+                    display: Show load more
+                    default: false
+
+            blogs:
+              display: Blog
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: slider
+                    options:
+                      slider: Home slider
+                      grid: Blog grid
+                      list: Blog list
+                      two: Home two
+                -
+                  import: section_heading
+                -
+                  handle: show_load_more
+                  field:
+                    type: toggle
+                    display: Show load more
+                    default: false
+
+            faqs:
+              display: FAQ
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: home
+                    options:
+                      home: Home accordion
+                      page: FAQ page
+                      two: FAQ two
+                -
+                  import: section_heading
+                -
+                  handle: show_load_more
+                  field:
+                    type: toggle
+                    display: Show load more
+                    default: false
+
+            careers:
+              display: Open positions
+              fields:
+                -
+                  import: section_heading
+
+            offers:
+              display: Offers
+              fields:
+                -
+                  import: section_heading
+
+            team:
+              display: Team
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: slider
+                    options:
+                      slider: Slider
+                      grid: Grid
+                -
+                  import: section_heading
+
+            pricing:
+              display: Pricing
+              fields:
+                -
+                  import: section_heading
+
+            testimonials:
+              display: Testimonials
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: home
+                    options:
+                      home: Home
+                      two: Home two
+                -
+                  import: section_heading
+
+            partners:
+              display: Partners
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: home
+                    options:
+                      home: Logo strip
+                      two: Orbit
+                -
+                  import: section_heading
+
+        contact:
+          display: Contact
+          sets:
+            join:
+              display: Newsletter
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: show_lines
+                  field:
+                    type: toggle
+                    display: Show line animation
+                    default: false
+
+            contact_form:
+              display: Contact form
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: show_social
+                  field:
+                    type: toggle
+                    display: Show social icons
+                    default: true
+
+            branch:
+              display: Branch cards
+              fields:
+                -
+                  import: section_heading
+
+            map:
+              display: Map
+              fields:
+                -
+                  import: section_heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Address text
+

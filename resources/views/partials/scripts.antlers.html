@@ -1,2 +1,32 @@
-<script src="/assets/js/custom.js"></script>
-<script src="/assets/js/theme-forms.js"></script>
+<script src="/assets/js/custom.js?v=12"></script>
+<script src="/assets/js/theme-forms.js?v=4"></script>
+<script>
+(function () {
+	var done = false;
+	var minMs = 800;
+	var started = Date.now();
+	function hideLoader() {
+		if (done) return;
+		var wait = Math.max(0, minMs - (Date.now() - started));
+		setTimeout(function () {
+			if (done) return;
+			done = true;
+			if (window.AOS && typeof window.AOS.refresh === 'function') {
+				window.AOS.refresh();
+			}
+			var loader = document.getElementById('bw-page-loader');
+			document.documentElement.classList.remove('bw-is-loading');
+			document.body.classList.remove('bw-is-loading');
+			document.documentElement.classList.add('bw-is-ready');
+			document.body.classList.add('bw-is-ready');
+			if (!loader) return;
+			loader.classList.add('is-done');
+			setTimeout(function () {
+				if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+			}, 400);
+		}, wait);
+	}
+	window.addEventListener('load', hideLoader);
+	setTimeout(hideLoader, 2500);
+})();
+</script>

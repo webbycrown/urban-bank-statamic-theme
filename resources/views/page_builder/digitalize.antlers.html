@@ -1,0 +1,35 @@
+{{ if style == "two" }}
+<section class="bw_digitalize_section bw_digitalize_section_two bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_digitalize_wrap">
+			<div class="bw_digitalize_content">
+				<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? 'Digitalize' }}</h3>
+				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Meet your banking future with Urban' }}</h2>
+				<a data-aos="fade-up" data-aos-duration="1500" class="bw_custom_buttom" href="{{ button_url ?? setting:cta_url ?? '/about' }}">{{ button_label ?? setting:cta_label ?? 'Learn more' }}</a>
+			</div>
+			{{ if image }}
+			<div class="bw_digitalize_images_wrap" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<img src="{{ partial:partials/media-url :file="image" }}" alt="">
+			</div>
+			{{ /if }}
+		</div>
+	</div>
+</section>
+{{ else }}
+<section class="bw_digitalize_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_digitalize_wrap">
+			{{ if image }}
+			<div class="bw_digitalize_images" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<img src="{{ partial:partials/media-url :file="image" }}" alt="">
+			</div>
+			{{ /if }}
+			<div class="bw_digitalize_content">
+				<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? 'Digitalize' }}</h3>
+				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Meet your banking future with Urban' }}</h2>
+				<a data-aos="fade-up" data-aos-duration="1500" class="bw_custom_buttom" href="{{ button_url ?? setting:cta_url ?? '/about' }}">{{ button_label ?? setting:cta_label ?? 'Learn more' }}</a>
+			</div>
+		</div>
+	</div>
+</section>
+{{ /if }}

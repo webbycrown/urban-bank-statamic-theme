@@ -1,0 +1,72 @@
+<!-- start_bw_about_section -->
+					<section class="bw_about_section bw_padding_y" data-aos="zoom-in" data-aos-duration="1500">
+						<div class="bw_container">
+							<div class="bw_about_wrap_main">
+								<div class="bw_about_wrap_border"></div>
+								<div class="bw_about_wrap">
+									<div class="bw_about_content">
+										<h3 class="bw_sub_title_2">{{ setting:about_kicker ?? 'About Us' }}</h3>
+										<h2 class="bw_sub_title" >{{ heading ?? 'Grow our investment in year 1996 to 2021' }}</h2>
+									</div>
+									<div class="bw_about_charts">
+										<canvas id="bw_about_charts_{{ id }}"></canvas>
+										<script>
+											var ctx = document.getElementById('bw_about_charts_{{ id }}').getContext('2d');
+											var gradient = ctx.createLinearGradient(0, 0, 0, 450);
+											gradient.addColorStop(0, 'rgba(247, 251, 164, 0.28)');
+											gradient.addColorStop(0.5, 'rgba(247, 251, 164, 0.28)');
+											gradient.addColorStop(1, 'rgba(217, 217, 217, 0.0)');
+
+											let gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+											gradientStroke.addColorStop(0, '#F7FBA4');
+											gradientStroke.addColorStop(1, '#64DCB6');
+
+											var myChart = new Chart(ctx, {
+												type: 'line',
+												data: {
+													labels: [{{ if chart_points }}{{ chart_points }}'{{ label }}'{{ unless last }}, {{ /unless }}{{ /chart_points }}{{ else }}'0', '100', '150', '200', '300', '400'{{ /if }}],
+													datasets: [{
+														backgroundColor: gradient,
+														label: 'Numbers',
+														fill: true,
+														data: [{{ if chart_points }}{{ chart_points }}{{ value }}{{ unless last }}, {{ /unless }}{{ /chart_points }}{{ else }}0, 50, 40, 100, 70, 120{{ /if }}],
+														pointRadius: 5,
+														pointBorderColor: [
+															'rgb(255 255 255)'
+															],
+														pointBackgroundColor: gradientStroke,
+														borderWidth: 3,
+														borderColor: [
+															'rgba(247, 251, 164, 1)',
+															'rgba(217, 217, 217, 1)'
+															],
+													}]
+												},
+												options: {
+													display: false,
+													scales: {
+														y: {
+															display: false,
+															beginAtZero: true
+														},
+														x: {
+															display: false,
+															beginAtZero: true
+														},
+													},
+													tension: 0.4,
+													plugins: {
+														legend: {
+															display: false
+														}
+													}
+												},
+											});
+										</script>
+										
+									</div>
+								</div>
+							</div>
+						</div>	
+					</section>
+					<!-- close_bw_about_section -->

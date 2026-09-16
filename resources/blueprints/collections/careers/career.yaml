@@ -11,6 +11,41 @@ tabs:
             type: text
             display: Title
         -
+          handle: content_sections
+          field:
+            type: replicator
+            display: Job sections
+            instructions: Add one group per heading (What you will do, How to apply). Click Add section for another group.
+            button_label: Add section
+            collapse: false
+            sets:
+              content:
+                display: Content
+                sets:
+                  text_section:
+                    display: Text section
+                    fields:
+                      -
+                        handle: heading
+                        field:
+                          type: text
+                          display: Heading
+                      -
+                        handle: body
+                        field:
+                          type: markdown
+                          display: Text
+                          automatic_line_breaks: true
+        -
+          handle: content
+          field:
+            type: markdown
+            display: Extra markdown
+            instructions: Used only if Job sections above is empty.
+            container: assets
+            restrict: false
+            automatic_line_breaks: true
+        -
           handle: image
           field:
             type: assets
@@ -23,11 +58,6 @@ tabs:
             type: textarea
             display: Excerpt
         -
-          handle: content
-          field:
-            type: markdown
-            display: Content
-        -
           handle: location
           field:
             type: text
@@ -37,3 +67,11 @@ tabs:
           field:
             type: text
             display: Order
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Search and social
+        fields:
+        -
+          import: seo

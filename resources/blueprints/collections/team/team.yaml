@@ -27,13 +27,35 @@ tabs:
           field:
             type: markdown
             display: Content
+            instructions: Bio shown on the team detail page.
+            container: assets
+            restrict: false
+            automatic_line_breaks: true
         -
           handle: role
           field:
             type: text
             display: Role
         -
+          handle: email
+          field:
+            type: text
+            display: Email
+        -
+          handle: phone
+          field:
+            type: text
+            display: Phone
+        -
           handle: order
           field:
             type: text
             display: Order
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Search and social
+        fields:
+        -
+          import: seo

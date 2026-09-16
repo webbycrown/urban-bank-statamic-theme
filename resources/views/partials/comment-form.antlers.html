@@ -3,6 +3,7 @@
 	<div class="stay-connect-success" hidden>
 		<p>Thanks — your comment was sent. We will review it shortly.</p>
 	</div>
+	<input type="hidden" name="post" value="{{ slug }}">
 	<div class="stay-connect-fields">
 		<input class="bw_custom_input bw_custom_input-1" type="text" name="name" placeholder="Name" value="{{ old:name }}" required>
 		<input class="bw_custom_input bw_custom_input-2" type="email" name="email" placeholder="Email" value="{{ old:email }}" required>

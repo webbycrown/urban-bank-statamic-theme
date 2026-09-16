@@ -1,0 +1,35 @@
+								<div class="bw_career_option_item" data-aos="fade-up" data-aos-duration="1500">
+									<div class="bw_career-item-img">
+										{{ if image }}
+										<img src="{{ image }}" alt="{{ title }}">
+										{{ else }}
+										<img src="/assets/image/Rectangle 265.png" alt="{{ title }}">
+										{{ /if }}
+									</div>
+									<div class="bw_career-item-contain">
+										<h4>{{ if card_link }}<a href="{{ url }}">{{ title }}</a>{{ else }}{{ title }}{{ /if }}</h4>
+										{{ if location }}
+										<div class="bw_career_location">
+											<div class="bw_career_location_icon">
+												<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+													<path d="M10 5.56522C10 9.70556 5.5 15 5.5 15C5.5 15 1 9.80417 1 5.56522C1 3.0437 3.0145 1 5.5 1C7.9852 1 10 3.0437 10 5.56522Z" stroke="url(#bw_pin_{{ slug }})" stroke-miterlimit="10" stroke-linejoin="round"/>
+													<path d="M5.49922 7.69612C6.49333 7.69612 7.29922 6.87855 7.29922 5.87003C7.29922 4.86151 6.49333 4.04395 5.49922 4.04395C4.50511 4.04395 3.69922 4.86151 3.69922 5.87003C3.69922 6.87855 4.50511 7.69612 5.49922 7.69612Z" stroke="url(#bw_pin2_{{ slug }})" stroke-miterlimit="10" stroke-linejoin="round"/>
+													<defs>
+														<linearGradient id="bw_pin_{{ slug }}" x1="5.5" y1="1" x2="5.5" y2="15" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#66DCB6"/>
+															<stop offset="1" stop-color="#F4FAA4"/>
+														</linearGradient>
+														<linearGradient id="bw_pin2_{{ slug }}" x1="5.49922" y1="4.04395" x2="5.49922" y2="7.69612" gradientUnits="userSpaceOnUse">
+															<stop stop-color="#66DCB6"/>
+															<stop offset="1" stop-color="#F4FAA4"/>
+														</linearGradient>
+													</defs>
+												</svg>
+											</div>
+											<p>{{ location }}</p>
+										</div>
+										{{ /if }}
+										{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
+										<a class="bw_custom_buttom bw_flex_btn" href="{{ url }}">{{ button_label ?? 'Apply for this job' }} <span class="material-symbols-sharp">chevron_right</span></a>
+									</div>
+								</div>

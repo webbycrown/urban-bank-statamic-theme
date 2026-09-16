@@ -3,82 +3,15 @@
 		<div class="bw_container">
 			<div class="bw_header_contant">
 				<div class="bw_header_logo_content">
-					<a href="/"><img src="/assets/image/logo.png" alt=""></a>
+					<a href="/"><img src="{{ partial:partials/media-url :file="setting:logo" fallback="image/logo.png" }}" alt="{{ setting:site_name ?? 'Urban Bank' }}"></a>
 				</div>
-				<ul class="bw_all_menu">
-					<li class="bw_header_dropdown">
-						<a href="javascript:;" class="bw_dropdown_hover">Home <span class="material-symbols-sharp">expand_more</span></a>
-						<div class="bw_header_dropdown_menu bw_home_dropdown_menu">
-							<div class="bw_header_dropdown_menu_title"><span>Home</span></div>
-							<ul>
-								<li><a class="bw_header_dropdown_item" href="/">Home-1</a></li>
-								<li><a class="bw_header_dropdown_item" href="/home-two">Home-2</a></li>
-								<li><a class="bw_header_dropdown_item" href="/home-three">Home-3</a></li>
-							</ul>
-						</div>
-					</li>
-					<li><a href="/about">About us</a></li>
-					<li><a href="/feature">Feature</a></li>
-					<li class="bw_header_dropdown bw_mega_dropdown">
-						<a href="javascript:;" class="bw_dropdown_hover">Page <span class="material-symbols-sharp">expand_more</span></a>
-												<div class="bw_header_dropdown_menu bw_mega_menu">
-							<div class="bw_mega_col">
-								<div class="bw_header_dropdown_menu_title"><span>Home</span></div>
-								<ul>
-									<li><a class="bw_header_dropdown_item" href="/">Home-1</a></li>
-									<li><a class="bw_header_dropdown_item" href="/home-two">Home-2</a></li>
-								<li><a class="bw_header_dropdown_item" href="/home-three">Home-3</a></li>
-									<li><a class="bw_header_dropdown_item" href="/banner">Banner</a></li>
-									<li><a class="bw_header_dropdown_item" href="/presentation">All pages</a></li>
-								</ul>
-							</div>
-							<div class="bw_mega_col">
-								<div class="bw_header_dropdown_menu_title"><span>Company</span></div>
-								<ul>
-									<li><a class="bw_header_dropdown_item" href="/about">About</a></li>
-									<li><a class="bw_header_dropdown_item" href="/team">Team</a></li>
-									<li><a class="bw_header_dropdown_item" href="/team/dale-baryant">Team Detail</a></li>
-									<li><a class="bw_header_dropdown_item" href="/career">Career</a></li>
-									<li><a class="bw_header_dropdown_item" href="/career/react-native-developer">Career Detail</a></li>
-									<li><a class="bw_header_dropdown_item" href="/contact">Contact</a></li>
-								</ul>
-							</div>
-							<div class="bw_mega_col">
-								<div class="bw_header_dropdown_menu_title"><span>Features</span></div>
-								<ul>
-									<li><a class="bw_header_dropdown_item" href="/feature">Feature</a></li>
-									<li><a class="bw_header_dropdown_item" href="/feature/multi-device">Feature Detail</a></li>
-									<li><a class="bw_header_dropdown_item" href="/feature-credit-cards">Credit cards</a></li>
-									<li><a class="bw_header_dropdown_item" href="/feature-business-loans">Business loans</a></li>
-									<li><a class="bw_header_dropdown_item" href="/feature-mobile-banking">Mobile banking</a></li>
-									<li><a class="bw_header_dropdown_item" href="/pricing">Pricing</a></li>
-									<li><a class="bw_header_dropdown_item" href="/offers">Offers</a></li>
-									<li><a class="bw_header_dropdown_item" href="/offers/checking-perks">Offer Detail</a></li>
-								</ul>
-							</div>
-							<div class="bw_mega_col">
-								<div class="bw_header_dropdown_menu_title"><span>More</span></div>
-								<ul>
-									<li><a class="bw_header_dropdown_item" href="/blog">Blog-1</a></li>
-									<li><a class="bw_header_dropdown_item" href="/blog-two">Blog-2</a></li>
-									<li><a class="bw_header_dropdown_item" href="/blog-three">Blog-3</a></li>
-									<li><a class="bw_header_dropdown_item" href="/blog/clear-fees-before-you-send">Blog Detail</a></li>
-									<li><a class="bw_header_dropdown_item" href="/faq">FAQ-1</a></li>
-									<li><a class="bw_header_dropdown_item" href="/faq-two">FAQ-2</a></li>
-									<li><a class="bw_header_dropdown_item" href="/privacy-policy">Privacy Policy</a></li>
-									<li><a class="bw_header_dropdown_item" href="/terms">Terms Of Service</a></li>
-									<li><a class="bw_header_dropdown_item" href="/login">Login</a></li>
-									<li><a class="bw_header_dropdown_item" href="/404">Error</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li><a href="/contact">Contact</a></li>
-				</ul>
+				{{ partial:partials/nav-header }}
 				<div class="bw_mobile_menu_icon">
 					<a href="javascript:;"><span class="material-symbols-outlined">menu</span></a>
 				</div>
-				<a class="bw_custom_buttom" href="/login">Open an account</a>
+				{{ if setting:cta_url }}
+				<a class="bw_custom_buttom" href="{{ setting:cta_url }}">{{ setting:cta_label ?? 'Talk to us' }}</a>
+				{{ /if }}
 			</div>
 		</div>
 	</header>

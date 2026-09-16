@@ -1,0 +1,71 @@
+{{ if style == "two" }}
+<section class="bw_video_section bw_video_section_two bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_video_section_two_wrap">
+			<div class="bw_video_content">
+				<div class="bw_play_popup">
+					<a class="popup-youtube js-video-modal" href="#bw_video_modal_{{ id }}">
+						<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M22.8145 12.9999L0.59223 25.8299V0.169868L22.8145 12.9999Z" fill="url(#paint0_linear_{{ id }})"></path>
+							<defs>
+								<linearGradient id="paint0_linear_{{ id }}" x1="22.8145" y1="12.9999" x2="-6.81518" y2="12.9999" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#6FDEB5"></stop>
+									<stop offset="1" stop-color="#F0F9A5"></stop>
+								</linearGradient>
+							</defs>
+						</svg>
+					</a>
+				</div>
+				<div class="bw_video_content_text">
+					<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:video_kicker ?? 'Strategy' }}</h3>
+					<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:video_title ?? 'Learn how we work' }}</h2>
+				</div>
+			</div>
+			<div class="bw_video_wrap_two" data-aos="zoom-in" data-aos-duration="1500">
+				<div class="bw_video_Slider">
+					<div class="before">
+						<a class="js-video-modal" href="#bw_video_modal_{{ id }}">
+							<img src="{{ partial:partials/media-url :file="poster" fallback="image/Mask group 1.png" }}" alt="">
+						</a>
+					</div>
+					<div class="slider scroller"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div id="bw_video_modal_{{ id }}" class="mfp-hide bw_video_modal">
+	<button type="button" class="mfp-close bw_video_modal_close" title="Close" aria-label="Close">&times;</button>
+	<video controls playsinline>
+		<source src="{{ partial:partials/media-url :file="video_file" fallback="image/video.mp4" }}" type="video/mp4">
+	</video>
+</div>
+{{ else }}
+<section class="bw_video_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_video_content">
+			<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:video_kicker ?? 'Strategy' }}</h3>
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:video_title ?? 'Learn how we work' }}</h2>
+		</div>
+		<div class="bw_video_wrap" data-aos="zoom-in" data-aos-duration="1500">
+			<div class="bw_video_Slider">
+				<div class="before">
+					<video class="bw_video_preview" muted playsinline preload="metadata"><source src="{{ partial:partials/media-url :file="video_file" fallback="image/video.mp4" }}" type="video/mp4"></video>
+				</div>
+				<div class="slider scroller">
+					<div class="bw_video_play_btn_border">
+						<a class="popup-vimeo js-video-modal" href="#bw_video_modal_{{ id }}"><i class="fa-solid playpause fa-play"></i></a>
+					</div>
+				</div>
+				<div class="after"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<div id="bw_video_modal_{{ id }}" class="mfp-hide bw_video_modal">
+	<button type="button" class="mfp-close bw_video_modal_close" title="Close" aria-label="Close">&times;</button>
+	<video controls playsinline>
+		<source src="{{ partial:partials/media-url :file="video_file" fallback="image/video.mp4" }}" type="video/mp4">
+	</video>
+</div>
+{{ /if }}

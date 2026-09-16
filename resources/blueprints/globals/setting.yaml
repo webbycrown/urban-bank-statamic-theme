@@ -1,0 +1,312 @@
+title: Setting
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: site_name
+          field:
+            type: text
+            display: Site Name
+        -
+          handle: logo
+          field:
+            type: assets
+            display: Logo
+            container: assets
+            max_files: 1
+        -
+          handle: footer_logo
+          field:
+            type: assets
+            display: Footer logo
+            container: assets
+            max_files: 1
+        -
+          handle: phone
+          field:
+            type: text
+            display: Phone
+        -
+          handle: email
+          field:
+            type: text
+            display: Email
+        -
+          handle: copyright
+          field:
+            type: text
+            display: Copyright
+        -
+          handle: cta_label
+          field:
+            type: text
+            display: Header CTA label
+        -
+          handle: cta_url
+          field:
+            type: text
+            display: Header CTA URL
+        -
+          handle: mega_home_title
+          field:
+            type: text
+            display: Mega menu Home column
+        -
+          handle: mega_company_title
+          field:
+            type: text
+            display: Mega menu Company column
+        -
+          handle: mega_features_title
+          field:
+            type: text
+            display: Mega menu Features column
+        -
+          handle: mega_more_title
+          field:
+            type: text
+            display: Mega menu More column
+        -
+          handle: facebook
+          field:
+            type: text
+            display: Facebook URL
+        -
+          handle: twitter
+          field:
+            type: text
+            display: Twitter URL
+        -
+          handle: linkedin
+          field:
+            type: text
+            display: LinkedIn URL
+        -
+          handle: instagram
+          field:
+            type: text
+            display: Instagram URL
+        -
+          handle: youtube
+          field:
+            type: text
+            display: YouTube URL
+        -
+          handle: map_embed
+          field:
+            type: textarea
+            display: Contact map embed URL
+        -
+          handle: branch_address
+          field:
+            type: textarea
+            display: Branch address
+        -
+          handle: branch_hours
+          field:
+            type: textarea
+            display: Branch hours
+        -
+          handle: error_title
+          field:
+            type: text
+            display: 404 title
+        -
+          handle: error_text
+          field:
+            type: textarea
+            display: 404 text
+        -
+          handle: feature_kicker
+          field:
+            type: text
+            display: Feature kicker
+        -
+          handle: feature_title
+          field:
+            type: text
+            display: Feature title
+        -
+          handle: partners_kicker
+          field:
+            type: text
+            display: Partners kicker
+        -
+          handle: partners_title
+          field:
+            type: text
+            display: Partners title
+        -
+          handle: blog_kicker
+          field:
+            type: text
+            display: Blog kicker
+        -
+          handle: blog_title
+          field:
+            type: text
+            display: Blog title
+        -
+          handle: testimonial_kicker
+          field:
+            type: text
+            display: Testimonial kicker
+        -
+          handle: testimonial_title
+          field:
+            type: text
+            display: Testimonial title
+        -
+          handle: join_title
+          field:
+            type: text
+            display: Newsletter strip title
+        -
+          handle: about_kicker
+          field:
+            type: text
+            display: About kicker
+        -
+          handle: offers_kicker
+          field:
+            type: text
+            display: Offers kicker
+        -
+          handle: offers_title
+          field:
+            type: text
+            display: Offers title
+        -
+          handle: favicon
+          field:
+            type: assets
+            display: Favicon
+            container: assets
+            max_files: 1
+        -
+          handle: app_store_url
+          field:
+            type: text
+            display: App Store download URL
+        -
+          handle: app_store_kicker
+          field:
+            type: text
+            display: App Store kicker
+        -
+          handle: app_store_name
+          field:
+            type: text
+            display: App Store name
+        -
+          handle: play_store_url
+          field:
+            type: text
+            display: Google Play download URL
+        -
+          handle: play_store_kicker
+          field:
+            type: text
+            display: Google Play kicker
+        -
+          handle: play_store_name
+          field:
+            type: text
+            display: Google Play name
+        -
+          handle: faq_kicker
+          field:
+            type: text
+            display: FAQ kicker
+        -
+          handle: faq_title
+          field:
+            type: text
+            display: FAQ title
+        -
+          handle: video_kicker
+          field:
+            type: text
+            display: Video kicker
+        -
+          handle: video_title
+          field:
+            type: text
+            display: Video title
+        -
+          handle: team_kicker
+          field:
+            type: text
+            display: Team kicker
+        -
+          handle: team_title
+          field:
+            type: text
+            display: Team title
+        -
+          handle: branch_kicker
+          field:
+            type: text
+            display: Contact branch kicker
+        -
+          handle: branch_title
+          field:
+            type: text
+            display: Contact branch title
+        -
+          handle: branch_office_title
+          field:
+            type: text
+            display: Head office label
+        -
+          handle: branch_hours_title
+          field:
+            type: text
+            display: Branch hours label
+        -
+          handle: branch_contact_title
+          field:
+            type: text
+            display: Talk to us label
+        -
+          handle: branch_office_icon
+          field:
+            type: assets
+            display: Head office icon
+            container: assets
+            max_files: 1
+        -
+          handle: branch_hours_icon
+          field:
+            type: assets
+            display: Branch hours icon
+            container: assets
+            max_files: 1
+        -
+          handle: branch_contact_icon
+          field:
+            type: assets
+            display: Talk to us icon
+            container: assets
+            max_files: 1
+        -
+          handle: seo_description
+          field:
+            type: textarea
+            display: Default meta description
+            instructions: Used when a page has no SEO description of its own.
+        -
+          handle: seo_keywords
+          field:
+            type: text
+            display: Default meta keywords
+        -
+          handle: seo_image
+          field:
+            type: assets
+            display: Default social share image
+            container: assets
+            max_files: 1

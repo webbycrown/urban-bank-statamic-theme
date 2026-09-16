@@ -1,0 +1,13 @@
+<section class="bw_career_option bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_career_content">
+			{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Open positions' }}</h2>
+		</div>
+		<div class="bw_career_option_group">
+			{{ collection:careers sort="order:asc" }}
+			{{ partial:partials/career-card button_label="Apply for this job" }}
+			{{ /collection:careers }}
+		</div>
+	</div>
+</section>

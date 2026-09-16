@@ -1,0 +1,19 @@
+<!-- start_bw_home_two_about_section -->
+					<section class="bw_about_two bw_padding_y">
+						<div class="bw_container">
+							<div class="bw_about_two_wrap">
+								<div class="bw_about_content">
+									<h3 class="bw_sub_title_2">{{ kicker ?? setting:about_kicker ?? 'About Us' }}</h3>
+									<h2 class="bw_sub_title">{{ heading ?? 'Grow with Urban Bank' }}</h2>
+									{{ if section_text }}<p>{{ section_text }}</p>{{ /if }}
+									<a data-aos="zoom-in" data-aos-duration="1500" class="bw_custom_buttom bw_flex_btn" href="{{ setting:cta_url ?? '/about' }}">{{ setting:cta_label ?? 'Learn more' }}<span class="material-symbols-sharp">chevron_right</span></a>
+								</div>
+								<div class="bw_about_charts">
+									<h3 class="bw_sub_title_2">{{ setting:about_kicker ?? 'About Us' }}</h3>
+									<img src="{{ partial:partials/media-url :file="about_chart_image" fallback="image/Group 966.png" }}">
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- end_bw_home_two_about_section -->

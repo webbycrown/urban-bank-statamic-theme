@@ -1,0 +1,21 @@
+<section class="bw_career_section bw_padding_y item">
+	<div class="bw_container">
+		<div class="bw_career_content">
+			{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Life at Urban Bank' }}</h2>
+		</div>
+		<div class="bw_career_detail">
+			{{ if image }}
+			<div class="bw_career_detail_img" data-aos="fade-up" data-aos-duration="1500">
+				<img class="item__img" src="{{ partial:partials/media-url :file="image" }}" alt="">
+			</div>
+			{{ /if }}
+			{{ if text }}<p data-aos="fade-up" data-aos-duration="1500">{{ text }}</p>{{ /if }}
+			{{ if body }}
+			<div class="bw_career_detail_copy" data-aos="fade-up" data-aos-duration="1500">{{ body }}</div>
+			{{ elseif content_sections or content }}
+			<div class="bw_career_detail_copy" data-aos="fade-up" data-aos-duration="1500">{{ partial:partials/content-sections }}</div>
+			{{ /if }}
+		</div>
+	</div>
+</section>

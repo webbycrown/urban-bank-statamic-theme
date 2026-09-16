@@ -27,3 +27,15 @@ tabs:
           field:
             type: markdown
             display: Content
+            instructions: Full article body. Use headings for sections.
+            container: assets
+            restrict: false
+            automatic_line_breaks: true
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Search and social
+        fields:
+        -
+          import: seo

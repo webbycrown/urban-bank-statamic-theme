@@ -1,0 +1,38 @@
+<section class="bw_contact_page_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_about_hero_title">
+			{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Let’s talk' }}</h2>
+			{{ if text }}<p data-aos="fade-up" data-aos-duration="1500">{{ text }}</p>{{ /if }}
+			{{ if show_social }}
+			<div class="bw_social_icon_box" data-aos="fade-up" data-aos-duration="1500">
+				<ul>
+					{{ if setting:facebook }}<li><a href="{{ setting:facebook }}" target="_blank" rel="noopener"><img src="/assets/image/facebook.svg" alt="Facebook"></a></li>{{ /if }}
+					{{ if setting:twitter }}<li><a href="{{ setting:twitter }}" target="_blank" rel="noopener"><img src="/assets/image/twitter.svg" alt="Twitter"></a></li>{{ /if }}
+					{{ if setting:instagram }}<li><a href="{{ setting:instagram }}" target="_blank" rel="noopener"><img src="/assets/image/instagram.svg" alt="Instagram"></a></li>{{ /if }}
+					{{ if setting:youtube }}<li><a href="{{ setting:youtube }}" target="_blank" rel="noopener"><img src="/assets/image/youtube.svg" alt="YouTube"></a></li>{{ /if }}
+				</ul>
+			</div>
+			{{ /if }}
+		</div>
+		<div class="bw_contact_form" data-aos="fade-up" data-aos-duration="1500">
+			{{ form:contact action="/!/forms/contact" class="js-theme-form" }}
+				<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
+				<div class="stay-connect-success" hidden>
+					<div class="bw_form_thanks">
+						<p>Thanks — we received your message and will reply shortly.</p>
+					</div>
+				</div>
+				<div class="stay-connect-fields">
+					<input class="bw_custom_input" type="text" name="first_name" placeholder="First Name" value="{{ old:first_name }}" required>
+					<input class="bw_custom_input" type="text" name="last_name" placeholder="Last Name" value="{{ old:last_name }}" required>
+					<input class="bw_custom_input" type="text" name="phone" placeholder="Phone" value="{{ old:phone }}">
+					<input class="bw_custom_input" type="email" name="email" placeholder="Email" value="{{ old:email }}" required>
+					<textarea class="bw_custom_input" name="message" placeholder="Message" required>{{ old:message }}</textarea>
+					<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+					<button type="submit" class="bw_custom_buttom"><span class="btn-label">Send Message</span><span class="btn-loading" hidden>Sending…</span></button>
+				</div>
+			{{ /form:contact }}
+		</div>
+	</div>
+</section>

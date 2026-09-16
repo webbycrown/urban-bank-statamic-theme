@@ -1,0 +1,41 @@
+<section class="bw_feature_page_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_feature_page_content bw_title_wrap_center">
+			<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:branch_kicker ?? 'Branch' }}</h3>
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:branch_title ?? 'Visit Urban Bank' }}</h2>
+		</div>
+		<div class="bw_feature_page_wrap">
+			{{ if setting:branch_address }}
+			<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<div class="bw_feature_page_icon"><img src="{{ partial:partials/media-url :file="setting:branch_office_icon" fallback="image/feature-1.png" }}" alt=""></div>
+				<div class="bw_feature_page_text">
+					<h4><a href="/contact">{{ setting:branch_office_title ?? 'Head office' }}</a></h4>
+					<p>{{ setting:branch_address }}</p>
+				</div>
+			</div>
+			{{ /if }}
+			{{ if setting:branch_hours }}
+			<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<div class="bw_feature_page_icon"><img src="{{ partial:partials/media-url :file="setting:branch_hours_icon" fallback="image/feature-2.png" }}" alt=""></div>
+				<div class="bw_feature_page_text">
+					<h4><a href="/contact">{{ setting:branch_hours_title ?? 'Branch hours' }}</a></h4>
+					<p>{{ setting:branch_hours }}</p>
+				</div>
+			</div>
+			{{ /if }}
+			{{ if setting:phone or setting:email }}
+			<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<div class="bw_feature_page_icon"><img src="{{ partial:partials/media-url :file="setting:branch_contact_icon" fallback="image/feature-3.png" }}" alt=""></div>
+				<div class="bw_feature_page_text">
+					<h4>{{ if setting:phone }}<a href="tel:{{ setting:phone | replace(' ', '') }}">{{ setting:branch_contact_title ?? 'Talk to us' }}</a>{{ else }}{{ setting:branch_contact_title ?? 'Talk to us' }}{{ /if }}</h4>
+					<p>
+						{{ if setting:phone }}<a href="tel:{{ setting:phone | replace(' ', '') }}">{{ setting:phone }}</a>{{ /if }}
+						{{ if setting:phone and setting:email }} · {{ /if }}
+						{{ if setting:email }}<a href="mailto:{{ setting:email }}">{{ setting:email }}</a>{{ /if }}
+					</p>
+				</div>
+			</div>
+			{{ /if }}
+		</div>
+	</div>
+</section>

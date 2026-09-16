@@ -1,8 +1,0 @@
-title: Register
-honeypot: honeypot
-email:
-  -
-    to: admin@example.com
-    reply_to: '{{ email }}'
-    subject: 'Urban Bank account request from {{ first_name }} {{ last_name }}'
-    html: emails/register

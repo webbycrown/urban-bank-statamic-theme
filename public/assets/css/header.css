@@ -30,9 +30,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.bw_header_logo_content {
+    flex-shrink: 0;
 }
 .bw_header_logo_content a {
     display: flex;
+}
+.bw_header_contant > .bw_custom_buttom,
+.bw_header_two .bw_header_contant > .bw_custom_buttom {
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 .bw_all_menu_btn {
     display: flex;
@@ -52,6 +61,8 @@
 .bw_all_menu {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     grid-gap: 30px;
 }
 .bw_all_menu li,

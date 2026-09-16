@@ -1,0 +1,13 @@
+tree:
+  -
+    entry: feature
+  -
+    entry: blog
+  -
+    entry: pricing
+  -
+    entry: offers
+  -
+    entry: team
+  -
+    entry: presentation

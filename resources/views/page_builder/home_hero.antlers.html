@@ -1,0 +1,72 @@
+<!-- start_bw_home_hero_section -->
+					<section class="bw_home_hero_section bw_padding_y">
+						<div class="bw_container">
+							<div class="bw_hero_wrap">
+								<div class="bw_hero_content">
+									<h1 class="bw_title" data-aos="fade-right" data-aos-duration="1500">{{ hero_lead ?? 'Smart' }} <span class="bw_title_gradient">{{ hero_accent ?? 'Investment' }}</span> <span class="bw_title_sm">{{ hero_rest ?? 'with Urban bank' }}</span></h1>
+									{{ if hero_text }}<p data-aos="fade-right" data-aos-duration="1500">{{ hero_text }}</p>{{ /if }}
+									<div class="bw_store_btn">
+										<a data-aos="zoom-in" data-aos-duration="1500" class="bw_custom_buttom"  href="{{ setting:cta_url ?? '/about' }}">{{ setting:cta_label ?? 'Learn more' }}</a>
+										{{ partial:partials/store-buttons }}
+									</div>
+								</div>
+								<div class="bw_hero_card">
+									<div class="bw_hero_custom_card preload" >
+										<div class="creditcard">
+											<div class="front">
+												<div class="bw_hero_bankname">
+													<h4>{{ card_name ?? setting:site_name ?? 'urban bank' }}</h4>
+													{{ if show_card_wifi }}
+													<span class="material-symbols-sharp">{{ card_icon ?? 'wifi' }}</span>
+													{{ /if }}
+												</div>
+												<div class="bw_hero_custom_card_chip">
+													<img src="{{ partial:partials/media-url :file="card_chip" fallback="image/chip.png" }}" alt="chip">
+												</div>
+												<div class="bw_hero_custom_card_number">
+													<h5 id="svgnumber" class="card_number" data-default="{{ card_number ?? '.... .... .... 5241' }}">{{ card_number ?? '.... .... .... 5241' }}</h5>
+													<h6 id="svgexpire" class="expiration_number" data-default="{{ card_expire ?? '00/00' }}">{{ card_expire ?? '00/00' }}</h6>
+												</div>
+												<h6 id="svgname" data-default="{{ card_holder ?? setting:site_name }}">{{ card_holder ?? setting:site_name }}</h6>
+											</div>
+											<div class="back">
+												<div class="creditcard_back_line"></div>
+												<div class="creditcard_back_cvv">
+													<div id="svgnameback" data-default="{{ card_holder ?? setting:site_name }}">{{ card_holder ?? setting:site_name }}</div>
+													<div id="svgsecurity" data-default="{{ card_cvv ?? '000' }}">{{ card_cvv ?? '000' }}</div>
+												</div>
+												{{ if hero_text }}<p>{{ hero_text }}</p>{{ /if }}
+											</div>
+										</div>
+									</div>
+									{{ if counter_app }}
+									<div class="bw_hero_counter_app" data-aos="fade-right" data-aos-duration="1500">
+										<h3><span class="counter">{{ counter_app }}</span>{{ if counter_app_suffix }} <span>{{ counter_app_suffix }}</span>{{ /if }}</h3>
+										<strong>{{ counter_app_label ?? 'User use the app' }}</strong>
+									</div>
+									{{ /if }}
+									{{ if counter_people }}
+									<div class="bw_hero_counter_people" data-aos="fade-up" data-aos-duration="1500">
+										<h3><span class="counter">{{ counter_people }}</span></h3>
+										<strong>{{ counter_people_label ?? 'People trust us' }}</strong>
+									</div>
+									{{ /if }}
+									<a class="bw_custom_popup bw_custom_buttom" href="#bw_card_popup">{{ card_button ?? 'Add Card Detail' }}</a>
+								</div>
+							</div>
+						</div>	
+					</section>
+
+					<!-- start_bw_team_popup -->
+					<div id="bw_card_popup" class="white-popup-block mfp-hide">
+						<div class="bw_card_popup">
+							<input class="bw_custom_input" id="name" maxlength="20" type="text" name="Card Name" placeholder="Card Name">
+							<input class="bw_custom_input"  id="cardnumber" type="text" pattern="[0-9]*" name="Card Number" placeholder="Card Number">
+							<input class="bw_custom_input" id="expirationdate" type="text" pattern="[0-9]*" name="Expiration (mm/yy)" placeholder="Expiration (mm/yy)">
+							<input class="bw_custom_input" id="securitycode" type="text" pattern="[0-9]*" name="Security Code" placeholder="Security Code">
+							<a class="bw_custom_buttom js-card-popup-done" href="#">Done</a>
+						</div>
+					</div>
+					<!-- close_bw_team_popup -->
+
+					<!-- close_bw_home_hero_section -->

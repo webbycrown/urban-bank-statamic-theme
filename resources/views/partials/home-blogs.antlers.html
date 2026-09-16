@@ -1,0 +1,20 @@
+								<div class="bw_blog_wrap" data-aos="fade-up" data-aos-duration="1500">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											{{ collection:blogs limit="6" sort="date:desc" }}
+											<div class="swiper-slide">
+												<div class="bw_blog_card_box">
+													<div class="bw_blog_card_cont">
+														<div class="bw_blog_badge">
+															<span>Bank</span>
+														</div>
+														<h5><a href="{{ url }}">{{ title }}</a></h5>
+														{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
+													</div>
+													<a class="bw_custom_buttom" href="{{ url }}">Learn more</a>
+												</div>
+											</div>
+											{{ /collection:blogs }}
+										</div>
+									</div>
+								</div>

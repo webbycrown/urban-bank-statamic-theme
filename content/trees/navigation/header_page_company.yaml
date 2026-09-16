@@ -1,0 +1,25 @@
+tree:
+  -
+    id: mega-about
+    title: About
+    url: /about
+  -
+    id: mega-team
+    title: Team
+    url: /team
+  -
+    id: mega-team-detail
+    title: Team Detail
+    url: /team/dale-baryant
+  -
+    id: mega-career
+    title: Career
+    url: /career
+  -
+    id: mega-career-detail
+    title: Career Detail
+    url: /career/developers
+  -
+    id: mega-contact
+    title: Contact
+    url: /contact

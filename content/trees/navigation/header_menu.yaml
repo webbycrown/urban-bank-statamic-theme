@@ -3,12 +3,26 @@ tree:
     entry: home
     children:
       -
-        entry: home-two
+        id: home-1-link
+        title: Home-1
+        url: /
       -
-        entry: home-three
+        id: home-2-link
+        title: Home-2
+        url: /home-two
+      -
+        id: home-3-link
+        title: Home-3
+        url: /home-three
   -
-    entry: about
+    id: about-us-nav
+    title: About us
+    url: /about
   -
     entry: feature
+  -
+    id: page-mega
+    title: Page
+    url: 'javascript:;'
   -
     entry: contact

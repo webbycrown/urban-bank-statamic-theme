@@ -10,12 +10,6 @@ tree:
   -
     entry: feature
   -
-    entry: feature-credit-cards
-  -
-    entry: feature-business-loans
-  -
-    entry: feature-mobile-banking
-  -
     entry: team
   -
     entry: career
@@ -23,8 +17,6 @@ tree:
     entry: contact
   -
     entry: pricing
-  -
-    entry: login
   -
     entry: blog
   -
@@ -43,3 +35,5 @@ tree:
     entry: terms
   -
     entry: presentation
+  -
+    entry: banner

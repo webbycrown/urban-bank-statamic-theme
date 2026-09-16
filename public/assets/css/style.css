@@ -1,139 +1,64 @@
-/*Urbanist_font*/
+/*Urbanist + Mulish — woff2 only, weights the theme actually uses */
 @font-face {
    font-family: 'Urbanist';
-   src: url('../font/Urbanist-Thin.eot');
-   src: url('../font/Urbanist-Thin.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-Thin.woff2') format('woff2'), url('../font/Urbanist-Thin.woff') format('woff'), url('../font/Urbanist-Thin.ttf') format('truetype');
-   font-weight: 100;
-   font-style: normal;
-   font-display: swap;
-}
-@font-face {
-   font-family: 'Urbanist';
-   src: url('../font/Urbanist-ExtraLight.eot');
-   src: url('../font/Urbanist-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-ExtraLight.woff2') format('woff2'), url('../font/Urbanist-ExtraLight.woff') format('woff'), url('../font/Urbanist-ExtraLight.ttf') format('truetype');
-   font-weight: 200;
-   font-style: normal;
-   font-display: swap;
-}
-@font-face {
-   font-family: 'Urbanist';
-   src: url('../font/Urbanist-Light.eot');
-   src: url('../font/Urbanist-Light.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-Light.woff2') format('woff2'), url('../font/Urbanist-Light.woff') format('woff'), url('../font/Urbanist-Light.ttf') format('truetype');
-   font-weight: 300;
-   font-style: normal;
-   font-display: swap;
-}
-@font-face {
-   font-family: 'Urbanist';
-   src: url('../font/Urbanist-Regular.eot');
-   src: url('../font/Urbanist-Regular.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-Regular.woff2') format('woff2'), url('../font/Urbanist-Regular.woff') format('woff'), url('../font/Urbanist-Regular.ttf') format('truetype');
+   src: url('../font/Urbanist-Regular.woff2') format('woff2');
    font-weight: 400;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Urbanist';
-   src: url('../font/Urbanist-Medium.eot');
-   src: url('../font/Urbanist-Medium.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-Medium.woff2') format('woff2'), url('../font/Urbanist-Medium.woff') format('woff'), url('../font/Urbanist-Medium.ttf') format('truetype');
+   src: url('../font/Urbanist-Medium.woff2') format('woff2');
    font-weight: 500;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Urbanist';
-   src: url('../font/Urbanist-SemiBold.eot');
-   src: url('../font/Urbanist-SemiBold.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-SemiBold.woff2') format('woff2'), url('../font/Urbanist-SemiBold.woff') format('woff'), url('../font/Urbanist-SemiBold.ttf') format('truetype');
+   src: url('../font/Urbanist-SemiBold.woff2') format('woff2');
    font-weight: 600;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Urbanist';
-   src: url('../font/Urbanist-Bold.eot');
-   src: url('../font/Urbanist-Bold.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-Bold.woff2') format('woff2'), url('../font/Urbanist-Bold.woff') format('woff'), url('../font/Urbanist-Bold.ttf') format('truetype');
+   src: url('../font/Urbanist-Bold.woff2') format('woff2');
    font-weight: 700;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Urbanist';
-   src: url('../font/Urbanist-ExtraBold.eot');
-   src: url('../font/Urbanist-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-ExtraBold.woff2') format('woff2'), url('../font/Urbanist-ExtraBold.woff') format('woff'), url('../font/Urbanist-ExtraBold.ttf') format('truetype');
+   src: url('../font/Urbanist-ExtraBold.woff2') format('woff2');
    font-weight: 800;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
-   font-family: 'Urbanist';
-   src: url('../font/Urbanist-Black.eot');
-   src: url('../font/Urbanist-Black.eot?#iefix') format('embedded-opentype'), url('../font/Urbanist-Black.woff2') format('woff2'), url('../font/Urbanist-Black.woff') format('woff'), url('../font/Urbanist-Black.ttf') format('truetype');
-   font-weight: 900;
-   font-style: normal;
-   font-display: swap;
-}
-/*Urbanist_font*/
-/*Mulish_font*/
-@font-face {
    font-family: 'Mulish';
-   src: url('../font/Mulish-ExtraLight.eot');
-   src: url('../font/Mulish-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../font/Mulish-ExtraLight.woff2') format('woff2'), url('../font/Mulish-ExtraLight.woff') format('woff'), url('../font/Mulish-ExtraLight.ttf') format('truetype');
-   font-weight: 200;
-   font-style: normal;
-   font-display: swap;
-}
-@font-face {
-   font-family: 'Mulish';
-   src: url('../font/Mulish-Light.eot');
-   src: url('../font/Mulish-Light.eot?#iefix') format('embedded-opentype'), url('../font/Mulish-Light.woff2') format('woff2'), url('../font/Mulish-Light.woff') format('woff'), url('../font/Mulish-Light.ttf') format('truetype');
+   src: url('../font/Mulish-Light.woff2') format('woff2');
    font-weight: 300;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Mulish';
-   src: url('../font/Mulish-Regular.eot');
-   src: url('../font/Mulish-Regular.eot?#iefix') format('embedded-opentype'), url('../font/Mulish-Regular.woff2') format('woff2'), url('../font/Mulish-Regular.woff') format('woff'), url('../font/Mulish-Regular.ttf') format('truetype');
+   src: url('../font/Mulish-Regular.woff2') format('woff2');
    font-weight: 400;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Mulish';
-   src: url('../font/Mulish-Medium.eot');
-   src: url('../font/Mulish-Medium.eot?#iefix') format('embedded-opentype'), url('../font/Mulish-Medium.woff2') format('woff2'), url('../font/Mulish-Medium.woff') format('woff'), url('../font/Mulish-Medium.ttf') format('truetype');
-   font-weight: 500;
-   font-style: normal;
-   font-display: swap;
-}
-@font-face {
-   font-family: 'Mulish';
-   src: url('../font/Mulish-SemiBold.eot');
-   src: url('../font/Mulish-SemiBold.eot?#iefix') format('embedded-opentype'), url('../font/Mulish-SemiBold.woff2') format('woff2'), url('../font/Mulish-SemiBold.woff') format('woff'), url('../font/Mulish-SemiBold.ttf') format('truetype');
+   src: url('../font/Mulish-SemiBold.woff2') format('woff2');
    font-weight: 600;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Mulish';
-   src: url('../font/Mulish-Bold.eot');
-   src: url('../font/Mulish-Bold.eot?#iefix') format('embedded-opentype'), url('../font/Mulish-Bold.woff2') format('woff2'), url('../font/Mulish-Bold.woff') format('woff'), url('../font/Mulish-Bold.ttf') format('truetype');
+   src: url('../font/Mulish-Bold.woff2') format('woff2');
    font-weight: 700;
-   font-style: normal;
-   font-display: swap;
-}
-@font-face {
-   font-family: 'Mulish';
-   src: url('../font/Mulish-Black.eot');
-   src: url('../font/Mulish-Black.eot?#iefix') format('embedded-opentype'), url('../font/Mulish-Black.woff2') format('woff2'), url('../font/Mulish-Black.woff') format('woff'), url('../font/Mulish-Black.ttf') format('truetype');
-   font-weight: 800;
-   font-style: normal;
-   font-display: swap;
-}
-@font-face {
-   font-family: 'Mulish';
-   src: url('../font/Mulish-ExtraBold.eot');
-   src: url('../font/Mulish-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../font/Mulish-ExtraBold.woff2') format('woff2'), url('../font/Mulish-ExtraBold.woff') format('woff'), url('../font/Mulish-ExtraBold.ttf') format('truetype');
-   font-weight: 900;
    font-style: normal;
    font-display: swap;
 }
@@ -170,8 +95,8 @@ font-feature-settings: 'liga';
 }
 /*Materialicon*/
 :root {
-   --font_family_1: Mulish;
-   --font_family_2: Urbanist;
+   --font_family_1: Mulish, sans-serif;
+   --font_family_2: Urbanist, sans-serif;
    --text_gradient: linear-gradient(180deg, #FFFFFF 0%, #F7FBA4 0.01%, #64DCB6 100%);
    --text_gradient_hover: linear-gradient(180deg, #FFFFFF 0%, #F7FBA4 60%, #64DCB6 40%);
    --text_hover: #F7FBA4;
@@ -204,6 +129,8 @@ body {
    background: #222828;
    padding: 0;
    margin: 0;
+   font-family: var(--font_family_2);
+   color: var(--text_white);
 }
 * {
    -ms-overflow-style: none;
@@ -645,8 +572,11 @@ select:focus, input:focus, textarea:focus, button:focus {
    max-width: 660px;
    width: 100%;
 }
-.accordion-tabs .material-symbols-sharp {
+.accordion-tabs .material-symbols-sharp,
+.accordion-tabs .accordion_icon {
    background: var(--text_white);
+   color: var(--text_black);
+   -webkit-text-fill-color: var(--text_black);
    border-radius: 100%;
    width: 29px;
    height: 29px;
@@ -656,10 +586,16 @@ select:focus, input:focus, textarea:focus, button:focus {
    position: absolute;
    top: 0;
    right: 0;
+   font-size: 20px;
+   line-height: 1;
+   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
-.accordion-tabs .material-symbols-sharp:hover, .accordion-tabs.acco-active .material-symbols-sharp {
+.accordion-tabs .material-symbols-sharp:hover,
+.accordion-tabs.acco-active .material-symbols-sharp,
+.accordion-tabs.acco-active .accordion_icon {
    background: var(--bg_gradient);
    color: var(--text_black);
+   -webkit-text-fill-color: var(--text_black);
 }
 /*=========================== bw_accordion ===========================*/
 /*=========================== bw_team_detail_box ===========================*/
@@ -1408,8 +1344,8 @@ select:focus, input:focus, textarea:focus, button:focus {
    margin-bottom: 15px;
 }
 .bw_feature_detail_textarea p {
-   margin-bottom: 10px;
-   line-height: 26px;
+   margin-bottom: 16px;
+   line-height: 27px;
 }
 .bw_feature_detail_textarea p:last-child {
    margin-bottom: 0;
@@ -1591,6 +1527,29 @@ select:focus, input:focus, textarea:focus, button:focus {
    display: flex;
    align-items: center;
    grid-gap: 18px;
+}
+.bw_testimonial_user_info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: left;
+}
+.bw_testimonial_user_info h4 {
+   margin: 0;
+   line-height: 1.25;
+}
+.bw_testimonial_role {
+   display: block;
+   margin-top: 4px;
+   font-size: 14px;
+   line-height: 1.3;
+   font-weight: 500;
+   font-family: var(--font_family_1);
+   color: #64DCB6;
+}
+.bw_testimonial_two_section .bw_testimonial_role {
+   text-align: center;
+   margin: 0 0 12px;
 }
 .bw_testimonial_user h4 {
    font-family: var(--font_family_2);
@@ -1800,8 +1759,7 @@ select:focus, input:focus, textarea:focus, button:focus {
    transform: rotate(49.59deg);
    z-index: 0;
    pointer-events: none;
-   animation: line_canvas 5s infinite;
-   animation-direction: alternate;
+   animation: none;
 }
 @keyframes line_canvas {
    from {
@@ -2804,13 +2762,15 @@ border-radius: 10px;
 .bw_career_option .bw_career_option_item .bw_career-item-img img {
    border-radius: 10px;
 }
-.bw_career_option .bw_career_location {
+.bw_career_option .bw_career_location,
+.bw_career_detail .bw_career_location {
    display: flex;
    align-items: center;
    gap: 10px;
    margin-bottom: 10px;
 }
-.bw_career_option .bw_career_location .bw_career_location_icon {
+.bw_career_option .bw_career_location .bw_career_location_icon,
+.bw_career_detail .bw_career_location .bw_career_location_icon {
    background-color: rgba(44, 51, 51, 1);
    width: 30px;
    height: 30px;
@@ -2819,10 +2779,13 @@ border-radius: 10px;
    align-items: center;
    border-radius: 50%;
 }
-.bw_career_option .bw_career_location p {
+.bw_career_option .bw_career_location p,
+.bw_career_detail .bw_career_location p {
    color: white;
+   margin-bottom: 0;
 }
-.bw_career_option .bw_career_location .bw_career_location_icon:hover {
+.bw_career_option .bw_career_location .bw_career_location_icon:hover,
+.bw_career_detail .bw_career_location .bw_career_location_icon:hover {
    background-color: rgb(44 51 51 / 30%);
 }
 .bw_career_option .bw_custom_buttom {
@@ -3150,6 +3113,13 @@ border-radius: 10px;
 .bw_feature_two_section .bw_feature_box_icon{
    margin-bottom: 20px;
 }
+.bw_feature_two_section .bw_feature_box_icon img{
+   width: 70px;
+   height: 70px;
+   object-fit: contain;
+   display: block;
+   margin: 0 auto;
+}
 .bw_feature_two_section .bw_feature_box {
    padding: 12px 5px;
 }
@@ -3435,7 +3405,7 @@ transform: rotate(360deg) translateY(-220px) rotate(-360deg);
    min-width: 60px;
    height: 60px;
 }
-.bw_testimonial_two_section .mySwiper2 .swiper-slide.swiper-slide-active .bw_testimonial_content_slider_img {
+.bw_testimonial_two_section .mySwiper2 .swiper-slide.swiper-slide-thumb-active .bw_testimonial_content_slider_img {
   max-width: 90px;
   min-width: 90px;
   height: 90px;
@@ -3446,7 +3416,7 @@ transform: rotate(360deg) translateY(-220px) rotate(-360deg);
   border: 1px solid rgba(106, 221, 181, 1);
   border-radius: 100%;
 }
-.bw_testimonial_two_section .mySwiper2 .swiper-slide.swiper-slide-active .bw_testimonial_content_slider_img img {
+.bw_testimonial_two_section .mySwiper2 .swiper-slide.swiper-slide-thumb-active .bw_testimonial_content_slider_img img {
    max-width: 75px;
    min-width: 75px;
    height: 75px;
@@ -4859,12 +4829,9 @@ line-height: 40px;
 }
 .bw_testimonial_two_section .mySwiper2 .swiper-slide.active {
    height: 95px;
-   max-width:100%;
-   width: 100% !important;
 }
 .bw_testimonial_two_section .mySwiper2 .swiper-slide {
    height: 100px;
-   max-width: 100%;
 }
 .bw_testimonial_two_section .swiper-pagination {
    display: none;

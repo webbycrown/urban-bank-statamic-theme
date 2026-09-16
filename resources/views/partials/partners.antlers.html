@@ -1,0 +1,13 @@
+									<div class="bw_partners_wrap">
+										{{ collection:partners placement:is="strip" sort="order:asc" }}
+										<div class="bw_partners_box" data-aos="zoom-in-down" data-aos-duration="1500">
+											{{ if link }}
+											<a href="{{ link }}" target="_blank" rel="noopener">
+												<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+											</a>
+											{{ else }}
+											<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+											{{ /if }}
+										</div>
+										{{ /collection:partners }}
+									</div>

@@ -1,0 +1,16 @@
+{{ if setting:map_embed }}
+<section class="bw_money_section bw_contact_map_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_money_wrap">
+			<div class="bw_money_content">
+				{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Head office on the map' }}</h2>
+				<p data-aos="fade-up" data-aos-duration="1500">{{ text ?? setting:branch_address }}</p>
+			</div>
+			<div class="bw_money_images bw_images_cover bw_contact_map" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<iframe title="Urban Bank branch map" src="{{ setting:map_embed }}" loading="lazy"></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+{{ /if }}

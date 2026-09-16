@@ -1,0 +1,8 @@
+{{ if content_sections }}
+{{ content_sections }}
+{{ if heading }}<h4>{{ heading }}</h4>{{ /if }}
+{{ if body }}{{ body }}{{ /if }}
+{{ /content_sections }}
+{{ elseif content }}
+{{ content }}
+{{ /if }}

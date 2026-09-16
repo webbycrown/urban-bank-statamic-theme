@@ -1,0 +1,38 @@
+title: Partners
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: image
+          field:
+            type: assets
+            display: Image
+            container: assets
+            max_files: 1
+        -
+          handle: link
+          field:
+            type: text
+            display: Optional URL
+        -
+          handle: placement
+          field:
+            type: select
+            display: Display group
+            options:
+              strip: Logo strip
+              orbit: Home two orbit
+            default: strip
+        -
+          handle: order
+          field:
+            type: text
+            display: Order

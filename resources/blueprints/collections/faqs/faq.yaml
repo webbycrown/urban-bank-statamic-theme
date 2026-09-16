@@ -1,0 +1,22 @@
+title: FAQs
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Question
+        -
+          handle: answer
+          field:
+            type: textarea
+            display: Answer
+        -
+          handle: order
+          field:
+            type: integer
+            display: Order

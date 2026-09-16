@@ -5,6 +5,11 @@ tabs:
       -
         fields:
         -
+          handle: post
+          field:
+            type: text
+            display: Post
+        -
           handle: name
           field:
             type: text

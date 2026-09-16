@@ -6,6 +6,10 @@ role: Head of Product
 order: 2
 image: image/team-2.jpg
 excerpt: Thomoson Pitersons works on Urban Bank head of product work.
+seo_title: Thomoson Pitersons
+seo_description: Thomoson Pitersons works on Urban Bank head of product work.
+seo_robots: 'index, follow'
+seo_image: image/team-2.jpg
 ---
 Thomoson Pitersons helps customers open accounts, read fees, and finish transfers.
 

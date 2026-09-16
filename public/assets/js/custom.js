@@ -1,6 +1,123 @@
 jQuery(document).ready(function () {
+function bwMakeSwiper(sel, opts) {
+  var node = document.querySelector(sel);
+  if (!node) {
+    return null;
+  }
+  opts = opts || {};
+  var slides = node.querySelectorAll(".swiper-slide").length;
+  if (!slides) {
+    return null;
+  }
+  if (opts.loop) {
+    var view = typeof opts.slidesPerView === "number" ? opts.slidesPerView : 1;
+    if (opts.breakpoints) {
+      Object.keys(opts.breakpoints).forEach(function (key) {
+        var per = opts.breakpoints[key].slidesPerView;
+        if (typeof per === "number" && per > view) {
+          view = per;
+        }
+      });
+    }
+    if (slides < view * 2) {
+      opts.loop = false;
+    }
+  }
+  try {
+    return new Swiper(sel, opts);
+  } catch (err) {
+    return null;
+  }
+}
+
+function bwEqualizeBlogBoxes() {
+  var groups = document.querySelectorAll(
+    ".bw_blog_page_wrap:not(.bw_pricing_page_wrap), .bw_blog_section .swiper-wrapper, .bw_career_option_group"
+  );
+  groups.forEach(function (group) {
+    var cards = [];
+    for (var i = 0; i < group.children.length; i++) {
+      var child = group.children[i];
+      if (child.classList.contains("bw_blog_card_box") || child.classList.contains("bw_career_option_item")) {
+        if (child.classList.contains("is-load-more-hidden")) {
+          continue;
+        }
+        cards.push(child);
+      } else if (child.classList.contains("swiper-slide")) {
+        var box = child.querySelector(".bw_blog_card_box");
+        if (box) {
+          cards.push(box);
+        }
+      }
+    }
+    if (cards.length < 2) {
+      return;
+    }
+    var max = 0;
+    cards.forEach(function (card) {
+      card.style.minHeight = "";
+    });
+    cards.forEach(function (card) {
+      max = Math.max(max, card.offsetHeight);
+    });
+    if (max > 0) {
+      cards.forEach(function (card) {
+        card.style.minHeight = max + "px";
+      });
+    }
+  });
+}
+
+function bwInitLoadMore() {
+  document.querySelectorAll("[data-load-more]").forEach(function (btn) {
+    var sel = btn.getAttribute("data-load-more");
+    var step = parseInt(btn.getAttribute("data-step") || "6", 10);
+    if (!sel || step < 1) {
+      return;
+    }
+    var scope = btn.closest("section") || document;
+    var items = scope.querySelectorAll(sel);
+    if (!items.length) {
+      btn.style.display = "none";
+      return;
+    }
+    var shown = 0;
+    function apply() {
+      for (var i = 0; i < items.length; i++) {
+        if (i < shown) {
+          items[i].classList.remove("is-load-more-hidden");
+          if (i >= step) {
+            items[i].classList.add("aos-animate");
+          }
+        } else {
+          items[i].classList.add("is-load-more-hidden");
+        }
+      }
+      if (shown >= items.length) {
+        var wrap = btn.closest(".bw_feature_page_btn, .bw_blog_page_btn, .bw_faq_page_btn, .bw_team_btn");
+        if (wrap) {
+          wrap.style.display = "none";
+        } else {
+          btn.style.display = "none";
+        }
+      }
+    }
+    shown = Math.min(step, items.length);
+    apply();
+    if (shown >= items.length) {
+      return;
+    }
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      shown = Math.min(shown + step, items.length);
+      apply();
+      bwEqualizeBlogBoxes();
+    });
+  });
+}
+
 // bw_testimonial_section
-  var swiper = new Swiper(".bw_testimonial_section .mySwiper", {
+  var swiper = bwMakeSwiper(".bw_testimonial_section .mySwiper", {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
@@ -11,7 +128,7 @@ jQuery(document).ready(function () {
   });
 // bw_testimonial_section
 
-  var swiper = new Swiper(".bw_testimonial_content_slider .mySwiper", {
+  var swiper = bwMakeSwiper(".bw_testimonial_content_slider .mySwiper", {
     loop: true, 
     spaceBetween: 0,
     slidesPerView: 1,
@@ -28,7 +145,7 @@ jQuery(document).ready(function () {
   // watchSlidesProgress: true,
 
   });
-  var swiper2 = new Swiper(".bw_testimonial_content_slider .mySwiper2", {
+  var swiper2 = bwMakeSwiper(".bw_testimonial_content_slider .mySwiper2", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
@@ -37,9 +154,7 @@ jQuery(document).ready(function () {
       nextEl: ".bw_testimonial_content_slider .swiper-button-next",
       prevEl: ".bw_testimonial_content_slider .swiper-button-prev",
     },
-    thumbs: {
-      swiper: swiper,
-    },
+    thumbs: swiper ? { swiper: swiper } : undefined,
     pagination: {
       el: ".swiper-pagination",
       dynamicBullets: true,
@@ -105,29 +220,33 @@ jQuery(document).ready(function () {
 
 
 
-  if (document.querySelector(".bw_testimonial_two_section .bw_testimonial_two_img")) {
-    var thumbs = new Swiper(".bw_testimonial_two_section .bw_testimonial_two_img", {
-      slidesPerView: 1,
+  var testimonialThumbsEl = document.querySelector(".bw_testimonial_two_section .bw_testimonial_two_img");
+  var testimonialMainEl = document.querySelector(".bw_testimonial_two_section .bw_testimonial_two_content");
+  if (testimonialThumbsEl && testimonialMainEl && testimonialThumbsEl.querySelectorAll(".swiper-slide").length) {
+    var thumbCount = testimonialThumbsEl.querySelectorAll(".swiper-slide").length;
+    var thumbs = new Swiper(testimonialThumbsEl, {
+      slidesPerView: Math.min(3, thumbCount),
       spaceBetween: 10,
-      centeredSlides: true,
       watchSlidesProgress: true,
-      slideToClickedSlide: true,
+      watchOverflow: true,
       breakpoints: {
         575: {
-          slidesPerView: 3,
+          slidesPerView: Math.min(3, thumbCount),
           spaceBetween: 10,
         },
         991: {
-          slidesPerView: 5,
+          slidesPerView: Math.min(5, thumbCount),
           spaceBetween: 20,
         },
       },
     });
-    new Swiper(".bw_testimonial_two_section .bw_testimonial_two_content", {
+    var testimonialMain = new Swiper(testimonialMainEl, {
       slidesPerView: 1,
       spaceBetween: 0,
+      watchOverflow: true,
       pagination: {
         el: ".bw_testimonial_two_section .swiper-pagination",
+        clickable: true,
         dynamicBullets: true,
       },
       navigation: {
@@ -138,13 +257,22 @@ jQuery(document).ready(function () {
         swiper: thumbs,
       },
     });
+    Array.prototype.forEach.call(thumbs.slides, function (slide, index) {
+      slide.addEventListener("click", function () {
+        testimonialMain.slideTo(index);
+        thumbs.slideTo(index);
+      });
+    });
+    testimonialMain.on("slideChange", function () {
+      thumbs.slideTo(testimonialMain.activeIndex);
+    });
   }
 
 
 
 
   // bw_team_slider_section
-  var swiper = new Swiper(".bw_team_slider_section .mySwiper", {
+  var swiper = bwMakeSwiper(".bw_team_slider_section .mySwiper", {
     spaceBetween: 0,
     slidesPerView: 1,
     pagination: {
@@ -165,7 +293,7 @@ jQuery(document).ready(function () {
 // bw_team_slider_section
 
   // bw_blog_section
-  var swiper = new Swiper(".bw_blog_section .mySwiper", {
+  var swiper = bwMakeSwiper(".bw_blog_section .mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
@@ -186,7 +314,7 @@ jQuery(document).ready(function () {
   });
   // bw_blog_section
    // bw_blog_section_two
-  var swiper = new Swiper(".bw_blog_section_two .mySwiper", {
+  var swiper = bwMakeSwiper(".bw_blog_section_two .mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
@@ -223,7 +351,8 @@ jQuery(document).ready(function () {
         let id = "curve" + this.getAttribute("id");
         let speed = 1;
         let position = 0;
-        let elements = Array(~~this.getAttribute("count") || 5)
+        let count = Math.min(Math.max(~~this.getAttribute("count") || 4, 1), 6);
+        let elements = Array(count)
         .fill(0)
         .map((_, idx, arr) => {
           let inlineFunctionOnEnd = `this.closest('svg').parentNode.onend(${idx})`;
@@ -250,31 +379,6 @@ jQuery(document).ready(function () {
   var page = URL.split("/").pop().split(".").shift();
   jQuery("body").addClass(page);
   // create_page_url_in_body_class
-
-  // login_page
-  jQuery(".bw_login_page_wrap .bw_login_click").click(function () {
-    jQuery(
-      ".bw_regisiter_wrap, .bw_forgot_password_wrap, .bw_reset_password_wrap"
-      ).removeClass("active");
-    jQuery(".bw_login_wrap").addClass("active");
-  });
-  jQuery(".bw_login_page_wrap .bw_register_click").click(function () {
-    jQuery(
-      ".bw_login_wrap, .bw_forgot_password_wrap, .bw_reset_password_wrap"
-      ).removeClass("active");
-    jQuery(".bw_regisiter_wrap").addClass("active");
-  });
-  jQuery(".bw_login_page_wrap .bw_forgot_cilck").click(function () {
-    jQuery(".bw_login_wrap").removeClass("active");
-    jQuery(".bw_forgot_password_wrap").addClass("active");
-  });
-  jQuery(
-    ".bw_login_page_wrap .bw_forgot_password_wrap a.bw_custom_buttom"
-    ).click(function () {
-      jQuery(".bw_forgot_password_wrap").removeClass("active");
-      jQuery(".bw_reset_password_wrap").addClass("active");
-    });
-  // login_page
 
   // bw_header
     jQuery(window).scroll(function () {
@@ -379,8 +483,22 @@ jQuery(document).ready(function () {
 
     //===== start all animation js =====//
 
+    document.querySelectorAll("[data-aos-duration]").forEach(function (el) {
+      if (parseInt(el.getAttribute("data-aos-duration"), 10) > 700) {
+        el.setAttribute("data-aos-duration", "600");
+      }
+    });
     AOS.init({
       once: true,
+      duration: 600,
+      disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    });
+    bwInitLoadMore();
+    bwEqualizeBlogBoxes();
+    window.addEventListener("load", bwEqualizeBlogBoxes);
+    window.addEventListener("resize", function () {
+      window.clearTimeout(window.bwBlogBoxTimer);
+      window.bwBlogBoxTimer = window.setTimeout(bwEqualizeBlogBoxes, 150);
     });
 
     //===== End all animation js =====//
@@ -411,20 +529,50 @@ jQuery(document).ready(function () {
 $(document).ready(function () {
   // start_after_and_before_slider
   // start_after_and_before_slider
-  jQuery(".popup-vimeo .play").hide();
-  jQuery(".popup-vimeo").click(function () {
-    var video = jQuery("video").get(0);
-    if (!video) {
+  if (window.jQuery && jQuery.fn.magnificPopup) {
+    jQuery(".js-video-modal").magnificPopup({
+      type: "inline",
+      midClick: true,
+      closeBtnInside: true,
+      removalDelay: 200,
+      mainClass: "bw-video-mfp",
+      callbacks: {
+        open: function () {
+          var preview = document.querySelector(".bw_video_Slider video");
+          if (preview) {
+            preview.pause();
+          }
+          var video = this.content.find("video").get(0);
+          if (video) {
+            video.currentTime = 0;
+            var playPromise = video.play();
+            if (playPromise && typeof playPromise.catch === "function") {
+              playPromise.catch(function () {});
+            }
+          }
+        },
+        close: function () {
+          var video = this.content.find("video").get(0);
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        },
+      },
+    });
+  }
+
+  jQuery(".bw_video_Slider .before").on("click", function (e) {
+    if (jQuery(e.target).closest(".js-video-modal, a, button").length) {
       return;
     }
-    if (video.paused) {
-      video.play();
-      jQuery(".popup-vimeo .playpause").fadeOut();
-      jQuery(".popup-vimeo .play").fadeIn();
-    } else {
-      video.pause();
-      jQuery(".popup-vimeo .playpause").fadeIn();
-      jQuery(".popup-vimeo .play").fadeOut();
+    var trigger = jQuery(this).closest(".bw_video_section").find(".js-video-modal").first();
+    if (!trigger.length) {
+      trigger = jQuery(".js-video-modal").first();
+    }
+    if (trigger.length) {
+      e.preventDefault();
+      trigger.trigger("click");
     }
   });
 
@@ -487,6 +635,9 @@ $(document).ready(function () {
   // Start_bw_home_hero_section_cred
   // Start_bw_home_hero_section_cred
   window.onload = function () {
+    if (typeof IMask === "undefined") {
+      return;
+    }
     const name = document.getElementById("name");
     const cardnumber = document.getElementById("cardnumber");
     const expirationdate = document.getElementById("expirationdate");
@@ -547,11 +698,31 @@ $(document).ready(function () {
       }
     });
 
+    var cardDone = document.querySelector(".js-card-popup-done");
+    if (cardDone) {
+      cardDone.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (window.jQuery && jQuery.magnificPopup) {
+          jQuery.magnificPopup.close();
+        }
+      });
+    }
+
+    var bwCardFallback = function (id, backup) {
+      var el = document.getElementById(id);
+      if (!el) return backup;
+      return el.getAttribute("data-default") || el.textContent.trim() || backup;
+    };
+    var fallbackName = bwCardFallback("svgname", "Urban Bank");
+    var fallbackNumber = bwCardFallback("svgnumber", ".... .... .... 5241");
+    var fallbackExpire = bwCardFallback("svgexpire", "00/00");
+    var fallbackCvv = bwCardFallback("svgsecurity", "000");
+
     //On Input Change Events
     name.addEventListener("input", function () {
       if (name.value.length == 0) {
-        document.getElementById("svgname").innerHTML = "Ghoghari Dharmesh";
-        document.getElementById("svgnameback").innerHTML = "Ghoghari Dharmesh";
+        document.getElementById("svgname").innerHTML = fallbackName;
+        document.getElementById("svgnameback").innerHTML = fallbackName;
       } else {
         document.getElementById("svgname").innerHTML = this.value;
         document.getElementById("svgnameback").innerHTML = this.value;
@@ -560,7 +731,7 @@ $(document).ready(function () {
 
     cardnumber_mask.on("accept", function () {
       if (cardnumber_mask.value.length == 0) {
-        document.getElementById("svgnumber").innerHTML = "0123 4567 8910 1112";
+        document.getElementById("svgnumber").innerHTML = fallbackNumber;
       } else {
         document.getElementById("svgnumber").innerHTML = cardnumber_mask.value;
       }
@@ -568,7 +739,7 @@ $(document).ready(function () {
 
     expirationdate_mask.on("accept", function () {
       if (expirationdate_mask.value.length == 0) {
-        document.getElementById("svgexpire").innerHTML = "01/23";
+        document.getElementById("svgexpire").innerHTML = fallbackExpire;
       } else {
         document.getElementById("svgexpire").innerHTML =
         expirationdate_mask.value;
@@ -577,7 +748,7 @@ $(document).ready(function () {
 
     securitycode_mask.on("accept", function () {
       if (securitycode_mask.value.length == 0) {
-        document.getElementById("svgsecurity").innerHTML = "012";
+        document.getElementById("svgsecurity").innerHTML = fallbackCvv;
       } else {
         document.getElementById("svgsecurity").innerHTML =
         securitycode_mask.value;

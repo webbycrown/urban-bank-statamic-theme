@@ -1,0 +1,36 @@
+{{ if style == "two" }}
+<section class="bw_feature_two_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_feature_content">
+			{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:feature_title ?? 'Best feature provide by Urban' }}</h2>
+		</div>
+		{{ partial:partials/home-two-features }}
+	</div>
+</section>
+{{ elseif style == "home" }}
+<section class="bw_feature_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_feature_content">
+			<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:feature_kicker ?? 'Feature' }}</h3>
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:feature_title ?? 'Best feature provide by Urban' }}</h2>
+		</div>
+		{{ partial:partials/home-features }}
+	</div>
+</section>
+{{ else }}
+<section class="bw_feature_page_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_feature_page_content bw_title_wrap_center">
+			<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:feature_kicker ?? 'Feature' }}</h3>
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:feature_title ?? 'Best feature provide by Urban' }}</h2>
+		</div>
+		{{ partial:partials/home-page-features }}
+		{{ if show_load_more }}
+		<div class="bw_feature_page_btn" data-aos="fade-up" data-aos-duration="1500">
+			<a class="bw_custom_buttom bw_flex_btn bw_load_more" href="#" data-load-more=".bw_feature_page_box" data-step="6">Load more <span class="material-symbols-outlined">refresh</span></a>
+		</div>
+		{{ /if }}
+	</div>
+</section>
+{{ /if }}

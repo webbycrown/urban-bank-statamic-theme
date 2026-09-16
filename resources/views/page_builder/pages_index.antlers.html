@@ -1,0 +1,20 @@
+<section class="bw_feature_page_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_feature_page_content bw_title_wrap_center">
+			{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'All Urban Bank layouts' }}</h2>
+		</div>
+		<div class="bw_feature_page_wrap">
+			{{ collection:pages }}
+			{{ unless slug == "presentation" or slug == "banner" }}
+			<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<div class="bw_feature_page_text">
+					<h4><a href="{{ url }}">{{ title }}</a></h4>
+					{{ if excerpt }}<p>{{ excerpt }}</p>{{ else }}<p>Open this Urban Bank layout.</p>{{ /if }}
+				</div>
+			</div>
+			{{ /unless }}
+			{{ /collection:pages }}
+		</div>
+	</div>
+</section>

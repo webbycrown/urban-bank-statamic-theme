@@ -1,0 +1,27 @@
+title: Footer
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: company_title
+          field:
+            type: text
+            display: Company column title
+        -
+          handle: useful_title
+          field:
+            type: text
+            display: Useful column title
+        -
+          handle: support_title
+          field:
+            type: text
+            display: Support column title
+        -
+          handle: newsletter_title
+          field:
+            type: text
+            display: Newsletter title

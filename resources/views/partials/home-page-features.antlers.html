@@ -1,0 +1,15 @@
+							<div class="bw_feature_page_wrap">
+								{{ collection:features sort="order:asc" }}
+								<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									{{ if image }}
+									<div class="bw_feature_page_icon">
+										<img src="{{ image }}" alt="{{ title }}">
+									</div>
+									{{ /if }}
+									<div class="bw_feature_page_text">
+										<h4><a href="{{ url }}">{{ title }}</a></h4>
+										{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
+									</div>
+								</div>
+								{{ /collection:features }}
+							</div>

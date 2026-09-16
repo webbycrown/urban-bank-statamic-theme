@@ -1,0 +1,48 @@
+<section class="bw_about_page_section bw_padding_y">
+						<div class="bw_container">
+							<div class="bw_about_page_wrap">
+								<div class="bw_title_wrap_center">
+									<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ setting:about_kicker ?? 'About Us' }}</h3>
+									<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Grow our investment from 1996 to 2021' }}</h2>
+								</div>
+								<div class="bw_about_page_content" data-aos="zoom-in" data-aos-duration="1500">
+									<canvas id="bw_about_page_charts_{{ id }}"></canvas>
+									<script>
+										var ctx = document.getElementById('bw_about_page_charts_{{ id }}').getContext('2d');
+										var gradient = ctx.createLinearGradient(0, 0, 0, 1000);
+										gradient.addColorStop(0, 'rgba(247, 251, 164, 0.28)');
+										gradient.addColorStop(0.7, 'rgba(100, 220, 182, 0.2)');
+										let gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+										gradientStroke.addColorStop(0, '#F7FBA4');
+										gradientStroke.addColorStop(1, '#64DCB6');
+										var myChart = new Chart(ctx, {
+											type: 'line',
+											data: {
+												labels: [{{ if chart_points }}{{ chart_points }}'{{ label }}'{{ unless last }}, {{ /unless }}{{ /chart_points }}{{ else }}'0', '1996', '1999', '2002', '2005', '2012', '2018', '2021'{{ /if }}],
+												datasets: [{
+													backgroundColor: gradient,
+													label: '',
+													fill: true,
+													data: [{{ if chart_points }}{{ chart_points }}{{ value }}{{ unless last }}, {{ /unless }}{{ /chart_points }}{{ else }}0, 1, 0.5, 2, 1.5, 3, 2.5, 4{{ /if }}],
+													pointRadius: 5,
+													pointBorderColor: ['rgb(255 255 255)'],
+													pointBackgroundColor: gradientStroke,
+													borderWidth: 3,
+													borderColor: ['rgba(247, 251, 164, 1)', 'rgba(217, 217, 217, 1)'],
+												}]
+											},
+											options: {
+												display: false,
+												scales: {
+													y: { display: false, beginAtZero: true },
+													x: { display: false, beginAtZero: true },
+												},
+												tension: 0.4,
+												plugins: { legend: { display: false } }
+											},
+										});
+									</script>
+								</div>
+							</div>
+						</div>
+					</section>

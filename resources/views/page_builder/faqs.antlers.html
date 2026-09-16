@@ -1,0 +1,70 @@
+{{ if style == "two" }}
+<section class="bw_faq_page_section bw_faq_page_section_2 bw_faq_page_section_two bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_faq_page_wrap">
+			<div class="bw_faq_page_content bw_title_wrap_center">
+				<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:faq_kicker ?? 'FAQ' }}</h3>
+				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:faq_title ?? 'Our FAQ’s' }}</h2>
+			</div>
+			<div class="accordion">
+				{{ collection:faqs sort="order:asc" }}
+				<div class="accordion-item" data-aos="fade-up" data-aos-duration="1500">
+					<div class="accordion-tabs{{ if first }} acco-active{{ /if }}">
+						<h4>{{ index }}</h4>
+						<h5><span class="accordion-title">{{ title }}</span><span class="material-symbols-sharp accordion_icon">{{ if first }}expand_less{{ else }}expand_more{{ /if }}</span></h5>
+					</div>
+					<div class="accordion-content"{{ unless first }} style="display: none;"{{ /unless }}>
+						{{ if answer }}<p>{{ answer }}</p>{{ /if }}
+					</div>
+				</div>
+				{{ /collection:faqs }}
+			</div>
+			{{ if show_load_more }}
+			<div class="bw_faq_page_btn" data-aos="fade-up" data-aos-duration="1500">
+				<a class="bw_custom_buttom bw_flex_btn bw_load_more" href="#" data-load-more=".accordion-item" data-step="3">Load more <span class="material-symbols-outlined">refresh</span></a>
+			</div>
+			{{ /if }}
+		</div>
+	</div>
+</section>
+{{ elseif style == "page" }}
+<section class="bw_faq_page_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_faq_page_wrap">
+			<div class="bw_faq_page_content bw_title_wrap_center">
+				<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:faq_kicker ?? 'FAQ' }}</h3>
+				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:faq_title ?? 'Our FAQs' }}</h2>
+			</div>
+			<div class="accordion">
+				{{ collection:faqs sort="order:asc" }}
+				<div class="accordion-item" data-aos="fade-up" data-aos-duration="1500">
+					<div class="accordion-tabs{{ if first }} acco-active{{ /if }}">
+						<h5><span class="accordion-title">{{ title }}</span><span class="material-symbols-sharp accordion_icon">{{ if first }}remove{{ else }}add{{ /if }}</span></h5>
+					</div>
+					<div class="accordion-content"{{ unless first }} style="display: none;"{{ /unless }}>
+						{{ if answer }}<p>{{ answer }}</p>{{ /if }}
+					</div>
+				</div>
+				{{ /collection:faqs }}
+			</div>
+			{{ if show_load_more }}
+			<div class="bw_faq_page_btn" data-aos="fade-up" data-aos-duration="1500">
+				<a class="bw_custom_buttom bw_flex_btn bw_load_more" href="#" data-load-more=".accordion-item" data-step="3">Load more <span class="material-symbols-outlined">refresh</span></a>
+			</div>
+			{{ /if }}
+		</div>
+	</div>
+</section>
+{{ else }}
+<section class="bw_faq_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_faq_wrap">
+			<div class="bw_faq_content bw_title_wrap_center">
+				<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:faq_kicker ?? 'FAQ' }}</h3>
+				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:faq_title ?? 'Our FAQ’s' }}</h2>
+			</div>
+			{{ partial:partials/home-faqs }}
+		</div>
+	</div>
+</section>
+{{ /if }}

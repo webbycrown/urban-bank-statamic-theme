@@ -1,0 +1,22 @@
+{{ if setting:app_store_url }}
+<a data-aos="zoom-in" data-aos-duration="1500" class="bw_app_download" href="{{ setting:app_store_url }}" target="_blank" rel="noopener">
+	<div class="bw_app_download_icon">
+		<i class="fa-brands fa-apple"></i>
+	</div>
+	<div class="bw_app_download_name">
+		<h6>{{ setting:app_store_kicker ?? 'Download on the' }}</h6>
+		<h5>{{ setting:app_store_name ?? 'App Store' }}</h5>
+	</div>
+</a>
+{{ /if }}
+{{ if setting:play_store_url }}
+<a class="bw_app_download" href="{{ setting:play_store_url }}" target="_blank" rel="noopener">
+	<div class="bw_app_download_icon">
+		<i class="fa-brands fa-google-play"></i>
+	</div>
+	<div class="bw_app_download_name">
+		<h6>{{ setting:play_store_kicker ?? 'Get it on' }}</h6>
+		<h5>{{ setting:play_store_name ?? 'Google Play' }}</h5>
+	</div>
+</a>
+{{ /if }}

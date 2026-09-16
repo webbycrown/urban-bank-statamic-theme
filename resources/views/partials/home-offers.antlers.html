@@ -1,0 +1,17 @@
+							<div class="bw_bank_special_offers_wrap">
+								{{ collection:offers sort="date:desc" }}
+								<div class="bw_bank_special_offers_box" data-aos="fade-up" data-aos-duration="1500">
+									<h4>{{ title }}</h4>
+									{{ if image }}
+									<div class="bw_bank_special_offers_img bw_images_cover">
+										<img src="{{ image }}" alt="{{ title }}">
+									</div>
+									{{ /if }}
+									{{ if excerpt }}<h5>{{ excerpt }}</h5>{{ /if }}
+									{{ if date }}<h6>{{ date format="F j, Y" }}</h6>{{ /if }}
+									<div class="bw_bank_special_offers_btn">
+										<a class="bw_custom_buttom bw_flex_btn" href="{{ url }}">Get offer <span class="material-symbols-sharp">chevron_right</span></a>
+									</div>
+								</div>
+								{{ /collection:offers }}
+							</div>

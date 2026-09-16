@@ -1,0 +1,11 @@
+title: Plans
+template: default
+layout: layout
+revisions: false
+sort_dir: asc
+propagate: false
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

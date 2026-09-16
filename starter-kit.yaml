@@ -5,8 +5,10 @@ export_paths:
   - routes
   - content
   - resources/blueprints
+  - resources/fieldsets
   - resources/forms
   - resources/views
   - public/assets
   - public/theme-banners.html
   - README.md
+  - THIRD_PARTY.md

@@ -1,49 +1,67 @@
 title: Pages
 tabs:
   main:
-    display: Main
+    display: Page
     sections:
       -
+        display: Content
         fields:
         -
           handle: title
           field:
             type: text
             display: Title
-        -
-          handle: image
-          field:
-            type: assets
-            display: Image
-            container: assets
-            max_files: 1
+            validate:
+              - required
         -
           handle: excerpt
           field:
             type: textarea
             display: Excerpt
+            instructions: Short intro. Optional.
+      -
+        display: Theme sections
+        instructions: Every page uses the same Page template. Add any section here and drag to reorder.
+        fields:
         -
-          handle: content
-          field:
-            type: markdown
-            display: Content
+          import: page_builder
+      -
+        display: Page chrome
+        fields:
         -
           handle: template
           field:
-            type: text
-            display: Template
+            type: hidden
+            default: page
         -
           handle: body_class
           field:
             type: text
             display: Body Class
+            instructions: Optional. Use index-2 for Home Two header.
         -
           handle: header_style
           field:
             type: text
             display: Header Style
+            instructions: Optional. Use two for the Home Two header.
         -
           handle: hide_footer
           field:
             type: text
             display: Hide Footer
+        -
+          handle: image
+          field:
+            type: assets
+            display: Fallback image
+            container: assets
+            max_files: 1
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Search and social
+        fields:
+        -
+          import: seo

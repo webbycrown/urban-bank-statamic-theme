@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bw-is-loading">
 {{ partial:partials/head }}
-<body class="{{ body_class }}">
+<body class="{{ body_class }} bw-is-loading">
+	{{ partial:partials/page-loader }}
 	{{ if header_style == "two" }}
 	{{ partial:partials/header-two }}
 	{{ else }}

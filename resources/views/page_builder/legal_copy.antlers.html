@@ -1,0 +1,11 @@
+<section class="bw_privacy_policy_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_privacy_policy_detail_content">
+			{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? title }}</h2>
+			<div class="bw_privacy_policy_textarea bw_feature_detail_textarea bw_legal_copy" data-aos="fade-up" data-aos-duration="1500">
+				{{ if body }}{{ body }}{{ else }}{{ partial:partials/content-sections }}{{ /if }}
+			</div>
+		</div>
+	</div>
+</section>

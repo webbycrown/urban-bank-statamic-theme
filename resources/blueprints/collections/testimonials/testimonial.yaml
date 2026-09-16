@@ -1,0 +1,34 @@
+title: Testimonials
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Name
+        -
+          handle: image
+          field:
+            type: assets
+            display: Image
+            container: assets
+            max_files: 1
+        -
+          handle: quote
+          field:
+            type: textarea
+            display: Quote
+        -
+          handle: role
+          field:
+            type: text
+            display: Role
+        -
+          handle: order
+          field:
+            type: integer
+            display: Order

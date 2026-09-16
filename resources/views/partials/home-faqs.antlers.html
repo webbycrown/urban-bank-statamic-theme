@@ -1,0 +1,12 @@
+									<div class="accordion">
+										{{ collection:faqs sort="order:asc" }}
+										<div class="accordion-item" data-aos="fade-up" data-aos-duration="1500">
+											<div class="accordion-tabs{{ if first }} acco-active{{ /if }}">
+												<h5><span class="accordion-title">{{ title }}</span><span class="material-symbols-sharp accordion_icon">{{ if first }}remove{{ else }}add{{ /if }}</span></h5>
+											</div>
+											<div class="accordion-content"{{ unless first }} style="display: none;"{{ /unless }}>
+												{{ if answer }}<p>{{ answer }}</p>{{ /if }}
+											</div>
+										</div>
+										{{ /collection:faqs }}
+									</div>

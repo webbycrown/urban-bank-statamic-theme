@@ -1,8 +1,0 @@
-title: Forgot Password
-honeypot: honeypot
-email:
-  -
-    to: admin@example.com
-    reply_to: '{{ email }}'
-    subject: 'Urban Bank password reset for {{ email }}'
-    html: emails/forgot

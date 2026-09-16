@@ -1,8 +1,0 @@
-title: Sign In
-honeypot: honeypot
-email:
-  -
-    to: admin@example.com
-    reply_to: '{{ email }}'
-    subject: 'Urban Bank login request from {{ email }}'
-    html: emails/login

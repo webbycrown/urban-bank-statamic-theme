@@ -1,0 +1,25 @@
+									<div class="bw_testimonial_slider" data-aos="fade-up" data-aos-duration="1500">
+										<div class="swiper mySwiper">
+											<div class="swiper-wrapper">
+												{{ collection:testimonials sort="order:asc" }}
+												<div class="swiper-slide">
+													<div class="bw_testimonial_box">
+														{{ if quote }}<p>{{ quote }}</p>{{ /if }}
+														<div class="bw_testimonial_user">
+															<div class="bw_testimonial_user_border">
+																<div class="bw_images_cover">
+																	<img src="{{ partial:partials/media-url :file="image" fallback="image/user.jpg" }}" alt="{{ title }}">
+																</div>
+															</div>
+															<div class="bw_testimonial_user_info">
+																<h4>{{ title }}</h4>
+																{{ if role }}<span class="bw_testimonial_role">{{ role }}</span>{{ /if }}
+															</div>
+														</div>
+													</div>
+												</div>
+												{{ /collection:testimonials }}
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>

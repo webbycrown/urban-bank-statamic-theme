@@ -1,0 +1,43 @@
+title: Plans
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Name
+        -
+          handle: price
+          field:
+            type: text
+            display: Price
+        -
+          handle: period
+          field:
+            type: text
+            display: Period
+        -
+          handle: featured
+          field:
+            type: toggle
+            display: Featured
+        -
+          handle: features
+          field:
+            type: grid
+            display: Features
+            fields:
+              -
+                handle: text
+                field:
+                  type: text
+                  display: Feature
+        -
+          handle: order
+          field:
+            type: integer
+            display: Order

@@ -1,0 +1,24 @@
+<section class="bw_about_hero_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_about_hero_wrap">
+			{{ if image }}
+			<div class="bw_about_hero_images bw_images_cover" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ heading ?? title }}">
+			</div>
+			{{ /if }}
+			<div class="bw_about_hero_content">
+				{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'About Urban Bank' }}</h2>
+				{{ if text }}<p data-aos="fade-up" data-aos-duration="1500">{{ text }}</p>{{ /if }}
+				{{ if button_label }}
+				<p data-aos="fade-up" data-aos-duration="1500"><a class="bw_custom_buttom" href="{{ button_url ?? setting:cta_url ?? '/contact' }}">{{ button_label }}</a></p>
+				{{ /if }}
+				{{ if body }}
+				<div data-aos="fade-up" data-aos-duration="1500">{{ body }}</div>
+				{{ elseif content_sections or content }}
+				<div data-aos="fade-up" data-aos-duration="1500">{{ partial:partials/content-sections }}</div>
+				{{ /if }}
+			</div>
+		</div>
+	</div>
+</section>

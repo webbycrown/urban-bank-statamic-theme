@@ -1,0 +1,26 @@
+									<div class="bw_testimonial_content_two_slider">
+									<div thumbsSlider="" class="swiper bw_testimonial_two_img mySwiper2">
+										<div class="swiper-wrapper">
+											{{ collection:testimonials sort="order:asc" }}
+											<div class="swiper-slide">
+												<div class="bw_testimonial_content_slider_img">
+													<img src="{{ partial:partials/media-url :file="image" fallback="image/user.jpg" }}" alt="{{ title }}" />
+												</div>
+											</div>
+											{{ /collection:testimonials }}
+										</div>
+									</div>
+									<div class="swiper mySwiper bw_testimonial_two_content">
+										<div class="swiper-wrapper">
+											{{ collection:testimonials sort="order:asc" }}
+											<div class="swiper-slide">
+												<div class="bw_swider_contain">
+													<h6>{{ title }}</h6>
+													{{ if role }}<span class="bw_testimonial_role">{{ role }}</span>{{ /if }}
+													{{ if quote }}<p>“{{ quote }}”</p>{{ /if }}
+												</div>
+											</div>
+											{{ /collection:testimonials }}
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>

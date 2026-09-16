@@ -1,0 +1,60 @@
+title: Setting
+data:
+  site_name: Urban Bank
+  logo: image/logo.png
+  footer_logo: image/footer_logo.png
+  phone: '+91 98712 87676'
+  email: support@urbanbank.com
+  copyright: '@Urban Bank. All rights reserved.'
+  cta_label: Talk to us
+  cta_url: /contact
+  mega_home_title: Home
+  mega_company_title: Company
+  mega_features_title: Features
+  mega_more_title: More
+  facebook: 'https://www.facebook.com/'
+  twitter: 'https://x.com/'
+  linkedin: 'https://www.linkedin.com/'
+  instagram: 'https://www.instagram.com/'
+  youtube: 'https://www.youtube.com/'
+  map_embed: 'https://maps.google.com/maps?q=Fort%2C%20Mumbai%2C%20Maharashtra%20400001&hl=en&z=16&ie=UTF8&output=embed'
+  branch_address: '14 Market Street, Suite 200, Downtown, 400001. Walk-in for accounts, cards, and loans.'
+  branch_hours: 'Monday to Friday 9:00–18:00. Saturday 10:00–14:00. Closed Sunday.'
+  error_title: Page not found
+  error_text: That address is not a page on this Urban Bank site. Use the menu or go back to the home page.
+  feature_kicker: Feature
+  feature_title: Best feature provide by Urban
+  partners_kicker: Partners
+  partners_title: Meet our trusted partners
+  blog_kicker: Blog
+  blog_title: Get more news & resources
+  testimonial_kicker: Testimonial
+  testimonial_title: Satisfied Our Customers
+  join_title: Connect your finance with urban bank
+  about_kicker: About Us
+  offers_kicker: Offers
+  offers_title: Bank Special Offers
+  favicon: image/five-icon.png
+  app_store_url: 'https://www.apple.com/app-store/'
+  app_store_kicker: Download on the
+  app_store_name: App Store
+  play_store_url: 'https://play.google.com/store'
+  play_store_kicker: Get it on
+  play_store_name: Google Play
+  faq_kicker: FAQ
+  faq_title: Our FAQ’s
+  video_kicker: Strategy
+  video_title: Learn how we work
+  team_kicker: Team
+  team_title: Our people
+  branch_kicker: Branch
+  branch_title: Visit Urban Bank
+  branch_office_title: Head office
+  branch_hours_title: Branch hours
+  branch_contact_title: Talk to us
+  branch_office_icon: image/feature-1.png
+  branch_hours_icon: image/feature-2.png
+  branch_contact_icon: image/feature-3.png
+  seo_description: Urban Bank lists fees before you confirm accounts, cards, loans, and transfers. Edit every page from the Control Panel.
+  seo_keywords: urban bank, accounts, cards, loans, transfers
+  seo_image: image/logo.png

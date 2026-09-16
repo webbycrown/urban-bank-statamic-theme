@@ -1,0 +1,34 @@
+						<div class="bw_header_dropdown_menu bw_mega_menu">
+							<div class="bw_mega_col">
+								<div class="bw_header_dropdown_menu_title"><span>{{ setting:mega_home_title ?? 'Home' }}</span></div>
+								<ul>
+									{{ nav:header_page_home }}
+									<li><a class="bw_header_dropdown_item" href="{{ url }}">{{ title }}</a></li>
+									{{ /nav:header_page_home }}
+								</ul>
+							</div>
+							<div class="bw_mega_col">
+								<div class="bw_header_dropdown_menu_title"><span>{{ setting:mega_company_title ?? 'Company' }}</span></div>
+								<ul>
+									{{ nav:header_page_company }}
+									<li><a class="bw_header_dropdown_item" href="{{ url }}">{{ title }}</a></li>
+									{{ /nav:header_page_company }}
+								</ul>
+							</div>
+							<div class="bw_mega_col">
+								<div class="bw_header_dropdown_menu_title"><span>{{ setting:mega_features_title ?? 'Features' }}</span></div>
+								<ul>
+									{{ nav:header_page_features }}
+									<li><a class="bw_header_dropdown_item" href="{{ url }}">{{ title }}</a></li>
+									{{ /nav:header_page_features }}
+								</ul>
+							</div>
+							<div class="bw_mega_col">
+								<div class="bw_header_dropdown_menu_title"><span>{{ setting:mega_more_title ?? 'More' }}</span></div>
+								<ul>
+									{{ nav:header_page_more }}
+									<li><a class="bw_header_dropdown_item" href="{{ url }}">{{ title }}</a></li>
+									{{ /nav:header_page_more }}
+								</ul>
+							</div>
+						</div>

@@ -1,0 +1,16 @@
+<section class="bw_money_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_money_wrap">
+			<div class="bw_money_content">
+				{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+				{{ if heading }}<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading }}</h2>{{ /if }}
+				{{ if text }}<div data-aos="fade-up" data-aos-duration="1500">{{ text }}</div>{{ /if }}
+			</div>
+			{{ if image }}
+			<div class="bw_money_images bw_images_cover" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+				<img src="{{ partial:partials/media-url :file="image" }}" alt="">
+			</div>
+			{{ /if }}
+		</div>
+	</div>
+</section>

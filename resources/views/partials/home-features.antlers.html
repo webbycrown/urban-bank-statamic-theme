@@ -1,0 +1,8 @@
+							<div class="bw_feature_wrap">
+								{{ collection:features sort="order:asc" limit="6" }}
+								<div class="bw_feature_box" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+									<h4><a href="{{ url }}">{{ title }}</a></h4>
+									{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
+								</div>
+								{{ /collection:features }}
+							</div>

@@ -1,0 +1,40 @@
+<section class="bw_pricing_page_section bw_padding_y">
+	<div class="bw_container">
+		<div class="bw_pricing_content">
+			{{ if kicker }}<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker }}</h3>{{ /if }}
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'We give the special price' }}</h2>
+		</div>
+		<div class="bw_blog_page_wrap bw_pricing_page_wrap" data-aos="fade-up" data-aos-duration="1500">
+			{{ collection:plans sort="order:asc" }}
+			<div class="bw_blog_card_box bw_pricing_card_box{{ if featured }} bw_pricing_card_box_2 hot-badge{{ /if }}">
+				<div class="bw_blog_card_cont">
+					<h5>{{ title }}</h5>
+					<div class="bw_price_box">
+						{{ if price }}<div class="bw_currency">{{ price }}</div>{{ /if }}
+						{{ if period }}<div class="bw_plan">{{ period }}</div>{{ /if }}
+					</div>
+					{{ if features }}
+					<div class="bw_plane_list">
+						<ul>
+							{{ features }}
+							<li class="bw_plane-item">
+								<div class="bw_plane-item-img">
+									<img src="/assets/image/check-box (1).png" alt="">
+								</div>
+								<div class="bw_plane-item-contant">
+									<p>{{ text }}</p>
+								</div>
+							</li>
+							{{ /features }}
+						</ul>
+					</div>
+					{{ /if }}
+				</div>
+				<div class="bw_faq_page_btn">
+					<a class="bw_custom_buttom bw_flex_btn" href="{{ setting:cta_url ?? '/contact' }}">Choose plan <span class="material-symbols-sharp">chevron_right</span></a>
+				</div>
+			</div>
+			{{ /collection:plans }}
+		</div>
+	</div>
+</section>

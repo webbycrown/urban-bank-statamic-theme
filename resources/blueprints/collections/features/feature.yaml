@@ -23,12 +23,50 @@ tabs:
             type: textarea
             display: Excerpt
         -
+          handle: content_sections
+          field:
+            type: replicator
+            display: Feature sections
+            instructions: Add one group per heading. Click Add section to create another group.
+            button_label: Add section
+            collapse: false
+            sets:
+              content:
+                display: Content
+                sets:
+                  text_section:
+                    display: Text section
+                    fields:
+                      -
+                        handle: heading
+                        field:
+                          type: text
+                          display: Heading
+                      -
+                        handle: body
+                        field:
+                          type: markdown
+                          display: Text
+                          automatic_line_breaks: true
+        -
           handle: content
           field:
             type: markdown
-            display: Content
+            display: Extra markdown
+            instructions: Used only if Feature sections above is empty.
+            container: assets
+            restrict: false
+            automatic_line_breaks: true
         -
           handle: order
           field:
             type: text
             display: Order
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Search and social
+        fields:
+        -
+          import: seo
