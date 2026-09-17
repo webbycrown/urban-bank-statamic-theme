@@ -76,6 +76,24 @@ Set each form’s email recipient in **CP → Forms** after install (defaults us
 Follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit) to get started with Urban Bank.
 Make sure you're running **Statamic 5.x** for compatibility.
 
+### SEO Kit (required for layout meta)
+
+Urban Bank’s layout uses `{{ seo_kit:head }}` from [webbycrown/seo-kit-statamic](https://github.com/webbycrown/seo-kit-statamic) for title, Open Graph, Twitter, JSON-LD, and `/sitemap.xml`.
+
+```json
+"repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/webbycrown/seo-kit-statamic"
+  }
+]
+```
+
+```bash
+composer require webbycrown/seo-kit-statamic:^1.0
+php please stache:refresh
+```
+
 Bundled jQuery, Swiper, Chart.js, AOS, Font Awesome, Material Symbols, and related fonts are listed in [THIRD_PARTY.md](THIRD_PARTY.md).
 
 ### Installing into an existing site

@@ -1,23 +1,8 @@
 <head>
-	<title>{{ if seo_title }}{{ seo_title }}{{ elseif title }}{{ title }}{{ if title != setting:site_name }} — {{ setting:site_name ?? site:name }}{{ /if }}{{ else }}{{ setting:error_title ?? 'Page not found' }} — {{ setting:site_name ?? site:name }}{{ /if }}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="csrf-token" content="{{ csrf_token }}">
-	<meta name="title" content="{{ seo_title ?? title ?? setting:site_name ?? site:name }}">
-	<meta name="description" content="{{ seo_description ?? excerpt ?? setting:seo_description }}">
-	{{ if seo_keywords or setting:seo_keywords }}<meta name="keywords" content="{{ seo_keywords ?? setting:seo_keywords }}">{{ /if }}
-	<meta name="robots" content="{{ seo_robots ?? 'index, follow' }}">
-	<link rel="canonical" href="{{ seo_canonical ?? permalink ?? current_url }}">
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="{{ setting:site_name ?? site:name }}">
-	<meta property="og:title" content="{{ seo_title ?? title ?? setting:site_name ?? site:name }}">
-	<meta property="og:description" content="{{ seo_description ?? excerpt ?? setting:seo_description }}">
-	<meta property="og:url" content="{{ permalink ?? current_url }}">
-	<meta property="og:image" content="{{ config:app:url }}{{ partial:partials/media-url :file="seo_image ?? setting:seo_image ?? setting:logo" fallback="image/logo.png" }}">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="{{ seo_title ?? title ?? setting:site_name ?? site:name }}">
-	<meta name="twitter:description" content="{{ seo_description ?? excerpt ?? setting:seo_description }}">
-	<meta name="twitter:image" content="{{ config:app:url }}{{ partial:partials/media-url :file="seo_image ?? setting:seo_image ?? setting:logo" fallback="image/logo.png" }}">
+	{{ seo_kit:head }}
 	<link rel="icon" href="{{ partial:partials/media-url :file="setting:favicon" fallback="image/five-icon.png" }}" type="image/gif">
 	<style id="bw-page-loader-css">
 		html { background: #222828; }
