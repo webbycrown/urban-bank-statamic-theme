@@ -2,6 +2,7 @@ title: Resumes
 disk: resumes
 allow_uploads: true
 create_folders: false
+# Private container: disk has no public URL (storage/app/resumes). Not browsable while logged out.
 validate:
   - 'mimes:pdf,doc,docx'
   - 'max:5120'
