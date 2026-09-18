@@ -12,7 +12,7 @@ page_builder:
   hero_text: Everyday accounts, cards, and loans from one desk. Fees and holds are
     listed before you confirm.
   counter_app: '80'
-  counter_app_label: User use the app
+  counter_app_label: People using the app
   counter_app_suffix: '%'
   counter_people: 24,300,659
   counter_people_label: People trust us
@@ -45,7 +45,7 @@ page_builder:
   type: features
   style: home
   kicker: Feature
-  heading: Best feature provide by Urban
+  heading: Products built for clear fees
 - id: 6dcaf081d092
   type: video
   style: home
@@ -69,7 +69,7 @@ page_builder:
   style: slider
 - id: 921f5352702c
   type: join
-  heading: Connect your finance with urban bank
+  heading: Stay in touch with Urban Bank
   show_lines: true
 - id: 0645841f192c
   type: faqs
@@ -80,7 +80,7 @@ hero_accent: Investment
 hero_rest: with Urban bank
 hero_text: Everyday accounts, cards, and loans from one desk. Fees and holds are listed before you confirm.
 counter_app: '80'
-counter_app_label: User use the app
+counter_app_label: People using the app
 counter_app_suffix: '%'
 counter_people: '24,300,659'
 counter_people_label: People trust us

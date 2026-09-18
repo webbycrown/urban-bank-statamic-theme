@@ -1,7 +1,7 @@
 ---
 id: banner
 blueprint: pages
-title: Banner
+title: Campaign banner
 template: page
 page_builder:
 - id: 5e93138068b9

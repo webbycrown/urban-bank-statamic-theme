@@ -1,7 +1,7 @@
 ---
 id: blog-three
 blueprint: pages
-title: Blog Three
+title: Insights grid
 template: page
 page_builder:
 - id: 811b33642207

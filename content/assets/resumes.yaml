@@ -1,0 +1,7 @@
+title: Resumes
+disk: resumes
+allow_uploads: true
+create_folders: false
+validate:
+  - 'mimes:pdf,doc,docx'
+  - 'max:5120'

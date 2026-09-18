@@ -1,7 +1,7 @@
 ---
 id: presentation
 blueprint: pages
-title: Presentation
+title: All pages
 template: page
 page_builder:
 - id: d0fdbe6006c9

@@ -13,7 +13,7 @@
 									<img class="item__img" src="/assets/image/Rectangle 255.png" alt="{{ title }}">
 									{{ /if }}
 								</div>
-								<h4 class="bw_bank_name" data-aos="fade-up" data-aos-duration="1500">Urban<span>Bank</span></h4>
+								{{ if setting:site_name }}<h4 class="bw_bank_name" data-aos="fade-up" data-aos-duration="1500">{{ setting:site_name }}</h4>{{ /if }}
 								{{ if location }}
 								<div class="bw_career_location" data-aos="fade-up" data-aos-duration="1500">
 									<div class="bw_career_location_icon">
@@ -61,7 +61,7 @@
 					<section class="bw_join_contact_section bw_career_contact_section bw_padding_y" data-aos="fade-right" data-aos-duration="1500">
 						<div class="bw_container">
 							<div class="bw_join_contact_content">
-								<h2 class="bw_sub_title">Stay on the Urban Bank list</h2>
+								<h2 class="bw_sub_title">Stay on our hiring list</h2>
 								{{ partial:partials/join-form }}
 							</div>
 						</div>

@@ -81,14 +81,18 @@
     visibility: hidden;
     transition: 0.3s all ease;
 }
-.bw_header_dropdown:hover .bw_header_dropdown_menu {
+.bw_header_dropdown:hover .bw_header_dropdown_menu,
+.bw_header_dropdown.is-open .bw_header_dropdown_menu,
+.bw_header_dropdown:focus-within .bw_header_dropdown_menu {
     opacity: 1;
     visibility: visible;
 }
 .bw_dropdown_hover span {
     transition: 0.5s all ease;
 }
-.bw_header_dropdown:hover .bw_dropdown_hover span {
+.bw_header_dropdown:hover .bw_dropdown_hover span,
+.bw_header_dropdown.is-open .bw_dropdown_hover span,
+.bw_header_dropdown:focus-within .bw_dropdown_hover span {
     transform: rotate(180deg);
 }
 .bw_header_dropdown {

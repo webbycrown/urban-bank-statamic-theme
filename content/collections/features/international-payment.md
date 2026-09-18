@@ -51,34 +51,5 @@ content_sections:
     type: text_section
     heading: 'How to start'
     body: |-
-      Ask which corridors your account may use. Bring the invoice or the purpose if we ask. Confirm only when destination, fee, and rate are all on the screen. Use [Talk to us](/contact) or a Jakarta branch if the app still cannot list your destination.
+      Ask which corridors your account may use. Bring the invoice or the purpose if we ask. Confirm only when destination, fee, and rate are all on the screen. Use [Talk to us](/contact) or a Mumbai branch if the app still cannot list your destination.
 ---
-An international payment at Urban Bank is simple when the screen is complete: where it goes, what it costs, what rate applies, and when we think it arrives. Missing one of those lines is how a “simple” send becomes a complaint.
-
-You still need a permitted purpose and a corridor we support. Simple is the layout, not a waiver of checks.
-
-#### How it works
-
-You enter the beneficiary the way the destination bank asks — name, account, bank code. We show the fee and the rate (or a “rate later” line if that is truly the product). Arrival is in working days when we publish one. You confirm after those lines are visible.
-
-Some countries need extra papers. We ask before we take the fee for a send we already know will bounce. If we only learn after the rail returns the payment, the return note says so.
-
-The desk uses the same order of fields. A walk-in customer should not get a clearer fee line than the app. If they do, the app is unfinished.
-
-#### What you see
-
-- Beneficiary name and destination country
-- Send amount, converted amount, and rate
-- Transfer fee before confirm
-- Arrival estimate or a sentence that we do not have one yet
-- A hold note if compliance or the rail is still working
-
-#### What this is not
-
-Simple international payment is not “send anywhere, no questions”. It is not a guarantee against beneficiary-bank delays. It is not a live FX widget on a blog post. Example amounts on this site are examples.
-
-We do not keep a public self-serve dashboard on this marketing kit that wires money without a banker-opened account.
-
-#### How to start
-
-Ask which corridors your account may use. Bring the invoice or the purpose if we ask. Confirm only when destination, fee, and rate are all on the screen. Use [Talk to us](/contact) or a Jakarta branch if the app still cannot list your destination.

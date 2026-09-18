@@ -3,8 +3,8 @@
 	<div class="bw_container">
 		<div class="bw_blog_section_two_wrap">
 			<div class="bw_blog_content">
-				<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:blog_kicker ?? 'Blog' }}</h3>
-				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:blog_title ?? 'Get more news & resources' }}</h2>
+				<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? 'Insights' }}</h3>
+				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Fees, holds, and transfers' }}</h2>
 			</div>
 			{{ partial:partials/home-two-blogs }}
 		</div>
@@ -15,13 +15,13 @@
 	<div class="bw_container">
 		<div class="bw_blog_content">
 			<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? 'Blog' }}</h3>
-			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:blog_title ?? 'Get more news & resources' }}</h2>
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Fees, holds, and transfers' }}</h2>
 		</div>
 		<div class="bw_blog_page_wrap">
 			{{ collection:blogs sort="date:desc" }}
 			<div class="bw_blog_card_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
 				<div class="bw_blog_card_cont">
-					<div class="bw_blog_badge"><span>Bank</span></div>
+					<div class="bw_blog_badge"><span>Insight</span></div>
 					<h5><a href="{{ url }}">{{ title }}</a></h5>
 					{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
 				</div>
@@ -41,7 +41,7 @@
 	<div class="bw_container">
 		<div class="bw_blog_content">
 			<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? 'Blog' }}</h3>
-			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:blog_title ?? 'Get more news & resources' }}</h2>
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Fees, holds, and transfers' }}</h2>
 		</div>
 		<div class="bw_blog_page_wrap">
 			{{ collection:blogs sort="date:desc" limit="{limit ?? 3}" }}
@@ -49,7 +49,7 @@
 				{{ if image }}
 				<div class="bw_blog_card_img">
 					<img src="{{ image }}" alt="{{ title }}">
-					<div class="bw_blog_badge"><span>Bank</span></div>
+					<div class="bw_blog_badge"><span>Insight</span></div>
 				</div>
 				{{ /if }}
 				<div class="bw_blog_card_cont">
@@ -74,8 +74,8 @@
 <section class="bw_blog_section bw_padding_y">
 	<div class="bw_container">
 		<div class="bw_blog_content">
-			<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? setting:blog_kicker ?? 'Blog' }}</h3>
-			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? setting:blog_title ?? 'Get more news & resources' }}</h2>
+			<h3 class="bw_sub_title_2" data-aos="fade-up" data-aos-duration="1500">{{ kicker ?? 'Insights' }}</h3>
+			<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'Fees, holds, and transfers' }}</h2>
 		</div>
 		{{ partial:partials/home-blogs }}
 		<div class="bw_arrow_wrap" data-aos="fade-up" data-aos-duration="1500">

@@ -159,7 +159,8 @@ iframe {
    background-size: 300% 300%;
    background-position: right center;
    color: var(--text_black);
-   outline: none;
+   outline: 2px solid #64DCB6;
+   outline-offset: 2px;
    border: 0;
 }
 .bw_grid-detail-2_hero_section .bw_grid_detail_form .bw_contact_form form .stay-connect-fields .bw_custom_buttom .btn-label {

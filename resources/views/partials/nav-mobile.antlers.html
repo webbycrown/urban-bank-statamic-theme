@@ -1,13 +1,13 @@
 						<ul class="bw_mobile_menu_ul">
 							{{ nav:header_menu }}
-							{{ if id == "page-mega" or title == "Page" }}
-							<li class="bw_drop_down_wrap"><a href="javascript:;" class="bw_dropdown_click">{{ title }} <span class="material-symbols-sharp">expand_more</span></a>
+							{{ if id == "page-mega" }}
+							<li class="bw_drop_down_wrap"><a href="{{ url ?? '#' }}" class="bw_dropdown_click">{{ title }} <span class="material-symbols-sharp" aria-hidden="true">expand_more</span></a>
 								<ul class="bw_dropdown_menu">
 									{{ partial:partials/nav-page-links }}
 								</ul>
 							</li>
 							{{ elseif children }}
-							<li class="bw_drop_down_wrap"><a href="javascript:;" class="bw_dropdown_click">{{ title }} <span class="material-symbols-sharp">expand_more</span></a>
+							<li class="bw_drop_down_wrap"><a href="{{ url }}" class="bw_dropdown_click">{{ title }} <span class="material-symbols-sharp" aria-hidden="true">expand_more</span></a>
 								<ul class="bw_dropdown_menu">
 									{{ children }}
 									<li><a class="bw_dropdown_item" href="{{ url }}">{{ title }}</a></li>

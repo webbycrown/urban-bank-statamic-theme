@@ -1,33 +1,17 @@
 tree:
   -
-    id: mega-blog-1
-    title: Blog-1
-    url: /blog
+    entry: blog
   -
-    id: mega-blog-2
-    title: Blog-2
-    url: /blog-two
+    entry: blog-two
   -
-    id: mega-blog-3
-    title: Blog-3
-    url: /blog-three
+    entry: blog-three
   -
-    id: mega-blog-detail
-    title: Blog Detail
-    url: /blog/clear-fees-before-you-send
+    entry: clear-fees-before-you-send
   -
-    id: mega-faq-1
-    title: FAQ-1
-    url: /faq
+    entry: faq
   -
-    id: mega-faq-2
-    title: FAQ-2
-    url: /faq-two
+    entry: faq-two
   -
-    id: mega-privacy
-    title: Privacy Policy
-    url: /privacy-policy
+    entry: privacy-policy
   -
-    id: mega-terms
-    title: Terms Of Service
-    url: /terms
+    entry: terms

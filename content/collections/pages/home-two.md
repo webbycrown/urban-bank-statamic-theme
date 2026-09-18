@@ -1,7 +1,7 @@
 ---
 id: home-two
 blueprint: pages
-title: Home Two
+title: Digital banking
 template: page
 page_builder:
 - id: 64e4c84d6b48
@@ -34,7 +34,7 @@ page_builder:
   style: two
 - id: d3a3597eeeb6
   type: join
-  heading: Connect your finance with urban bank
+  heading: Stay in touch with Urban Bank
   show_lines: true
 - id: 320642842dd7
   type: blogs

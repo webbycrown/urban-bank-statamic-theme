@@ -1,7 +1,7 @@
 ---
 id: faq-two
 blueprint: pages
-title: FAQ Two
+title: Product FAQ
 template: page
 page_builder:
 - id: 3cc97f45e83e

@@ -394,18 +394,62 @@ function bwInitLoadMore() {
       $(this).toggleClass("active");
     });
 
-    jQuery(".bw_mobile_menu_icon a").click(function () {
+    jQuery(".bw_mobile_menu_icon a").on("click keydown", function (e) {
+      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
+        return;
+      }
+      e.preventDefault();
       jQuery(".bw_menubar_wrap").addClass("open");
+      jQuery(".bw_menubar_close").trigger("focus");
     });
-    jQuery(".bw_menubar_close").click(function () {
+    jQuery(".bw_menubar_close").on("click keydown", function (e) {
+      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
+        return;
+      }
+      e.preventDefault();
       jQuery(".bw_menubar_wrap").removeClass("open");
+      jQuery(".bw_mobile_menu_icon a").trigger("focus");
     });
     
-    jQuery(".bw_header_two .bw_mobile_menu_icon a").click(function () {
+    jQuery(".bw_header_two .bw_mobile_menu_icon a").on("click keydown", function (e) {
+      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
+        return;
+      }
+      e.preventDefault();
       jQuery(".bw_header_two").addClass("open");
+      jQuery(".bw_header_two .bw_mobile_menu_closer").trigger("focus");
     });
-    jQuery(".bw_header_two .bw_mobile_menu_closer").click(function () {
+    jQuery(".bw_header_two .bw_mobile_menu_closer").on("click keydown", function (e) {
+      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
+        return;
+      }
+      e.preventDefault();
       jQuery(".bw_header_two").removeClass("open");
+      jQuery(".bw_header_two .bw_mobile_menu_icon a").trigger("focus");
+    });
+
+    // Keyboard-friendly desktop dropdowns (not hover-only)
+    jQuery(".bw_header_dropdown > .bw_dropdown_hover").on("click keydown", function (e) {
+      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
+        return;
+      }
+      e.preventDefault();
+      var $li = jQuery(this).closest(".bw_header_dropdown");
+      var open = !$li.hasClass("is-open");
+      jQuery(".bw_header_dropdown").removeClass("is-open");
+      jQuery(".bw_dropdown_hover").attr("aria-expanded", "false");
+      if (open) {
+        $li.addClass("is-open");
+        jQuery(this).attr("aria-expanded", "true");
+      }
+    });
+    jQuery(document).on("keydown", function (e) {
+      if (e.key === "Escape") {
+        jQuery(".bw_header_dropdown").removeClass("is-open");
+        jQuery(".bw_dropdown_hover").attr("aria-expanded", "false");
+        jQuery(".bw_menubar_wrap").removeClass("open");
+        jQuery(".bw_header_two").removeClass("open");
+      }
     });
 
   // bw_header
@@ -463,15 +507,10 @@ function bwInitLoadMore() {
     $(".bw_custom_popup").magnificPopup({
       type: "inline",
       preloader: false,
-      focus: "#name",
     });
 
 
-    jQuery(document).on("click", ".bw_card_popup .bw_custom_buttom", function () {
-      jQuery("button.mfp-close").click();
-      jQuery(".bw_hero_custom_card > .creditcard.flipped").click();
-    });
-
+    // Card detail popup removed — hero card is decorative only.
     if (jQuery.fn.counterUp && $(".counter").length) {
       $(".counter").counterUp({
         delay: 10,

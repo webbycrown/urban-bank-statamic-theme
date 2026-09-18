@@ -50,33 +50,5 @@ content_sections:
     type: text_section
     heading: 'How to start'
     body: |-
-      Ask for cards at a Jakarta branch or send [Talk to us](/contact). Bring ID and, for some files, income or business papers. Read the fee box on the card page before you sign. Limits you set in the app apply the next time the network sees them — not always on a purchase that already authorised.
+      Ask for cards at a Mumbai branch or send [Talk to us](/contact). Bring ID and, for some files, income or business papers. Read the fee box on the card page before you sign. Limits you set in the app apply the next time the network sees them — not always on a purchase that already authorised.
 ---
-Urban Bank cards are meant to sit next to the account you already have. Spend limits, freeze, and rewards are not a second product with a second password. A banker can explain if your file needs a deposit or a credit check before a card is issued.
-
-The rate that belongs on the card is printed on the card face when we issue it that way. A page on this site will not advertise a different rate than the plastic and the app.
-
-#### How it works
-
-You apply at a branch or through the contact form. We tell you what papers we need. If the card is approved, it is added to the same app as your accounts. You set a spend limit if your card type allows it. You freeze the card from the app or at the desk if it is lost.
-
-Rewards, when the card has them, accrue on eligible spend. Eligible is defined on the card page and on the monthly note — not in a social post. If a bonus needs a direct deposit or a minimum spend, that line stays on the offer.
-
-A declined payment shows a reason we are allowed to show. “Call us” is used when the full reason cannot go on a lock screen.
-
-#### What you see
-
-- Card last four, freeze control, and limit in the app
-- The purchase amount and, where we show it, the rate on foreign spend
-- Rewards balance that matches the monthly note
-- A hold on a card purchase explained in the same hold language as a transfer
-
-#### What this is not
-
-This is not a marketplace for other banks’ cards. It is Urban Bank issuing Urban cards. We do not promise approval on this page. Under-18 rules and credit checks are decided on the file, not on a banner.
-
-We also do not run internet-only card servicing that ignores the branch. A freeze at the desk is a freeze in the app.
-
-#### How to start
-
-Ask for cards at a Jakarta branch or send [Talk to us](/contact). Bring ID and, for some files, income or business papers. Read the fee box on the card page before you sign. Limits you set in the app apply the next time the network sees them — not always on a purchase that already authorised.

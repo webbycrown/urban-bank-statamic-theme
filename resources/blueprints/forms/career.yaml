@@ -50,5 +50,9 @@ tabs:
           field:
             type: assets
             display: Resume
-            container: assets
+            container: resumes
             max_files: 1
+            validate:
+              - required
+              - 'mimes:pdf,doc,docx'
+              - 'max:5120'

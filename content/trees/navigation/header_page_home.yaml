@@ -1,21 +1,11 @@
 tree:
   -
-    id: mega-home-1
-    title: Home-1
-    url: /
+    entry: home
   -
-    id: mega-home-2
-    title: Home-2
-    url: /home-two
+    entry: home-two
   -
-    id: mega-home-3
-    title: Home-3
-    url: /home-three
+    entry: home-three
   -
-    id: mega-banner
-    title: Banner
-    url: /banner
+    entry: banner
   -
-    id: mega-all-pages
-    title: All pages
-    url: /presentation
+    entry: presentation

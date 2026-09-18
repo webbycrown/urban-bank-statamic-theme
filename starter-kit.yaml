@@ -4,11 +4,14 @@ repo: webbycrown/urban-bank-statamic-theme
 export_paths:
   - routes
   - content
+  - app/Providers
+  - storage/app/resumes
+  - packages/seo-kit-statamic
   - resources/blueprints
   - resources/fieldsets
   - resources/forms
   - resources/views
   - public/assets
-  - public/theme-banners.html
   - README.md
   - THIRD_PARTY.md
+  - StarterKitPostInstall.php

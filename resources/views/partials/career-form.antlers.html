@@ -6,43 +6,42 @@
 	<div class="stay-connect-fields user__details">
 		<div class="input__box_group">
 			<div class="input__box">
-				<span class="details">Full Name</span>
-				<input type="text" name="first_name" placeholder="Enter your full name" value="{{ old:first_name }}" required>
+				<label class="details" for="career-first-name">First name</label>
+				<input id="career-first-name" type="text" name="first_name" placeholder="First name" value="{{ old:first_name }}" required>
 			</div>
 			<div class="input__box">
-				<span class="details">Last Name</span>
-				<input type="text" name="last_name" placeholder="Enter your last name" value="{{ old:last_name }}" required>
+				<label class="details" for="career-last-name">Last name</label>
+				<input id="career-last-name" type="text" name="last_name" placeholder="Last name" value="{{ old:last_name }}" required>
 			</div>
 		</div>
 		<div class="input__box_group">
 			<div class="input__box">
-				<span class="details">Email</span>
-				<input type="email" name="email" placeholder="Enter your Email id" value="{{ old:email }}" required>
+				<label class="details" for="career-email">Email</label>
+				<input id="career-email" type="email" name="email" placeholder="you@example.com" value="{{ old:email }}" required>
 			</div>
 			<div class="input__box">
-				<span class="details">Mobile Number</span>
+				<label class="details" for="career-phone">Phone</label>
 				<div class="wb_mobile_number">
-					<input type="tel" name="phone" placeholder="Enter your Mobile Number" value="{{ old:phone }}" required>
-					<p>+91</p>
+					<input id="career-phone" type="tel" name="phone" placeholder="Phone number" value="{{ old:phone }}" required>
 				</div>
 			</div>
 		</div>
 		<div class="input__box_group input__box_group_status">
 			<div class="input__box">
-				<span class="details">Work Status</span>
-				<input type="text" name="work_status" placeholder="I am Experienced" value="{{ old:work_status }}" required>
+				<label class="details" for="career-work-status">Work status</label>
+				<input id="career-work-status" type="text" name="work_status" placeholder="Experienced or fresher" value="{{ old:work_status }}" required>
 			</div>
 			<div class="input__box">
-				<span class="details"></span>
-				<input type="text" name="role" placeholder="Role you are applying for" value="{{ old:role }}">
+				<label class="details" for="career-role">Role</label>
+				<input id="career-role" type="text" name="role" placeholder="Role you are applying for" value="{{ old:role }}">
 			</div>
 		</div>
 		<div class="input__box_group input__box_group_resume">
 			<div class="input__box">
-				<span class="details">Upload Resume</span>
+				<label class="details" for="career-resume">Upload Resume (PDF, DOC, or DOCX, max 5 MB)</label>
 				<div class="input_file_wrap">
 					<p>Choose File</p>
-					<input type="file" name="resume" accept=".pdf,.doc,.docx">
+					<input id="career-resume" type="file" name="resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
 				</div>
 			</div>
 		</div>

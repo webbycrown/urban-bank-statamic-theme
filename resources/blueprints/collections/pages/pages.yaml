@@ -36,20 +36,31 @@ tabs:
         -
           handle: body_class
           field:
-            type: text
-            display: Body Class
-            instructions: Optional. Use index-2 for Home Two header.
+            type: select
+            display: Body class
+            instructions: Optional CSS hook. Chart.js and counters always load.
+            options:
+              '': Default
+              index-2: Home Two
+              index-3: Home Three
+            clearable: true
         -
           handle: header_style
           field:
-            type: text
-            display: Header Style
-            instructions: Optional. Use two for the Home Two header.
+            type: select
+            display: Header style
+            instructions: Choose the top bar layout for this page.
+            options:
+              '': Default header
+              two: Home Two header
+            clearable: true
         -
           handle: hide_footer
           field:
-            type: text
-            display: Hide Footer
+            type: toggle
+            display: Hide footer
+            instructions: Turn on to hide the site footer on this page.
+            default: false
         -
           handle: image
           field:

@@ -1,7 +1,7 @@
 ---
 id: home-three
 blueprint: pages
-title: Home Three
+title: Branch banking
 template: page
 page_builder:
 - id: 949bac49e4c5
@@ -30,7 +30,7 @@ page_builder:
   style: slider
 - id: 7f7e6d9fe36b
   type: join
-  heading: Connect your finance with urban bank
+  heading: Stay in touch with Urban Bank
   show_lines: true
 - id: 33105c45ff8f
   type: faqs

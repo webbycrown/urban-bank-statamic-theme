@@ -26,18 +26,18 @@
 				</div>
 				{{ partial:partials/nav-header }}
 				<div class="bw_mobile_menu_icon">
-					<a href="javascript:;"><span class="material-symbols-outlined">menu</span></a>
+					<a href="#" role="button" aria-label="Open menu"><span class="material-symbols-outlined" aria-hidden="true">menu</span></a>
 				</div>
 				{{ if setting:cta_url }}
-				<a class="bw_custom_buttom bw_flex_btn" href="{{ setting:cta_url }}">{{ setting:cta_label ?? 'Talk to us' }} <span class="material-symbols-sharp">chevron_right</span></a>
+				<a class="bw_custom_buttom bw_flex_btn" href="{{ setting:cta_url }}">{{ setting:cta_label ?? 'Talk to us' }} <span class="material-symbols-sharp" aria-hidden="true">chevron_right</span></a>
 				{{ /if }}
 			</div>
 			<div class="bw_mobile_menu_wrap">
 				<div class="bw_container">
 					<div class="bw_mobile_menu_wrap_inner">
-						<div class="bw_mobile_menu_closer">
-							<span class="material-symbols-outlined">close</span>
-						</div>
+						<button type="button" class="bw_mobile_menu_closer" aria-label="Close menu">
+							<span class="material-symbols-outlined" aria-hidden="true">close</span>
+						</button>
 						<div class="bw_mobile_menu_wrap_logo">
 							<a href="/"><img src="{{ partial:partials/media-url :file="setting:logo" fallback="image/logo.png" }}" alt="{{ setting:site_name ?? 'Urban Bank' }}"></a>
 						</div>

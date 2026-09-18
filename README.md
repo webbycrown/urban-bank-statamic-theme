@@ -11,90 +11,66 @@ Every marketing page uses one global **Page** template. Add, remove, or reorder 
 The starter kit includes a complete set of pages for a bank marketing site:
 
 - **Home Pages**: 3 variants (`/`, `/home-two`, `/home-three`)
-- **Banner**: Domain home with bank information and sitemap (`/banner`)
+- **Campaign banner** (`/banner`)
 - **About**
-- **Features**: listing plus detail pages (`/feature/{slug}`), including credit cards, business loans, and mobile banking
-- **Team**:
-  - Team listing
-  - Team detail (`/team/{slug}`)
-- **Career**:
-  - Career listing
-  - Career detail (`/career/{slug}`)
-- **Offers**:
-  - Offers listing
-  - Offer detail (`/offers/{slug}`)
-- **Blog**:
-  - Blog listing
-  - Blog two
-  - Blog three
-  - Blog detail (`/blog/{slug}`)
+- **Products**: listing plus detail pages (`/feature/{slug}`), including credit cards, business loans, and mobile banking
+- **Team**: listing and detail (`/team/{slug}`)
+- **Careers**: listing and detail with private résumé uploads (`/career/{slug}`)
+- **Offers**: listing and detail (`/offers/{slug}`)
+- **Insights**: three listing layouts plus detail (`/blog/{slug}`)
 - **Pricing**
-- **FAQ** and FAQ two
+- **FAQ** and Product FAQ
 - **Contact**
 - **Privacy Policy** and Terms
-- **Presentation**: card index of every layout
-- **Theme banners**: marketplace images and listing copy
+- **All pages**: card index of every layout
 
 ## Collections
 
-Organize your content with built-in collections:
-
-- **Pages**: Site structure. One Page template plus Theme sections (hero, listings, contact, legal).
-- **Blogs**: Bank notes, fees, and product stories.
+- **Pages**: Site structure. One Page template plus Theme sections.
+- **Blogs**: Bank notes, fees, and product stories. Comments stay hidden until approved in the Control Panel.
 - **Features**: Cards, loans, and app write-ups.
 - **Team**: Named staff and roles.
-- **Careers**: Open seats with apply forms.
+- **Careers**: Open seats with apply forms. Résumés store on a private disk (not public URLs).
 - **Offers**: Checking perks and seasonal plans.
-- **Testimonials**: Customer quotes used on the homes.
-- **FAQs**: Accordion answers on FAQ pages and homes.
-- **Plans**: Pricing cards.
-- **Partners**: Logos on the homes and about page.
+- **Testimonials**, **FAQs**, **Plans**, **Partners**
 
-Site name, phone, email, logos, mega-menu column titles, branch hours, map embed, and social links live in the **Setting** global. Footer copy lives in the **Footer** global. Header and footer menus are Statamic navigations.
+Site name, phone, email, logos, mega-menu column titles, branch hours, map embed, and social links live in the **Setting** global. Footer copy lives in the **Footer** global. Header and footer menus are Statamic navigations (entry links).
 
 ## Features of Urban Bank
 
 - **Theme sections**: Mix any section onto any page from the Control Panel.
-- **Three homes**: Card hero, phone mock, and a third native-scroll layout. Features, testimonials, blogs, FAQs, and offers come from collections.
-- **Product write-ups**: Credit cards, business loans, and mobile banking are Features entries.
+- **Three homes**: Decorative card hero (no card-number form), phone mock, and a third layout.
+- **Private career uploads**: PDF/DOC/DOCX, max 5 MB, stored outside the public web root.
+- **Moderated comments**: Blog comments appear only after an editor turns on Approved.
 - **AJAX forms**: Contact, newsletter, comments, and careers return success and field errors. Statamic Core includes one form; use Statamic Pro if you keep all four.
+- **SEO Kit**: Layout meta via `webbycrown/seo-kit-statamic` (declared Composer dependency).
 - **Bank palette**: Dark `#101521`, mint `#64DCB6`, lime `#F7FBA4`. Urbanist and Mulish are bundled under the SIL Open Font License.
-- **Responsive layout**: Desktop, laptop, tablet, and mobile.
 - **Statamic 5 ready**: Built for Statamic 5.x.
 
 ## Control Panel Forms
 
 - Contact
 - Newsletter
-- Comment
-- Career
+- Comment (approve before public display)
+- Career (private résumé container)
 
 Set each form’s email recipient in **CP → Forms** after install (defaults use `admin@example.com`).
 
 ## Installation
 
-Follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit) to get started with Urban Bank.
-Make sure you're running **Statamic 5.x** for compatibility.
+Follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit). Use **Statamic 5.x**.
 
-### SEO Kit (required for layout meta)
+### SEO Kit (bundled)
 
-Urban Bank’s layout uses `{{ seo_kit:head }}` from [webbycrown/seo-kit-statamic](https://github.com/webbycrown/seo-kit-statamic) for title, Open Graph, Twitter, JSON-LD, and `/sitemap.xml`.
+Urban Bank’s layout uses `{{ seo_kit:head }}` from [webbycrown/seo-kit-statamic](https://github.com/webbycrown/seo-kit-statamic) for title, Open Graph, Twitter, JSON-LD, and `/sitemap.xml`. The package is declared in `composer.json` and ships under `packages/seo-kit-statamic` so install works without waiting on Packagist. `StarterKitPostInstall` path-requires it after the kit files are copied.
 
-```json
-"repositories": [
-  {
-    "type": "vcs",
-    "url": "https://github.com/webbycrown/seo-kit-statamic"
-  }
-]
-```
+After install:
 
 ```bash
-composer require webbycrown/seo-kit-statamic:^1.0
 php please stache:refresh
 ```
 
-Bundled jQuery, Swiper, Chart.js, AOS, Font Awesome, Material Symbols, and related fonts are listed in [THIRD_PARTY.md](THIRD_PARTY.md).
+Bundled libraries and image rights are listed in [THIRD_PARTY.md](THIRD_PARTY.md).
 
 ### Installing into an existing site
 
@@ -103,8 +79,6 @@ php please starter-kit:install webbycrown/urban-bank-statamic-theme
 ```
 
 ### Installing via the Statamic CLI Tool
-
-If you have the [Statamic CLI Tool](https://github.com/statamic/cli) installed, create a new Statamic installation with Urban Bank in one command:
 
 ```bash
 statamic new my-site webbycrown/urban-bank-statamic-theme
@@ -118,12 +92,11 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 
 ### v1.0.0
 
-- Initial release
-- One global Page template with Theme sections
-- Three home layouts, product pages, team, careers, offers, and blog
-- AJAX contact, newsletter, comment, and career forms
-- Testimonials, FAQs, plans, and partners collections
-- Marketplace banners and listing fields
+- Private résumé disk with server-side mime/size validation
+- Moderated blog comments; removed unused offer comment form
+- Decorative home card (no “Add Card Detail” inputs)
+- SEO Kit Composer dependency; dropped marketplace banners from the export
+- Entry-linked navigation, leaner Setting global, copy and a11y fixes
 
 ---
 <div align="center">

@@ -1,33 +1,17 @@
 tree:
   -
-    id: mega-feature
-    title: Feature
-    url: /feature
+    entry: feature
   -
-    id: mega-feature-detail
-    title: Feature Detail
-    url: /feature/multi-device
+    entry: multi-device
   -
-    id: mega-credit-cards
-    title: Credit cards
-    url: /feature/credit-cards
+    entry: credit-cards
   -
-    id: mega-business-loans
-    title: Business loans
-    url: /feature/business-loans
+    entry: business-loans
   -
-    id: mega-mobile-banking
-    title: Mobile banking
-    url: /feature/mobile-banking
+    entry: mobile-banking
   -
-    id: mega-pricing
-    title: Pricing
-    url: /pricing
+    entry: pricing
   -
-    id: mega-offers
-    title: Offers
-    url: /offers
+    entry: offers
   -
-    id: mega-offer-detail
-    title: Offer Detail
-    url: /offers/checking-perks
+    entry: checking-perks

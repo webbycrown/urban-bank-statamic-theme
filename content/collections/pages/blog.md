@@ -1,7 +1,7 @@
 ---
 id: blog
 blueprint: pages
-title: Blog
+title: Insights
 template: page
 page_builder:
 - id: 0b5dd7a2b89d

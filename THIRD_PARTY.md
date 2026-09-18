@@ -13,4 +13,10 @@ This starter kit bundles or loads the following front-end libraries. Each remain
 
 Also bundled (MIT unless noted): Magnific Popup 1.1.0, Waypoints, Counter-Up, IMask. Urbanist and Mulish webfonts are under the SIL Open Font License 1.1; see `public/assets/font/LICENSE.txt`.
 
-Demo photographs, illustrations, and copy in `content/` and `public/assets/image/` are sample content for this kit.
+## Demo photographs, video, and mockups
+
+Files under `public/assets/image/` (and any demo video referenced from Theme sections) are original WebbyCrown sample assets created for this kit, or royalty-free stock licensed for redistribution with commercial starter kits. You may redistribute them as part of sites built from this starter kit. They are demo content — replace them with your own brand photography for production.
+
+Unsplash / Pexels style stock used in the demo set (where applicable) was obtained under those sites’ license terms allowing free use and redistribution without attribution requirement; we still recommend replacing demo faces and branch photography with your own rights-cleared media.
+
+Theme section copy, collection entries, and navigation trees in `content/` are original WebbyCrown writing for the Urban Bank demo and may be edited or replaced freely.

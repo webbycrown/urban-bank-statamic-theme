@@ -42,7 +42,7 @@
 									{{ if counter_app }}
 									<div class="bw_hero_counter_app" data-aos="fade-right" data-aos-duration="1500">
 										<h3><span class="counter">{{ counter_app }}</span>{{ if counter_app_suffix }} <span>{{ counter_app_suffix }}</span>{{ /if }}</h3>
-										<strong>{{ counter_app_label ?? 'User use the app' }}</strong>
+										<strong>{{ counter_app_label ?? 'People using the app' }}</strong>
 									</div>
 									{{ /if }}
 									{{ if counter_people }}
@@ -51,22 +51,9 @@
 										<strong>{{ counter_people_label ?? 'People trust us' }}</strong>
 									</div>
 									{{ /if }}
-									<a class="bw_custom_popup bw_custom_buttom" href="#bw_card_popup">{{ card_button ?? 'Add Card Detail' }}</a>
 								</div>
 							</div>
 						</div>	
 					</section>
-
-					<!-- start_bw_team_popup -->
-					<div id="bw_card_popup" class="white-popup-block mfp-hide">
-						<div class="bw_card_popup">
-							<input class="bw_custom_input" id="name" maxlength="20" type="text" name="Card Name" placeholder="Card Name">
-							<input class="bw_custom_input"  id="cardnumber" type="text" pattern="[0-9]*" name="Card Number" placeholder="Card Number">
-							<input class="bw_custom_input" id="expirationdate" type="text" pattern="[0-9]*" name="Expiration (mm/yy)" placeholder="Expiration (mm/yy)">
-							<input class="bw_custom_input" id="securitycode" type="text" pattern="[0-9]*" name="Security Code" placeholder="Security Code">
-							<a class="bw_custom_buttom js-card-popup-done" href="#">Done</a>
-						</div>
-					</div>
-					<!-- close_bw_team_popup -->
 
 					<!-- close_bw_home_hero_section -->

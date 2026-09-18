@@ -37,15 +37,6 @@ tabs:
                           display: Text
                           automatic_line_breaks: true
         -
-          handle: content
-          field:
-            type: markdown
-            display: Extra markdown
-            instructions: Used only if Job sections above is empty.
-            container: assets
-            restrict: false
-            automatic_line_breaks: true
-        -
           handle: image
           field:
             type: assets

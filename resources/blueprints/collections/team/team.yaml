@@ -22,14 +22,13 @@ tabs:
           field:
             type: textarea
             display: Excerpt
+            instructions: Short intro under the name.
         -
           handle: content
           field:
             type: markdown
-            display: Content
-            instructions: Bio shown on the team detail page.
-            container: assets
-            restrict: false
+            display: Bio
+            instructions: Full bio shown on the team detail page.
             automatic_line_breaks: true
         -
           handle: role

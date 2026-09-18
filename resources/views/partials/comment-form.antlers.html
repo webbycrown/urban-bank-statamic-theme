@@ -4,15 +4,21 @@
 		<p>Thanks — your comment was sent. We will review it shortly.</p>
 	</div>
 	<input type="hidden" name="post" value="{{ slug }}">
+	<input type="hidden" name="approved" value="0">
 	<div class="stay-connect-fields">
-		<input class="bw_custom_input bw_custom_input-1" type="text" name="name" placeholder="Name" value="{{ old:name }}" required>
-		<input class="bw_custom_input bw_custom_input-2" type="email" name="email" placeholder="Email" value="{{ old:email }}" required>
-		<input class="bw_custom_input bw_custom_input-3" type="text" name="phone" placeholder="Phone" value="{{ old:phone }}">
-		<input class="bw_custom_input bw_custom_input-4" type="text" name="subject" placeholder="Subject" value="{{ old:subject }}">
-		<textarea class="bw_custom_input" name="message" placeholder="Your Comments" required>{{ old:message }}</textarea>
-		<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+		<label class="bw_sr_only" for="comment-name">Name</label>
+		<input id="comment-name" class="bw_custom_input bw_custom_input-1" type="text" name="name" placeholder="Name" value="{{ old:name }}" required autocomplete="name">
+		<label class="bw_sr_only" for="comment-email">Email</label>
+		<input id="comment-email" class="bw_custom_input bw_custom_input-2" type="email" name="email" placeholder="Email" value="{{ old:email }}" required autocomplete="email">
+		<label class="bw_sr_only" for="comment-phone">Phone</label>
+		<input id="comment-phone" class="bw_custom_input bw_custom_input-3" type="text" name="phone" placeholder="Phone" value="{{ old:phone }}" autocomplete="tel">
+		<label class="bw_sr_only" for="comment-subject">Subject</label>
+		<input id="comment-subject" class="bw_custom_input bw_custom_input-4" type="text" name="subject" placeholder="Subject" value="{{ old:subject }}">
+		<label class="bw_sr_only" for="comment-message">Comment</label>
+		<textarea id="comment-message" class="bw_custom_input" name="message" placeholder="Your comment" required>{{ old:message }}</textarea>
+		<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 		<button type="submit" class="bw_custom_buttom bw_flex_btn">
-			<span class="btn-label">Post Comment <span class="material-symbols-sharp">chevron_right</span></span>
+			<span class="btn-label">Post Comment <span class="material-symbols-sharp" aria-hidden="true">chevron_right</span></span>
 			<span class="btn-loading" hidden>Sending…</span>
 		</button>
 	</div>

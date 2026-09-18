@@ -50,33 +50,5 @@ content_sections:
     type: text_section
     heading: 'How to start'
     body: |-
-      Use [Talk to us](/contact) or visit a Jakarta branch with company registration and statements. Ask for the schedule on paper before you sign. If the app and the letter disagree, stop and ask the banker to reprint — do not pay against the wrong line.
+      Use [Talk to us](/contact) or visit a Mumbai branch with company registration and statements. Ask for the schedule on paper before you sign. If the app and the letter disagree, stop and ask the banker to reprint — do not pay against the wrong line.
 ---
-A business loan at Urban Bank is a schedule you can read before you sign. Instalment dates, the interest figure we are allowed to print, and the fees sit on one sheet. We do not add a fee after signature that was not on that sheet.
-
-Short-term and term loans are for registered businesses. Personal overdrafts and card spend are separate products. If a campaign mixes them, the campaign is wrong — not the contract.
-
-#### How it works
-
-You bring registration papers, recent statements, and the purpose of the funds. A banker lists what is missing. Credit review is not instant because a page said “fast”. When we have a decision, you get a schedule. You sign only if the numbers match what you were shown.
-
-Drawdown and repayment post to the same ledger as your business account. A late payment hold uses the same hold sentence as other Urban Bank holds. The app will not show “paid” if the desk still has an open instalment.
-
-This site does not run a loan calculator that invents a rate. Any example rate is labelled as an example. Your rate is the one on the offer letter.
-
-#### What you see
-
-- Purpose, amount, and term on the offer
-- Each repayment date and amount
-- Fees named before you sign — not “processing later”
-- After drawdown, the remaining schedule in the same view as the account
-
-#### What this is not
-
-We do not approve loans from a marketing form alone. The contact form starts a conversation. Underwriting still happens on the file. We also do not hide a balloon payment in the last line of a PDF if the offer summary omitted it.
-
-Early settlement, if allowed, is described on the offer. Do not assume a web page about “flexible” means a free exit.
-
-#### How to start
-
-Use [Talk to us](/contact) or visit a Jakarta branch with company registration and statements. Ask for the schedule on paper before you sign. If the app and the letter disagree, stop and ask the banker to reprint — do not pay against the wrong line.

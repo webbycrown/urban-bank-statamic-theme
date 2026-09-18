@@ -67,6 +67,7 @@ fields:
                   field:
                     type: text
                     display: Card holder
+                    instructions: Decorative text on the hero card. Not a payment form.
                 -
                   handle: card_name
                   field:
@@ -76,17 +77,19 @@ fields:
                   handle: card_number
                   field:
                     type: text
-                    display: Card number
+                    display: Sample card number
+                    instructions: Display-only digits on the decorative card. Visitors cannot edit this on the front end.
                 -
                   handle: card_expire
                   field:
                     type: text
-                    display: Card expire
+                    display: Sample expiry
                 -
                   handle: card_cvv
                   field:
                     type: text
-                    display: Card CVV
+                    display: Sample security code
+                    instructions: Display-only on the card back. Not collected from visitors.
                 -
                   handle: card_chip
                   field:
@@ -105,11 +108,6 @@ fields:
                     type: toggle
                     display: Show wifi icon
                     default: true
-                -
-                  handle: card_button
-                  field:
-                    type: text
-                    display: Card button label
 
             home_hero_two:
               display: Home hero (phone)

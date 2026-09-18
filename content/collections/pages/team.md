@@ -1,7 +1,7 @@
 ---
 id: team
 blueprint: pages
-title: Team
+title: Our team
 template: page
 page_builder:
 - id: 3700b4a6be0d

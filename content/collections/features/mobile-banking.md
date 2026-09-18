@@ -42,7 +42,7 @@ content_sections:
     type: text_section
     heading: 'What this is not'
     body: |-
-      Mobile banking on this kit is not a standalone internet-banking product with a public self-register dashboard. Accounts are opened with Urban Bank. The app is the phone door. If a page ever asked you to “log in” to a fake demo, that page was removed.
+      Mobile banking on this kit is not a standalone internet-banking product with a public self-register dashboard. Accounts are opened with Urban Bank. The app is the phone door. Accounts are opened with Urban Bank; this site does not offer a public internet-banking login.
       
       Offline, the app cannot invent a successful send. Wait for a connection, or use the branch.
   -
@@ -52,31 +52,3 @@ content_sections:
     body: |-
       Open an account, then install from the App Store or Google Play links in the footer. If a fee is missing on confirm, do not send — screenshot and tell support. Branch staff can complete the same payment at the counter with the same fee line.
 ---
-The Urban app is how many customers transfer, deposit, and pay bills without a queue. It is still the same bank as the desk. A payment you confirm on the phone is a payment on the ledger. A fee you skip reading is still the fee.
-
-iOS and Android both ship. We do not advertise a control that exists on only one store. Store URLs on this site are editable so a badge never points at a dead listing.
-
-#### How it works
-
-You sign in with the details the banker set up. You see accounts, recent items, and any hold. To send money you enter the destination and the amount. The fee appears before confirm. To pay a bill you pick a biller we list, or enter the details the bill requires. Deposits follow the methods your account type allows — photo of a cheque is not assumed.
-
-Push notes can tell you a transfer posted or a card froze. A push is not a legal notice on its own. The item in the app and the branch record still decide what happened.
-
-Biometric unlock is a device lock, not a second bank. Losing the phone still needs a freeze through the remaining device, the website, or the desk.
-
-#### What you see
-
-- Balances that match the last posted ledger, not a cached marketing figure
-- Fee before confirm on transfers
-- Bill payments with the biller name you chose
-- Card freeze and, where issued, spend limits
-
-#### What this is not
-
-Mobile banking on this kit is not a standalone internet-banking product with a public self-register dashboard. Accounts are opened with Urban Bank. The app is the phone door. If a page ever asked you to “log in” to a fake demo, that page was removed.
-
-Offline, the app cannot invent a successful send. Wait for a connection, or use the branch.
-
-#### How to start
-
-Open an account, then install from the App Store or Google Play links in the footer. If a fee is missing on confirm, do not send — screenshot and tell support. Branch staff can complete the same payment at the counter with the same fee line.

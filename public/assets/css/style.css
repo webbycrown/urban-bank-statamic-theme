@@ -271,8 +271,29 @@ input[type=number] {
 }
 select:focus, input:focus, textarea:focus, button:focus {
    box-shadow: none !important;
-   outline: none !important;
-   border-color: #B0B0B0 !important;
+   outline: 2px solid #64DCB6 !important;
+   outline-offset: 2px;
+   border-color: #64DCB6 !important;
+}
+a:focus-visible,
+.bw_dropdown_hover:focus-visible,
+.bw_menubar_close:focus-visible,
+.bw_mobile_menu_closer:focus-visible,
+.bw_mobile_menu_icon a:focus-visible,
+.bw_custom_buttom:focus-visible {
+   outline: 2px solid #64DCB6;
+   outline-offset: 3px;
+}
+.bw_sr_only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border: 0;
 }
 .bw_custom_input {
    font-family: var(--font_family_2);
