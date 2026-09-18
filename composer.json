@@ -4,22 +4,8 @@
     "description": "Banking starter kit with accounts, cards, loans, team, careers, offers, and AJAX contact forms.",
     "license": "proprietary",
     "require": {
-        "statamic/cms": "^5.0",
-        "webbycrown/seo-kit-statamic": "^1.0"
+        "statamic/cms": "^5.0"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "packages/seo-kit-statamic",
-            "options": {
-                "symlink": false
-            }
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/webbycrown/seo-kit-statamic"
-        }
-    ],
     "extra": {
         "statamic": {
             "starter-kit": true

@@ -43,7 +43,6 @@ Site name, phone, email, logos, mega-menu column titles, branch hours, map embed
 - **Private career uploads**: PDF/DOC/DOCX, max 5 MB, stored outside the public web root.
 - **Moderated comments**: Blog comments appear only after an editor turns on Approved.
 - **AJAX forms**: Contact, newsletter, comments, and careers return success and field errors. Statamic Core includes one form; use Statamic Pro if you keep all four.
-- **SEO Kit**: Layout meta via `webbycrown/seo-kit-statamic` (declared Composer dependency).
 - **Bank palette**: Dark `#101521`, mint `#64DCB6`, lime `#F7FBA4`. Urbanist and Mulish are bundled under the SIL Open Font License.
 - **Statamic 5 ready**: Built for Statamic 5.x.
 
@@ -60,9 +59,7 @@ Set each form’s email recipient in **CP → Forms** after install (defaults us
 
 Follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit). Use **Statamic 5.x**.
 
-### SEO Kit (bundled)
-
-Urban Bank’s layout uses `{{ seo_kit:head }}` from [webbycrown/seo-kit-statamic](https://github.com/webbycrown/seo-kit-statamic) for title, Open Graph, Twitter, JSON-LD, and `/sitemap.xml`. The package is declared in `composer.json` and ships under `packages/seo-kit-statamic` so install works without waiting on Packagist. `StarterKitPostInstall` path-requires it after the kit files are copied.
+Page SEO fields (title, description, image, robots) power the layout meta tags. Defaults live in the **Setting** global.
 
 After install:
 
@@ -95,7 +92,7 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 - Private résumé disk with server-side mime/size validation
 - Moderated blog comments; removed unused offer comment form
 - Decorative home card (no “Add Card Detail” inputs)
-- SEO Kit Composer dependency; dropped marketplace banners from the export
+- Native page SEO meta tags; dropped marketplace banners from the export
 - Entry-linked navigation, leaner Setting global, copy and a11y fixes
 
 ---
