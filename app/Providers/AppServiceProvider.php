@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use Statamic\Events\FormSubmitted;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -31,5 +33,14 @@ class AppServiceProvider extends ServiceProvider
                 ['doc', 'docx']
             ))),
         ]);
+
+        // Comments stay hidden until an editor turns on Approved in the CP (Rule 05).
+        Event::listen(FormSubmitted::class, function (FormSubmitted $event) {
+            if ($event->submission->form()->handle() !== 'comment') {
+                return;
+            }
+
+            $event->submission->set('approved', false);
+        });
     }
 }
