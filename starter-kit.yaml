@@ -2,7 +2,6 @@ title: Urban Bank Theme
 user: webbycrown
 repo: webbycrown/urban-bank-statamic-theme
 export_paths:
-  - routes
   - content
   - app/Providers/UrbanBankServiceProvider.php
   - storage/app/resumes
@@ -13,3 +12,4 @@ export_paths:
   - public/assets
   - README.md
   - THIRD_PARTY.md
+  - optional/legacy-html-redirects.php

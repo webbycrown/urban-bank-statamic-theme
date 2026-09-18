@@ -8,5 +8,6 @@
 .vscode
 *.log
 /storage/forms/**/*.yaml
+/storage/demo-video-frames/
 SETUP.md
 /public/assets/images/marketplace/*.zip

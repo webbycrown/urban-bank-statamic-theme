@@ -2,7 +2,7 @@
 id: basic
 blueprint: plan
 title: Basic
-price: $69
+price: ₹5,999
 period: Per Month
 featured: false
 order: 1

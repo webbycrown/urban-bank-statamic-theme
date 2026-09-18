@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Optional legacy HTML redirects for Urban Bank.
+ *
+ * NOT part of the starter-kit export (Rule 06). Installing this kit does not
+ * overwrite routes/web.php or routes/console.php.
+ *
+ * Paste into your site's routes/web.php only if you still receive traffic on
+ * the original static HTML paths (.html template URLs). New Statamic sites do
+ * not need these redirects.
+ */
+
 use Illuminate\Support\Facades\Route;
 
 Route::redirect('/index.html', '/');

@@ -48,7 +48,7 @@ Site name, phone, email, logos, mega-menu column titles, branch hours, map embed
 - **Theme sections**: Mix any section onto any page from the Control Panel.
 - **Three homes**: Decorative card hero (no card-number form), phone mock, and a third layout.
 - **Private career uploads**: PDF/DOC/DOCX, max 5 MB, stored outside the public web root.
-- **Moderated comments**: The comment form creates an unpublished entry in the **Comments** collection. Form submissions are read-only in Statamic 5 — editors publish (or delete) comments under **CP → Collections → Comments**.
+- **Moderated comments**: The comment form creates an unpublished entry in the **Comments** collection, linked to the blog post by entry ID (survives slug renames). Form submissions are read-only in Statamic 5 — editors publish (or delete) comments under **CP → Collections → Comments**.
 - **AJAX forms**: Contact, newsletter, comments, and careers return success and field errors. Statamic Core includes one form; use Statamic Pro if you keep all four.
 - **Bank palette**: Dark `#101521`, mint `#64DCB6`, lime `#F7FBA4`. Urbanist and Mulish are bundled under the SIL Open Font License.
 - **Statamic 5 ready**: Built for Statamic 5.x.
@@ -100,6 +100,10 @@ php please starter-kit:install webbycrown/urban-bank-statamic-theme
 
 Your existing `AppServiceProvider` is left alone. Register `UrbanBankServiceProvider` as above if the post-hook did not.
 
+This kit does **not** export `routes/`. Your `routes/web.php` and `routes/console.php` (including scheduled commands) are left unchanged.
+
+Optional: if you still need redirects from the original HTML template URLs (`/index-2.html`, `/login.html`, and so on), copy lines from `optional/legacy-html-redirects.php` into your own `routes/web.php`. New sites do not need them.
+
 ### Installing via the Statamic CLI Tool
 
 ```bash
@@ -111,6 +115,14 @@ statamic new my-site webbycrown/urban-bank-statamic-theme
 Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](https://github.com/webbycrown/urban-bank-statamic-theme/issues) or [WebbyCrown](https://www.webbycrown.com/custom-statamic-development-services-company/).
 
 ## Changelog
+
+### v1.1.1
+
+- Replace remaining stock photographs and the Shutterstock demo video with original brand art; rewrite THIRD_PARTY.md to match every file under `public/assets/image/`
+- Stop exporting `routes/` so existing `web.php` / `console.php` survive install; HTML redirects live in `optional/legacy-html-redirects.php`
+- Distinct insight covers per blog post; pricing plans in ₹; comments link to blogs by entry ID
+- Drop legacy `content/sites.yaml` (Statamic 5 uses `resources/sites.yaml`)
+- Center team monograms and offer art in circular/cover crops
 
 ### v1.1.0
 

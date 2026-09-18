@@ -14,9 +14,12 @@ tabs:
           -
             handle: post
             field:
-              type: text
-              display: Blog slug
-              instructions: Matches the blog entry slug this comment belongs to.
+              type: entries
+              display: Blog post
+              instructions: The insight this comment belongs to. Survives slug renames.
+              max_items: 1
+              collections:
+                - blogs
               validate:
                 - required
           -

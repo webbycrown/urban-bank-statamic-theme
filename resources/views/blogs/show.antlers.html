@@ -50,7 +50,7 @@
 									</div>
 								</div>
 							</div>
-							{{ collection:comments post:is="{slug}" sort="date:desc" }}
+							{{ collection:comments :post="{id}" sort="date:desc" }}
 							{{ if first }}
 							<div class="bw_grid_detail_comment">
 								<h3 class="head" data-aos="fade-up" data-aos-duration="1500">Comments</h3>

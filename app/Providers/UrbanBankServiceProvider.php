@@ -57,24 +57,35 @@ class UrbanBankServiceProvider extends ServiceProvider
 
             $data = $event->submission->data();
             $name = trim((string) ($data->get('name') ?? 'Comment'));
-            $post = trim((string) ($data->get('post') ?? ''));
+            $postRef = trim((string) ($data->get('post') ?? ''));
             $message = (string) ($data->get('message') ?? '');
 
-            if ($post === '' || $message === '') {
+            if ($postRef === '' || $message === '') {
                 return;
             }
 
-            $title = Str::limit($name.' on '.$post, 100, '');
+            // Prefer entry ID (entries field); fall back to slug for older forms.
+            $blog = Entry::find($postRef)
+                ?? Entry::query()
+                    ->where('collection', 'blogs')
+                    ->where('slug', $postRef)
+                    ->first();
+
+            if (! $blog) {
+                return;
+            }
+
+            $title = Str::limit($name.' on '.$blog->get('title', $blog->slug()), 100, '');
 
             Entry::make()
                 ->collection('comments')
                 ->locale(Site::default()->handle())
                 ->published(false)
-                ->slug(Str::slug($name.'-'.$post.'-'.uniqid()))
+                ->slug(Str::slug($name.'-'.$blog->slug().'-'.uniqid()))
                 ->date(now())
                 ->data([
                     'title' => $title,
-                    'post' => $post,
+                    'post' => $blog->id(),
                     'name' => $name,
                     'email' => $data->get('email'),
                     'phone' => $data->get('phone'),

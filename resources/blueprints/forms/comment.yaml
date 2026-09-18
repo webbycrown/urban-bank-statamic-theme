@@ -9,6 +9,7 @@ tabs:
           field:
             type: text
             display: Post
+            instructions: Blog entry ID (set by the theme form). Editors link comments via the Comments collection entries field.
         -
           handle: name
           field:

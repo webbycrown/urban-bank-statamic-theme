@@ -646,7 +646,8 @@ a:focus-visible,
    height: 100%;
 }
 .bw_team_detail_box .bw_team_detail_img img {
-   object-position: top;
+   object-fit: cover;
+   object-position: center;
 }
 .bw_team_detail_box h6 {
    font-family: var(--font_family_2);
@@ -1543,6 +1544,8 @@ a:focus-visible,
 }
 .bw_testimonial_user_border .bw_images_cover img {
    border-radius: 100%;
+   object-fit: cover;
+   object-position: center;
 }
 .bw_testimonial_user {
    display: flex;
@@ -1957,6 +1960,8 @@ a:focus-visible,
 }
 .bw_bank_special_offers_box .bw_bank_special_offers_img img {
    border-radius: 10px;
+   object-fit: cover;
+   object-position: center;
 }
 .bw_bank_special_offers_box h5 {
    font-family: var(--font_family_2);

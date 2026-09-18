@@ -2,7 +2,7 @@
 id: standard
 blueprint: plan
 title: Standard
-price: $89
+price: ₹7,499
 period: Per Month
 featured: true
 order: 2
@@ -14,7 +14,7 @@ features:
   -
     text: Same-day transfer windows
   -
-    text: Business Mastercard
+    text: Business debit card
   -
     text: 24/7 support desk
 ---
