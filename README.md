@@ -112,7 +112,7 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 
 ## Changelog
 
-### v1.0.1
+### v1.1.0
 
 - Ship kit logic in `UrbanBankServiceProvider` so installs no longer replace your `AppServiceProvider`
 - Store blog comments as unpublished **Comments** entries editors can publish in the Control Panel (form submissions stay read-only)
