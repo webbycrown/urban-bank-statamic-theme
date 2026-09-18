@@ -1,0 +1,7 @@
+title: Comments
+template: null
+layout: layout
+revisions: false
+date: true
+sort_dir: desc
+# No public route — editors publish entries in the CP; the blog template lists published comments only.

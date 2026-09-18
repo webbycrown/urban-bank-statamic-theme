@@ -1,7 +1,7 @@
 {{ form:comment action="/!/forms/comment" class="js-theme-form" }}
 	<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
 	<div class="stay-connect-success" hidden>
-		<p>{{ setting:comment_success ?? 'Thanks — your comment was sent. We will review it shortly.' }}</p>
+		<p>{{ setting:comment_success ?? 'Thanks — your comment was sent. An editor will review it before it appears on the page.' }}</p>
 	</div>
 	<input type="hidden" name="post" value="{{ slug }}">
 	<div class="stay-connect-fields">

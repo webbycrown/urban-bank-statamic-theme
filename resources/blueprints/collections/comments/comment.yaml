@@ -1,0 +1,52 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+              validate:
+                - required
+          -
+            handle: post
+            field:
+              type: text
+              display: Blog slug
+              instructions: Matches the blog entry slug this comment belongs to.
+              validate:
+                - required
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+              validate:
+                - email
+          -
+            handle: phone
+            field:
+              type: text
+              display: Phone
+          -
+            handle: subject
+            field:
+              type: text
+              display: Subject
+          -
+            handle: message
+            field:
+              type: textarea
+              display: Message
+              validate:
+                - required

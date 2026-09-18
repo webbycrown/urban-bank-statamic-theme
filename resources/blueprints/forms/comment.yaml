@@ -41,10 +41,3 @@ tabs:
             display: Message
             validate:
               - required
-        -
-          handle: approved
-          field:
-            type: toggle
-            display: Approved
-            instructions: Turn on to show this comment on the blog post. New submissions stay hidden until reviewed.
-            default: false

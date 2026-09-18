@@ -4,7 +4,7 @@ repo: webbycrown/urban-bank-statamic-theme
 export_paths:
   - routes
   - content
-  - app/Providers
+  - app/Providers/UrbanBankServiceProvider.php
   - storage/app/resumes
   - resources/blueprints
   - resources/fieldsets

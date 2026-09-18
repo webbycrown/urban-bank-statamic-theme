@@ -50,7 +50,7 @@
 									</div>
 								</div>
 							</div>
-							{{ form:submissions in="comment" post:is="{slug}" approved:is="true" sort="date:desc" }}
+							{{ collection:comments post:is="{slug}" sort="date:desc" }}
 							{{ if first }}
 							<div class="bw_grid_detail_comment">
 								<h3 class="head" data-aos="fade-up" data-aos-duration="1500">Comments</h3>
@@ -69,10 +69,10 @@
 								</div>
 							</div>
 							{{ /if }}
-							{{ /form:submissions }}
+							{{ /collection:comments }}
 							<div class="bw_grid_detail_form">
 								<h3 data-aos="fade-up" data-aos-duration="1500">Leave A Comment</h3>
-								<p data-aos="fade-up" data-aos-duration="1500">Ask about a fee, a hold, or a transfer on this article. We read every comment in the Control Panel and reply by email when we can.</p>
+								<p data-aos="fade-up" data-aos-duration="1500">Ask about a fee, a hold, or a transfer on this article. New comments stay unpublished until an editor publishes them under Collections → Comments.</p>
 								<div class="bw_contact_form" data-aos="fade-up" data-aos-duration="1500">
 									{{ partial:partials/comment-form }}
 								</div>

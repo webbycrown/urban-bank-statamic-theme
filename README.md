@@ -6,16 +6,11 @@ Visitors browse accounts, cards, loans, offers, team, and careers, then send inq
 
 Every marketing page uses one global **Page** template. Add, remove, or reorder Theme sections in the Control Panel. Collection details (blog, career, feature, team, offer) keep their own entry templates.
 
-### How Urban Bank differs from other WebbyCrown kits
+Urban Bank’s surface: decorative flip-card hero, private résumé uploads, unpublished blog comments awaiting Control Panel publish, Mumbai/+91 branch chrome, and mint/lime bank palette (`#101521` / `#64DCB6` / `#F7FBA4`).
 
-| Kit | Niche | What Urban Bank does instead |
-|---|---|---|
-| Clare | Fashion catalog + session cart | Bank products, offers, and fee-first copy — no shop cart |
-| Design Studio | Creative agency services/projects | Branch, cards, loans, and careers — not a portfolio grid |
-| Donation | Charity causes + donation inquiry | Banking inquiry forms — no donation flow |
-| Journea | Tours + booking inquiry | Accounts and card offers — no tour booking path |
+## Live demo
 
-Urban Bank’s own surface: decorative flip-card hero, private résumé uploads, moderated blog comments, Mumbai/+91 branch chrome, and mint/lime bank palette (`#101521` / `#64DCB6` / `#F7FBA4`).
+[https://urban-bank-statamic.webbydemo.in](https://urban-bank-statamic.webbydemo.in)
 
 ## Pages of Urban Bank
 
@@ -38,7 +33,8 @@ The starter kit includes a complete set of pages for a bank marketing site:
 ## Collections
 
 - **Pages**: Site structure. One Page template plus Theme sections.
-- **Blogs**: Bank notes, fees, and product stories. Comments stay hidden until approved in the Control Panel.
+- **Blogs**: Bank notes, fees, and product stories. Visitor comments are saved as unpublished **Comments** entries until an editor publishes them in the Control Panel.
+- **Comments**: Unpublished until published in **CP → Collections → Comments**.
 - **Features**: Cards, loans, and app write-ups.
 - **Team**: Named staff and roles.
 - **Careers**: Open seats with apply forms. Résumés store on a private disk (not public URLs).
@@ -52,7 +48,7 @@ Site name, phone, email, logos, mega-menu column titles, branch hours, map embed
 - **Theme sections**: Mix any section onto any page from the Control Panel.
 - **Three homes**: Decorative card hero (no card-number form), phone mock, and a third layout.
 - **Private career uploads**: PDF/DOC/DOCX, max 5 MB, stored outside the public web root.
-- **Moderated comments**: Blog comments appear only after an editor turns on Approved.
+- **Moderated comments**: The comment form creates an unpublished entry in the **Comments** collection. Form submissions are read-only in Statamic 5 — editors publish (or delete) comments under **CP → Collections → Comments**.
 - **AJAX forms**: Contact, newsletter, comments, and careers return success and field errors. Statamic Core includes one form; use Statamic Pro if you keep all four.
 - **Bank palette**: Dark `#101521`, mint `#64DCB6`, lime `#F7FBA4`. Urbanist and Mulish are bundled under the SIL Open Font License.
 - **Statamic 5 ready**: Built for Statamic 5.x.
@@ -61,7 +57,7 @@ Site name, phone, email, logos, mega-menu column titles, branch hours, map embed
 
 - Contact
 - Newsletter
-- Comment (approve before public display)
+- Comment (creates an unpublished Comments entry for CP review)
 - Career (private résumé container)
 
 Set each form’s email recipient in **CP → Forms** after install (defaults use `admin@example.com`).
@@ -78,6 +74,22 @@ After install:
 php please stache:refresh
 ```
 
+### Register UrbanBankServiceProvider (required)
+
+This kit does **not** overwrite `app/Providers/AppServiceProvider.php`. Private résumé storage and comment moderation live in `app/Providers/UrbanBankServiceProvider.php`.
+
+The install post-hook adds it to `bootstrap/providers.php` when possible. If it is missing, register it yourself:
+
+```php
+// bootstrap/providers.php
+return [
+    App\Providers\AppServiceProvider::class,
+    App\Providers\UrbanBankServiceProvider::class,
+];
+```
+
+Confirm the file exists at `app/Providers/UrbanBankServiceProvider.php` after install. That provider also creates unpublished **Comments** entries from the blog comment form.
+
 Bundled libraries and image rights are listed in [THIRD_PARTY.md](THIRD_PARTY.md).
 
 ### Installing into an existing site
@@ -85,6 +97,8 @@ Bundled libraries and image rights are listed in [THIRD_PARTY.md](THIRD_PARTY.md
 ```bash
 php please starter-kit:install webbycrown/urban-bank-statamic-theme
 ```
+
+Your existing `AppServiceProvider` is left alone. Register `UrbanBankServiceProvider` as above if the post-hook did not.
 
 ### Installing via the Statamic CLI Tool
 
@@ -98,18 +112,23 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 
 ## Changelog
 
+### v1.0.1
+
+- Ship kit logic in `UrbanBankServiceProvider` so installs no longer replace your `AppServiceProvider`
+- Store blog comments as unpublished **Comments** entries editors can publish in the Control Panel (form submissions stay read-only)
+- Private career résumé disk with server-side PDF/DOC/DOCX and 5 MB checks
+- Document provider registration and point to the live demo
+
 ### v1.0.0
 
-- Private résumé disk with server-side mime/size validation
-- Moderated blog comments; removed unused offer comment form
-- Decorative home card (no “Add Card Detail” inputs)
-- Native page SEO meta tags; dropped marketplace banners from the export
-- Entry-linked navigation, leaner Setting global, editable form UI copy
-- Rule 04 demo copy (Mumbai/+91, no kit-meta language)
-- Rule 05 keyboard nav, focus outlines, and labeled form fields
-- Rule 08 image/video/mockup rights in THIRD_PARTY.md
-- Rule 01 niche differentiation vs other WebbyCrown kits
-- Live demo aligned with this release
+- Private career résumé uploads outside the public web root
+- Blog comment form with review before public display
+- Decorative home card (no card-number or security-code inputs)
+- Built-in page SEO meta tags; marketplace banner files removed from the export
+- Entry-linked navigation, simpler Setting global, and editable form button/success copy
+- Consistent Mumbai / +91 demo copy and proofread headings
+- Keyboard-friendly header menus, visible focus outlines, and labeled form fields
+- Photo, video, and mockup rights listed in THIRD_PARTY.md
 
 ---
 <div align="center">
