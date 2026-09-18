@@ -104,7 +104,12 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 - Moderated blog comments; removed unused offer comment form
 - Decorative home card (no “Add Card Detail” inputs)
 - Native page SEO meta tags; dropped marketplace banners from the export
-- Entry-linked navigation, leaner Setting global, copy and a11y fixes
+- Entry-linked navigation, leaner Setting global, editable form UI copy
+- Rule 04 demo copy (Mumbai/+91, no kit-meta language)
+- Rule 05 keyboard nav, focus outlines, and labeled form fields
+- Rule 08 image/video/mockup rights in THIRD_PARTY.md
+- Rule 01 niche differentiation vs other WebbyCrown kits
+- Live demo aligned with this release
 
 ---
 <div align="center">
