@@ -2,8 +2,6 @@ tree:
   -
     entry: feature
   -
-    entry: multi-device
-  -
     entry: credit-cards
   -
     entry: business-loans
@@ -13,5 +11,3 @@ tree:
     entry: pricing
   -
     entry: offers
-  -
-    entry: checking-perks

@@ -1,10 +1,21 @@
 # Urban Bank - Statamic Starter Kit
 
-Urban Bank is a banking and finance starter kit for Statamic 5. It is built for credit unions, digital banks, and card or loan brands that need a dark mint-and-lime marketing site — accounts, cards, loans, team, careers, offers, and contact forms.
+Urban Bank is a **banking and finance** starter kit for Statamic 5 — not a storefront, travel catalog, charity site, or creative-agency portfolio. It is built for credit unions, digital banks, and card or loan brands that need a dark mint-and-lime marketing site where fees, holds, and product pages match what the branch desk says.
 
-Visitors can browse products and send inquiries. This kit is a marketing site. It does not include an internet-banking dashboard or member login.
+Visitors browse accounts, cards, loans, offers, team, and careers, then send inquiries. This kit is a marketing site only. It does not include an internet-banking dashboard, member login, cart, or donation checkout.
 
 Every marketing page uses one global **Page** template. Add, remove, or reorder Theme sections in the Control Panel. Collection details (blog, career, feature, team, offer) keep their own entry templates.
+
+### How Urban Bank differs from other WebbyCrown kits
+
+| Kit | Niche | What Urban Bank does instead |
+|---|---|---|
+| Clare | Fashion catalog + session cart | Bank products, offers, and fee-first copy — no shop cart |
+| Design Studio | Creative agency services/projects | Branch, cards, loans, and careers — not a portfolio grid |
+| Donation | Charity causes + donation inquiry | Banking inquiry forms — no donation flow |
+| Journea | Tours + booking inquiry | Accounts and card offers — no tour booking path |
+
+Urban Bank’s own surface: decorative flip-card hero, private résumé uploads, moderated blog comments, Mumbai/+91 branch chrome, and mint/lime bank palette (`#101521` / `#64DCB6` / `#F7FBA4`).
 
 ## Pages of Urban Bank
 

@@ -17,7 +17,7 @@ content_sections:
     body: |-
       Faster and cheaper only mean something if you can read the fee and the clock. Urban Bank shows the fee before you send. If a transfer is same-day, the cut-off is on the screen. If it is not same-day, we do not write “instant” on a banner.
       
-      Cheaper is compared with a send that hid the fee until the statement. It is not a promise that Urban Bank is the lowest fee in Indonesia on every corridor, every day.
+      Cheaper is compared with a send that hid the fee until the statement. It is not a promise that Urban Bank is the lowest fee on every corridor, every day.
   -
     id: bab456371295
     type: text_section

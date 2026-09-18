@@ -1,11 +1,11 @@
 ---
 id: multi-currency
 blueprint: feature
-title: Multi Currency
+title: Multi-currency accounts
 order: 3
 image: image/feature-5.png
 excerpt: A rate shown next to the amount you send.
-seo_title: Multi Currency — Urban Bank
+seo_title: Multi-currency accounts — Urban Bank
 seo_description: Urban Bank shows the conversion rate next to the send amount. The fee is listed before you confirm.
 seo_robots: 'index, follow'
 seo_image: image/feature-5.png

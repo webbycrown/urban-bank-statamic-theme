@@ -2,12 +2,12 @@
 					{{ nav:header_menu }}
 					{{ if id == "page-mega" }}
 					<li class="bw_header_dropdown bw_mega_dropdown">
-						<a href="{{ url ?? '#' }}" class="bw_dropdown_hover" aria-haspopup="true" aria-expanded="false">{{ title }} <span class="material-symbols-sharp" aria-hidden="true">expand_more</span></a>
+						<button type="button" class="bw_dropdown_hover" aria-haspopup="true" aria-expanded="false">{{ title }} <span class="material-symbols-sharp" aria-hidden="true">expand_more</span></button>
 						{{ partial:partials/nav-page-mega }}
 					</li>
 					{{ elseif children }}
 					<li class="bw_header_dropdown">
-						<a href="{{ url }}" class="bw_dropdown_hover" aria-haspopup="true" aria-expanded="false">{{ title }} <span class="material-symbols-sharp" aria-hidden="true">expand_more</span></a>
+						<button type="button" class="bw_dropdown_hover" aria-haspopup="true" aria-expanded="false">{{ title }} <span class="material-symbols-sharp" aria-hidden="true">expand_more</span></button>
 						<div class="bw_header_dropdown_menu bw_home_dropdown_menu">
 							<div class="bw_header_dropdown_menu_title"><span>{{ title }}</span></div>
 							<ul>

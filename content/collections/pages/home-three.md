@@ -6,10 +6,10 @@ template: page
 page_builder:
 - id: 949bac49e4c5
   type: about_hero
-  kicker: Home 3
+  kicker: Everyday banking
   heading: Everyday banking with Urban
   text: Open an account, use cards and transfers, and keep fees visible before you
-    confirm. Home 3 puts products and offers first.
+    confirm. Products and offers come first on this page.
   image: image/bank_img.jpg
   button_label: Talk to us
   button_url: /contact
@@ -38,20 +38,20 @@ page_builder:
 - id: aa37b9b441a5
   type: digitalize
   style: home
-  kicker: Digitalize
+  kicker: Go digital
   heading: Meet your banking future with Urban
   image: image/mockup_app.png
 body_class: index-3
-hero_kicker: Home 3
+hero_kicker: Everyday banking
 hero_title: Everyday banking with Urban
-hero_text: Open an account, use cards and transfers, and keep fees visible before you confirm. Home 3 puts products and offers first.
+hero_text: Open an account, use cards and transfers, and keep fees visible before you confirm. Products and offers come first on this page.
 image: image/bank_img.jpg
-section_kicker: Digitalize
+section_kicker: Go digital
 section_title: Meet your banking future with Urban
 section_image: image/mockup_app.png
 digitalize_image: image/mockup_app.png
-seo_title: Urban Bank Home Three — Features and offers
-seo_description: 'Third Urban Bank home layout with features, special offers, and FAQs managed from the Control Panel.'
+seo_title: Urban Bank — features and offers
+seo_description: 'Urban Bank home for cards, special offers, and FAQs.'
 seo_keywords: 'urban bank, home three, offers'
 seo_image: image/bank_img.jpg
 seo_robots: 'index, follow'

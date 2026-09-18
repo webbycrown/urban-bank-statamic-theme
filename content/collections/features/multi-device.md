@@ -1,11 +1,11 @@
 ---
 id: multi-device
 blueprint: feature
-title: Multi Device
+title: Multi-device access
 order: 1
 image: image/feature-1.png
 excerpt: Use Urban on the phone and desktop you already have.
-seo_title: Multi Device — Urban Bank
+seo_title: Multi-device access — Urban Bank
 seo_description: Sign in on phone or desktop and see the same Urban Bank balances, holds, and fee lines. No second set of figures.
 seo_robots: 'index, follow'
 seo_image: image/feature-1.png

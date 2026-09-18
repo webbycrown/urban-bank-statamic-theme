@@ -9,7 +9,7 @@
 			<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
 				<div class="bw_feature_page_icon"><img src="{{ partial:partials/media-url :file="null" fallback="image/feature-1.png" }}" alt=""></div>
 				<div class="bw_feature_page_text">
-					<h4><a href="/contact">{{ 'Head office' }}</a></h4>
+					<h4><a href="/contact">{{ setting:branch_office_label ?? 'Head office' }}</a></h4>
 					<p>{{ setting:branch_address }}</p>
 				</div>
 			</div>
@@ -18,7 +18,7 @@
 			<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
 				<div class="bw_feature_page_icon"><img src="{{ partial:partials/media-url :file="null" fallback="image/feature-2.png" }}" alt=""></div>
 				<div class="bw_feature_page_text">
-					<h4><a href="/contact">{{ 'Branch hours' }}</a></h4>
+					<h4><a href="/contact">{{ setting:branch_hours_label ?? 'Branch hours' }}</a></h4>
 					<p>{{ setting:branch_hours }}</p>
 				</div>
 			</div>
@@ -27,7 +27,7 @@
 			<div class="bw_feature_page_box" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
 				<div class="bw_feature_page_icon"><img src="{{ partial:partials/media-url :file="null" fallback="image/feature-3.png" }}" alt=""></div>
 				<div class="bw_feature_page_text">
-					<h4>{{ if setting:phone }}<a href="tel:{{ setting:phone | replace(' ', '') }}">{{ 'Talk to us' }}</a>{{ else }}{{ 'Talk to us' }}{{ /if }}</h4>
+					<h4>{{ if setting:phone }}<a href="tel:{{ setting:phone | replace(' ', '') }}">{{ setting:branch_contact_label ?? setting:cta_label ?? 'Talk to us' }}</a>{{ else }}{{ setting:branch_contact_label ?? setting:cta_label ?? 'Talk to us' }}{{ /if }}</h4>
 					<p>
 						{{ if setting:phone }}<a href="tel:{{ setting:phone | replace(' ', '') }}">{{ setting:phone }}</a>{{ /if }}
 						{{ if setting:phone and setting:email }} · {{ /if }}

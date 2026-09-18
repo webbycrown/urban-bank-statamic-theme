@@ -1,7 +1,7 @@
 {{ form:comment action="/!/forms/comment" class="js-theme-form" }}
 	<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
 	<div class="stay-connect-success" hidden>
-		<p>Thanks — your comment was sent. We will review it shortly.</p>
+		<p>{{ setting:comment_success ?? 'Thanks — your comment was sent. We will review it shortly.' }}</p>
 	</div>
 	<input type="hidden" name="post" value="{{ slug }}">
 	<div class="stay-connect-fields">
@@ -17,8 +17,8 @@
 		<textarea id="comment-message" class="bw_custom_input" name="message" placeholder="Your comment" required>{{ old:message }}</textarea>
 		<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 		<button type="submit" class="bw_custom_buttom bw_flex_btn">
-			<span class="btn-label">Post Comment <span class="material-symbols-sharp" aria-hidden="true">chevron_right</span></span>
-			<span class="btn-loading" hidden>Sending…</span>
+			<span class="btn-label">{{ setting:comment_button ?? 'Post Comment' }} <span class="material-symbols-sharp" aria-hidden="true">chevron_right</span></span>
+			<span class="btn-loading" hidden>{{ setting:form_sending_label ?? 'Sending…' }}</span>
 		</button>
 	</div>
 {{ /form:comment }}

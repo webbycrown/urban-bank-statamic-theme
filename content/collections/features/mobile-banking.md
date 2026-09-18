@@ -42,7 +42,7 @@ content_sections:
     type: text_section
     heading: 'What this is not'
     body: |-
-      Mobile banking on this kit is not a standalone internet-banking product with a public self-register dashboard. Accounts are opened with Urban Bank. The app is the phone door. Accounts are opened with Urban Bank; this site does not offer a public internet-banking login.
+      Mobile banking is the phone door to an Urban Bank account opened with a banker. This marketing site does not offer a public self-register internet-banking login.
       
       Offline, the app cannot invent a successful send. Wait for a connection, or use the branch.
   -

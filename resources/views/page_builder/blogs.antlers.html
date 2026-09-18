@@ -25,7 +25,7 @@
 					<h5><a href="{{ url }}">{{ title }}</a></h5>
 					{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
 				</div>
-				<a class="bw_custom_buttom" href="{{ url }}">Learn more</a>
+				<a class="bw_custom_buttom" href="{{ url }}">{{ setting:learn_more_label ?? 'Learn more' }}</a>
 			</div>
 			{{ /collection:blogs }}
 		</div>
@@ -56,7 +56,7 @@
 					<h5><a href="{{ url }}">{{ title }}</a></h5>
 					{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
 					<div class="bw_blog_button_wrap">
-						<a class="bw_custom_buttom bw_flex_btn" href="{{ url }}">Learn more <span class="material-symbols-sharp">chevron_right</span></a>
+						<a class="bw_custom_buttom bw_flex_btn" href="{{ url }}">{{ setting:learn_more_label ?? 'Learn more' }} <span class="material-symbols-sharp">chevron_right</span></a>
 						{{ if date }}<p>{{ date format="F j, Y" }}</p>{{ /if }}
 					</div>
 				</div>

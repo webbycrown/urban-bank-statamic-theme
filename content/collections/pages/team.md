@@ -8,7 +8,7 @@ page_builder:
   type: team
   style: grid
   kicker: Team
-  heading: Our best skill person
+  heading: Meet the team
 seo_title: Urban Bank team
 seo_description: 'People who explain fees, holds, and product pages. Each person is a team entry.'
 seo_keywords: urban bank team

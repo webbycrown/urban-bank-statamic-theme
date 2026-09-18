@@ -7,14 +7,14 @@
 													{{ if image }}
 													<div class="bw_blog_card_img">
 														<img src="{{ image }}" alt="{{ title }}">
-														<div class="bw_blog_badge"><span>Bank</span></div>
+														<div class="bw_blog_badge"><span>Insight</span></div>
 													</div>
 													{{ /if }}
 													<div class="bw_blog_card_cont">
 														<h5><a href="{{ url }}">{{ title }}</a></h5>
 														{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
 														<div class="bw_blog_button_wrap">
-															<a class="bw_custom_buttom bw_flex_btn" href="{{ url }}">Learn more
+															<a class="bw_custom_buttom bw_flex_btn" href="{{ url }}">{{ setting:learn_more_label ?? 'Learn more' }}
 																<span class="material-symbols-sharp">chevron_right</span>
 															</a>
 															{{ if date }}<p>{{ date format="F j, Y" }}</p>{{ /if }}

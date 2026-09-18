@@ -27,7 +27,7 @@ hero_kicker: urbanbank.com
 hero_title: Urban Bank
 hero_text: Everyday accounts, cards, and loans from one desk.
 seo_title: Urban Bank banners
-seo_description: Banner layouts used across the Urban Bank marketing site.
+seo_description: Banner examples used across Urban Bank pages.
 seo_keywords: urban bank banners
 seo_image: image/logo.png
 seo_robots: 'index, follow'

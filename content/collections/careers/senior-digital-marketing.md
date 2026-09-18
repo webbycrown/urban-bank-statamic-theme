@@ -41,7 +41,7 @@ content_sections:
     body: |-
       - Several years running digital campaigns for a regulated or financial brand
       - Ability to write or edit short product copy without hype
-      - Comfort with analytics, landing-page tests, and a CMS such as Statamic
+      - Comfort with analytics, landing-page tests, and a CMS
       - Mumbai time for shoots and launches; you can plan remote weeks around them
   -
     id: 03304b03e8aa

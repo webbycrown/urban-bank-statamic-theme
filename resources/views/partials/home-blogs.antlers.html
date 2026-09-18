@@ -6,12 +6,12 @@
 												<div class="bw_blog_card_box">
 													<div class="bw_blog_card_cont">
 														<div class="bw_blog_badge">
-															<span>Bank</span>
+															<span>Insight</span>
 														</div>
 														<h5><a href="{{ url }}">{{ title }}</a></h5>
 														{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
 													</div>
-													<a class="bw_custom_buttom" href="{{ url }}">Learn more</a>
+													<a class="bw_custom_buttom" href="{{ url }}">{{ setting:learn_more_label ?? 'Learn more' }}</a>
 												</div>
 											</div>
 											{{ /collection:blogs }}

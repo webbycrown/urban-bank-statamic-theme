@@ -20,17 +20,22 @@
 				<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
 				<div class="stay-connect-success" hidden>
 					<div class="bw_form_thanks">
-						<p>Thanks — we received your message and will reply shortly.</p>
+						<p>{{ setting:contact_success ?? 'Thanks — we received your message and will reply shortly.' }}</p>
 					</div>
 				</div>
 				<div class="stay-connect-fields">
-					<input class="bw_custom_input" type="text" name="first_name" placeholder="First Name" value="{{ old:first_name }}" required>
-					<input class="bw_custom_input" type="text" name="last_name" placeholder="Last Name" value="{{ old:last_name }}" required>
-					<input class="bw_custom_input" type="text" name="phone" placeholder="Phone" value="{{ old:phone }}">
-					<input class="bw_custom_input" type="email" name="email" placeholder="Email" value="{{ old:email }}" required>
-					<textarea class="bw_custom_input" name="message" placeholder="Message" required>{{ old:message }}</textarea>
-					<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
-					<button type="submit" class="bw_custom_buttom"><span class="btn-label">Send Message</span><span class="btn-loading" hidden>Sending…</span></button>
+					<label class="bw_sr_only" for="contact-first-name">First name</label>
+					<input id="contact-first-name" class="bw_custom_input" type="text" name="first_name" placeholder="First Name" value="{{ old:first_name }}" required autocomplete="given-name">
+					<label class="bw_sr_only" for="contact-last-name">Last name</label>
+					<input id="contact-last-name" class="bw_custom_input" type="text" name="last_name" placeholder="Last Name" value="{{ old:last_name }}" required autocomplete="family-name">
+					<label class="bw_sr_only" for="contact-phone">Phone</label>
+					<input id="contact-phone" class="bw_custom_input" type="text" name="phone" placeholder="Phone" value="{{ old:phone }}" autocomplete="tel">
+					<label class="bw_sr_only" for="contact-email">Email</label>
+					<input id="contact-email" class="bw_custom_input" type="email" name="email" placeholder="Email" value="{{ old:email }}" required autocomplete="email">
+					<label class="bw_sr_only" for="contact-message">Message</label>
+					<textarea id="contact-message" class="bw_custom_input" name="message" placeholder="Message" required>{{ old:message }}</textarea>
+					<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+					<button type="submit" class="bw_custom_buttom"><span class="btn-label">{{ setting:contact_button ?? 'Send Message' }}</span><span class="btn-loading" hidden>{{ setting:form_sending_label ?? 'Sending…' }}</span></button>
 				</div>
 			{{ /form:contact }}
 		</div>

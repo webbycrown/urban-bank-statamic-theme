@@ -6,16 +6,16 @@ template: page
 page_builder:
 - id: 7c958584ea17
   type: about_hero
-  kicker: Online platform
+  kicker: Since 1996
   heading: About Urban Bank
-  text: Urban Bank is a marketing site for accounts, cards, and loans. Branch copy
-    and product pages are edited in the Control Panel.
+  text: Urban Bank helps people open accounts, use cards, and apply for loans. Branch
+    copy and product pages stay aligned with what the desk says.
   image: image/bank_img.jpg
   body: Urban Bank helps people open accounts, read fees, and finish transfers. The
     desk and the app use the same numbers.
 - id: b47f90ad74cb
   type: about_chart
-  heading: Grow our investment from 1996 to 2021
+  heading: Growth from 1996 to 2021
   chart_points:
   - label: '0'
     value: '0'
@@ -53,11 +53,11 @@ page_builder:
   type: blogs
   style: grid
   show_load_more: false
-hero_kicker: Online platform
+hero_kicker: Since 1996
 hero_title: About Urban Bank
-excerpt: Urban Bank is a marketing site for accounts, cards, and loans. Branch copy and product pages are edited in the Control Panel.
+excerpt: Urban Bank helps people open accounts, use cards, and apply for loans. Branch copy and product pages stay aligned with what the desk says.
 image: image/bank_img.jpg
-chart_title: Grow our investment from 1996 to 2021
+chart_title: Growth from 1996 to 2021
 chart_points:
   -
     label: '0'
@@ -89,7 +89,7 @@ section_text: Fees and holds are listed before you confirm. The branch desk and 
 section_image: image/money.png
 seo_title: About Urban Bank
 seo_description: 'Urban Bank opened in 1996. Read how accounts, cards, and loans share the same numbers in the branch and the app.'
-seo_keywords: 'about urban bank, online platform'
+seo_keywords: 'about urban bank, mumbai banking'
 seo_image: image/bank_img.jpg
 seo_robots: 'index, follow'
 content_sections:

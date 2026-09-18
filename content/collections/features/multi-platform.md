@@ -1,11 +1,11 @@
 ---
 id: multi-platform
 blueprint: feature
-title: Multi Platform
+title: Multi-platform banking
 order: 2
 image: image/feature-2.png
 excerpt: The same account view on web and in the app.
-seo_title: Multi Platform — Urban Bank
+seo_title: Multi-platform banking — Urban Bank
 seo_description: Urban Bank web and app share one account view. Fees, holds, and card status match the branch note.
 seo_robots: 'index, follow'
 seo_image: image/feature-2.png
@@ -36,7 +36,7 @@ content_sections:
       - One account list, whether you tap or click
       - Confirm screens that name the fee before Send
       - Card freeze and limits that apply on every platform
-      - Store and web copy that can be updated in the Control Panel when a URL or badge changes
+      - Store and web copy that stays current when a URL or badge changes
   -
     id: 85c2aa79225d
     type: text_section

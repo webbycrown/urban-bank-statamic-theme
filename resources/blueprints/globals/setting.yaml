@@ -65,6 +65,82 @@ tabs:
           field:
             type: textarea
             display: Contact map embed URL
+        -
+          handle: branch_office_label
+          field:
+            type: text
+            display: Head office label
+        -
+          handle: branch_hours_label
+          field:
+            type: text
+            display: Branch hours label
+        -
+          handle: branch_contact_label
+          field:
+            type: text
+            display: Talk to us label
+      -
+        display: Forms
+        instructions: Success messages and button labels for newsletter, contact, comment, and career forms.
+        fields:
+        -
+          handle: form_sending_label
+          field:
+            type: text
+            display: Sending label
+            instructions: Shown on buttons while a form submits.
+        -
+          handle: newsletter_success
+          field:
+            type: text
+            display: Newsletter success message
+        -
+          handle: newsletter_placeholder
+          field:
+            type: text
+            display: Newsletter email placeholder
+        -
+          handle: newsletter_button
+          field:
+            type: text
+            display: Newsletter button
+        -
+          handle: contact_success
+          field:
+            type: text
+            display: Contact success message
+        -
+          handle: contact_button
+          field:
+            type: text
+            display: Contact button
+        -
+          handle: comment_success
+          field:
+            type: text
+            display: Comment success message
+        -
+          handle: comment_button
+          field:
+            type: text
+            display: Comment button
+        -
+          handle: career_success
+          field:
+            type: text
+            display: Career success message
+        -
+          handle: career_button
+          field:
+            type: text
+            display: Career button
+        -
+          handle: learn_more_label
+          field:
+            type: text
+            display: Learn more label
+            instructions: Default link label on blog and product cards.
       -
         display: Header CTA and social
         fields:

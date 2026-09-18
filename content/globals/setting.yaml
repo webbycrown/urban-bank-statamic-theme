@@ -8,7 +8,7 @@ data:
   copyright: '@Urban Bank. All rights reserved.'
   cta_label: Talk to us
   cta_url: /contact
-  mega_home_title: Home
+  mega_home_title: Banking
   mega_company_title: Company
   mega_features_title: Products
   mega_more_title: Resources
@@ -20,6 +20,20 @@ data:
   map_embed: 'https://maps.google.com/maps?q=Fort%2C%20Mumbai%2C%20Maharashtra%20400001&hl=en&z=16&ie=UTF8&output=embed'
   branch_address: '14 Market Street, Suite 200, Fort, Mumbai 400001. Walk-in for accounts, cards, and loans.'
   branch_hours: 'Monday to Friday 9:00–18:00. Saturday 10:00–14:00. Closed Sunday.'
+  branch_office_label: Head office
+  branch_hours_label: Branch hours
+  branch_contact_label: Talk to us
+  form_sending_label: Sending…
+  newsletter_success: 'Thanks — you are on the list.'
+  newsletter_placeholder: Enter your email address
+  newsletter_button: Subscribe
+  contact_success: 'Thanks — we received your message and will reply shortly.'
+  contact_button: Send Message
+  comment_success: 'Thanks — your comment was sent. We will review it shortly.'
+  comment_button: Post Comment
+  career_success: 'Thanks — we received your application and will reply if there is a match.'
+  career_button: Apply Now
+  learn_more_label: Learn more
   error_title: Page not found
   error_text: That address is not a page on this Urban Bank site. Use the menu or go back to the home page.
   favicon: image/five-icon.png
@@ -29,6 +43,6 @@ data:
   play_store_url: 'https://play.google.com/store'
   play_store_kicker: Get it on
   play_store_name: Google Play
-  seo_description: Urban Bank lists fees before you confirm accounts, cards, loans, and transfers. Edit every page from the Control Panel.
+  seo_description: Urban Bank lists fees before you confirm accounts, cards, loans, and transfers.
   seo_keywords: urban bank, accounts, cards, loans, transfers
   seo_image: image/logo.png

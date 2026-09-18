@@ -1,10 +1,10 @@
 <!-- start_bw_menubar_wrap -->
-	<div class="bw_menubar_wrap">
+	<div class="bw_menubar_wrap" id="bw-menubar" aria-hidden="true" inert>
 		<div class="bw_container">
 			<div class="bw_menubar_content">
-				<a class="bw_menubar_close" href="#" role="button" aria-label="Close menu">
+				<button type="button" class="bw_menubar_close" aria-label="Close menu">
 					<span class="material-symbols-rounded" aria-hidden="true">close</span>
-				</a>
+				</button>
 				<ul class="bw_menubar_menu">
 					{{ nav:header_menu }}
 					{{ if id == "page-mega" }}

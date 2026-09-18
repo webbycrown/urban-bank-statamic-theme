@@ -27,7 +27,7 @@ page_builder:
   card_button: Add Card Detail
 - id: 47689ccfb3c7
   type: growth_chart
-  heading: Grow our investment in year 1996 to 2021
+  heading: Growth from 1996 to 2021
   chart_points:
   - label: '0'
     value: '0'
@@ -49,13 +49,13 @@ page_builder:
 - id: 6dcaf081d092
   type: video
   style: home
-  kicker: Strategy
+  kicker: How we work
   heading: Learn how we work
   video_file: image/video.mp4
 - id: 5f0bc1ee0d01
   type: digitalize
   style: home
-  kicker: Digitalize
+  kicker: Go digital
   heading: Meet your banking future with Urban
   image: image/mockup_app.png
 - id: 3c30a929ab94
@@ -93,7 +93,7 @@ card_chip: image/chip.png
 card_icon: wifi
 show_card_wifi: true
 card_button: Add Card Detail
-chart_title: Grow our investment in year 1996 to 2021
+chart_title: Growth from 1996 to 2021
 chart_points:
   -
     label: '0'
@@ -113,15 +113,15 @@ chart_points:
   -
     label: '400'
     value: '120'
-section_kicker: Digitalize
+section_kicker: Go digital
 section_title: Meet your banking future with Urban
 section_image: image/mockup_app.png
-video_kicker: Strategy
+video_kicker: How we work
 video_title: Learn how we work
 video_file: image/video.mp4
 digitalize_image: image/mockup_app.png
 seo_title: 'Urban Bank — Everyday accounts, cards, and loans'
-seo_description: 'Open accounts, use cards and loans, and see fees before you confirm. Urban Bank is edited from the Control Panel.'
+seo_description: 'Open accounts, use cards and loans, and see fees before you confirm.'
 seo_keywords: 'urban bank, accounts, cards, loans'
 seo_image: image/mockup_app.png
 seo_robots: 'index, follow'

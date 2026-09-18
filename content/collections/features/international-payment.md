@@ -45,7 +45,7 @@ content_sections:
     body: |-
       Simple international payment is not “send anywhere, no questions”. It is not a guarantee against beneficiary-bank delays. It is not a live FX widget on a blog post. Example amounts on this site are examples.
       
-      We do not keep a public self-serve dashboard on this marketing kit that wires money without a banker-opened account.
+      International transfers need an Urban Bank account opened with a banker. This marketing site does not send money on its own.
   -
     id: edb635e7a29e
     type: text_section

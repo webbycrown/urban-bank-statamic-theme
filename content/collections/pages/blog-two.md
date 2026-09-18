@@ -9,8 +9,8 @@ page_builder:
   style: list
   kicker: Blog
   show_load_more: true
-seo_title: Urban Bank blog — list layout
-seo_description: Second blog listing layout for Urban Bank articles (text list).
+seo_title: Urban Bank blog — list
+seo_description: Urban Bank articles in a text list.
 seo_keywords: urban bank blog
 seo_image: image/Rectangle 51 (1).png
 seo_robots: 'index, follow'

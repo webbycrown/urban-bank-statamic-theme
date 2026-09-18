@@ -1,7 +1,7 @@
 {{ form:career action="/!/forms/career" class="js-theme-form" files="true" }}
 	<div class="stay-connect-alert stay-connect-alert--error" hidden></div>
 	<div class="stay-connect-success" hidden>
-		<p>Thanks — we received your application and will reply if there is a match.</p>
+		<p>{{ setting:career_success ?? 'Thanks — we received your application and will reply if there is a match.' }}</p>
 	</div>
 	<div class="stay-connect-fields user__details">
 		<div class="input__box_group">
@@ -47,8 +47,8 @@
 		</div>
 		<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
 		<button type="submit" class="bw_custom_buttom bw_flex_btn">
-			<span class="btn-label">Apply Now <span class="material-symbols-sharp">chevron_right</span></span>
-			<span class="btn-loading" hidden>Sending…</span>
+			<span class="btn-label">{{ setting:career_button ?? 'Apply Now' }} <span class="material-symbols-sharp">chevron_right</span></span>
+			<span class="btn-loading" hidden>{{ setting:form_sending_label ?? 'Sending…' }}</span>
 		</button>
 	</div>
 {{ /form:career }}

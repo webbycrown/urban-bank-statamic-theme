@@ -13,7 +13,7 @@ page_builder:
   style: home
   heading: Some of our offerings
 seo_title: Urban Bank special offers
-seo_description: 'Checking perks, card bonuses, and savings offers. Each offer is a Control Panel entry.'
+seo_description: 'Checking perks, card bonuses, and savings offers from Urban Bank.'
 seo_keywords: 'urban bank offers, checking, savings'
 seo_image: image/bank_special_offers_1.jpg
 seo_robots: 'index, follow'

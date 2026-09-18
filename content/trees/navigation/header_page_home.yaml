@@ -5,7 +5,3 @@ tree:
     entry: home-two
   -
     entry: home-three
-  -
-    entry: banner
-  -
-    entry: presentation

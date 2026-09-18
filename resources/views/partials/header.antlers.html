@@ -7,7 +7,7 @@
 				</div>
 				{{ partial:partials/nav-header }}
 				<div class="bw_mobile_menu_icon">
-					<a href="#" role="button" aria-label="Open menu"><span class="material-symbols-outlined" aria-hidden="true">menu</span></a>
+					<button type="button" class="bw_mobile_menu_open" aria-label="Open menu" aria-controls="bw-menubar" aria-expanded="false"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
 				</div>
 				{{ if setting:cta_url }}
 				<a class="bw_custom_buttom" href="{{ setting:cta_url }}">{{ setting:cta_label ?? 'Talk to us' }}</a>

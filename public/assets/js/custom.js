@@ -394,45 +394,43 @@ function bwInitLoadMore() {
       $(this).toggleClass("active");
     });
 
-    jQuery(".bw_mobile_menu_icon a").on("click keydown", function (e) {
-      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
+    function setMenuOpen($panel, open) {
+      if (!$panel.length) {
         return;
       }
-      e.preventDefault();
-      jQuery(".bw_menubar_wrap").addClass("open");
+      if (open) {
+        $panel.addClass("open").attr("aria-hidden", "false").removeAttr("inert");
+      } else {
+        $panel.removeClass("open").attr("aria-hidden", "true").attr("inert", "");
+      }
+    }
+
+    jQuery(".bw_header .bw_mobile_menu_open").on("click", function () {
+      var $panel = jQuery("#bw-menubar");
+      setMenuOpen($panel, true);
+      jQuery(this).attr("aria-expanded", "true");
       jQuery(".bw_menubar_close").trigger("focus");
     });
-    jQuery(".bw_menubar_close").on("click keydown", function (e) {
-      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
-        return;
-      }
-      e.preventDefault();
-      jQuery(".bw_menubar_wrap").removeClass("open");
-      jQuery(".bw_mobile_menu_icon a").trigger("focus");
-    });
-    
-    jQuery(".bw_header_two .bw_mobile_menu_icon a").on("click keydown", function (e) {
-      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
-        return;
-      }
-      e.preventDefault();
-      jQuery(".bw_header_two").addClass("open");
-      jQuery(".bw_header_two .bw_mobile_menu_closer").trigger("focus");
-    });
-    jQuery(".bw_header_two .bw_mobile_menu_closer").on("click keydown", function (e) {
-      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
-        return;
-      }
-      e.preventDefault();
-      jQuery(".bw_header_two").removeClass("open");
-      jQuery(".bw_header_two .bw_mobile_menu_icon a").trigger("focus");
+    jQuery(".bw_menubar_close").on("click", function () {
+      setMenuOpen(jQuery("#bw-menubar"), false);
+      jQuery(".bw_header .bw_mobile_menu_open").attr("aria-expanded", "false").trigger("focus");
     });
 
-    // Keyboard-friendly desktop dropdowns (not hover-only)
-    jQuery(".bw_header_dropdown > .bw_dropdown_hover").on("click keydown", function (e) {
-      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") {
-        return;
-      }
+    jQuery(".bw_header_two .bw_mobile_menu_open").on("click", function () {
+      jQuery(".bw_header_two").addClass("open");
+      var $panel = jQuery("#bw-mobile-menu");
+      $panel.attr("aria-hidden", "false").removeAttr("inert");
+      jQuery(this).attr("aria-expanded", "true");
+      jQuery(".bw_header_two .bw_mobile_menu_closer").trigger("focus");
+    });
+    jQuery(".bw_header_two .bw_mobile_menu_closer").on("click", function () {
+      jQuery(".bw_header_two").removeClass("open");
+      jQuery("#bw-mobile-menu").attr("aria-hidden", "true").attr("inert", "");
+      jQuery(".bw_header_two .bw_mobile_menu_open").attr("aria-expanded", "false").trigger("focus");
+    });
+
+    // Keyboard + click desktop dropdowns (hover still works as progressive enhancement)
+    jQuery(".bw_header_dropdown > .bw_dropdown_hover").on("click", function (e) {
       e.preventDefault();
       var $li = jQuery(this).closest(".bw_header_dropdown");
       var open = !$li.hasClass("is-open");
@@ -447,8 +445,11 @@ function bwInitLoadMore() {
       if (e.key === "Escape") {
         jQuery(".bw_header_dropdown").removeClass("is-open");
         jQuery(".bw_dropdown_hover").attr("aria-expanded", "false");
-        jQuery(".bw_menubar_wrap").removeClass("open");
+        setMenuOpen(jQuery("#bw-menubar"), false);
+        jQuery(".bw_header .bw_mobile_menu_open").attr("aria-expanded", "false");
         jQuery(".bw_header_two").removeClass("open");
+        jQuery("#bw-mobile-menu").attr("aria-hidden", "true").attr("inert", "");
+        jQuery(".bw_header_two .bw_mobile_menu_open").attr("aria-expanded", "false");
       }
     });
 

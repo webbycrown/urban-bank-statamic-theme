@@ -21,7 +21,7 @@ excerpt: Open roles in Mumbai for people who can keep fees, holds, and product p
 image: image/Rectangle 255.png
 seo_title: Careers at Urban Bank
 seo_description: Open Urban Bank roles in Mumbai — developers, mobile, marketing, and project management. Apply from a role page.
-seo_keywords: 'urban bank careers, jobs, jakarta'
+seo_keywords: 'urban bank careers, jobs, mumbai'
 seo_image: image/Rectangle 255.png
 seo_robots: 'index, follow'
 content_sections:
@@ -30,10 +30,10 @@ content_sections:
     type: text_section
     heading: ''
     body: |-
-      Urban Bank hires people who can explain fees, holds, and product pages in plain language. The desk and the app share one customer record. We do not hire for an internet-banking dashboard on this site.
+      Urban Bank hires people who can explain fees, holds, and product pages in plain language. The desk and the app share one customer record. We hire for the public site, the app, and the branch desk.
       
       Roles below are full files in the Careers collection. Open a role for the work, the team, and how to apply. Use **Apply now** on that page. We reply if there is a match.
 ---
-Urban Bank hires people who can explain fees, holds, and product pages in plain language. The desk and the app share one customer record. We do not hire for an internet-banking dashboard on this site.
+Urban Bank hires people who can explain fees, holds, and product pages in plain language. The desk and the app share one customer record. We hire for the public site, the app, and the branch desk.
 
 Roles below are full files in the Careers collection. Open a role for the work, the team, and how to apply. Use **Apply now** on that page. We reply if there is a match.

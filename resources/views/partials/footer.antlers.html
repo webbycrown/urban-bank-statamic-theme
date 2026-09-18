@@ -47,13 +47,14 @@
 											<path d="M7.2 12.3l3.1 3.1 6.5-6.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
 										</svg>
 									</span>
-									<p>Thanks — you are on the list.</p>
+									<p>{{ setting:newsletter_success ?? 'Thanks — you are on the list.' }}</p>
 								</div>
 							</div>
 							<div class="stay-connect-fields">
-								<input type="email" name="email" placeholder="Enter your email address" value="{{ old:email }}" required>
-								<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off">
-								<button type="submit" class="bw_custom_buttom"><span class="btn-label">Subscribe</span><span class="btn-loading" hidden>Sending…</span></button>
+								<label class="bw_sr_only" for="footer-newsletter-email">Email</label>
+								<input id="footer-newsletter-email" type="email" name="email" placeholder="{{ setting:newsletter_placeholder ?? 'Enter your email address' }}" value="{{ old:email }}" required autocomplete="email">
+								<input type="text" class="js-honeypot" name="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+								<button type="submit" class="bw_custom_buttom"><span class="btn-label">{{ setting:newsletter_button ?? 'Subscribe' }}</span><span class="btn-loading" hidden>{{ setting:form_sending_label ?? 'Sending…' }}</span></button>
 							</div>
 						{{ /form:newsletter }}
 					</div>
