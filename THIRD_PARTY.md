@@ -15,17 +15,19 @@ Also bundled (MIT unless noted): Magnific Popup 1.1.0, Waypoints, Counter-Up, IM
 
 ## Demo photographs, video, and mockups
 
-All demo media under `public/assets/image/` ships with this kit so buyers can redistribute it with sites built from Urban Bank. You may keep, edit, or replace these files in commercial projects. They are sample content — use your own rights-cleared brand photography for production when possible.
+All demo media under `public/assets/image/` ships with this kit. Buyers may keep, edit, or replace these files in commercial projects. Prefer your own brand photography for production sites.
 
-| Asset group | Examples in this kit | Origin / rights |
-|---|---|---|
-| Brand logos & UI chrome | `logo.png`, `footer_logo.png`, `five-icon.png`, social SVGs/PNGs, feature icons (`feature-1.png` …) | Original WebbyCrown artwork for Urban Bank. Redistributable with the kit. |
-| App / card mockups | `mockup_app.png`, `digitlize.png`, `card-bg.png`, `money.png`, `bank_img.jpg` | Original WebbyCrown mockups and composites created for this theme. Redistributable with the kit. |
-| Offer photography | `bank_special_offers_1.jpg` … `bank_special_offers_4.jpg` | WebbyCrown-licensed demo stock cleared for redistribution with commercial starter kits. |
-| Team portraits | `team-1.jpg` … `team-6.jpg` (and matching `.png`) | WebbyCrown-licensed demo stock cleared for redistribution with commercial starter kits. |
-| Blog / section photos | `Rectangle 51 (1).png`, Mask group images, partner logos | WebbyCrown-licensed demo stock or original kit art. Redistributable with the kit. |
-| Demo video | `video.mp4` (Theme section video on Home / Home Two) | Original WebbyCrown sample clip for this kit. You may redistribute it with sites built from the kit. |
+**No Unsplash, Pexels, Pixabay, or other third-party stock photograph libraries are bundled in this kit.** Offer cards, team portraits, and blog cover art below are original WebbyCrown graphics created for Urban Bank (brand palette, monograms, and composites of kit mockups). Source: WebbyCrown Solutions. License: proprietary to this starter kit; redistributable with sites built from the kit.
 
-Where Unsplash / Pexels–style stock was used as a base for any demo photo, it was obtained under those sites’ license terms that allow free use and redistribution without a mandatory attribution line. We still recommend replacing demo faces and branch photography with your own rights-cleared media before go-live.
+| Asset group | Files | Source | License |
+|---|---|---|---|
+| Brand logos & UI chrome | `logo.png`, `footer_logo.png`, `five-icon.png`, social SVGs/PNGs, `feature-1.png` … `feature-6.png` | Original WebbyCrown artwork for Urban Bank | Redistributable with the kit |
+| App / card mockups | `mockup_app.png`, `digitlize.png`, `card-bg.png`, `money.png`, `chip.png`, `bank_img.jpg` | Original WebbyCrown mockups and brand composites for this theme (`bank_img.jpg` is kit brand art, not a stock photo) | Redistributable with the kit |
+| Offer cards | `bank_special_offers_1.jpg` … `bank_special_offers_4.jpg` | Original WebbyCrown graphics (mint/lime brand panels + kit mockup overlays). Generated for this kit — not third-party stock photos. | Redistributable with the kit |
+| Team / testimonial portraits | `team-1.jpg` … `team-6.jpg`, `user.jpg` | Original WebbyCrown monogram portraits (brand colors + initials). Generated for this kit — not third-party stock photos. | Redistributable with the kit |
+| Blog / section covers | `images-1.jpg` … `images-3.jpg`, UI screen captures named `Rectangle *.png`, `Mask group *.png`, partner marks | Original WebbyCrown UI art and brand covers for the demo | Redistributable with the kit |
+| Demo video | `video.mp4` (Home / Home Two Theme section) | Original WebbyCrown sample clip for this kit | Redistributable with the kit |
+
+To regenerate the monogram portraits and offer cards after a design change, run `php scripts/generate_original_demo_media.php` from a PHP build with GD and Liberation Sans (or DejaVu Bold).
 
 Theme section copy, collection entries, and navigation trees in `content/` are original WebbyCrown writing for the Urban Bank demo and may be edited or replaced freely.

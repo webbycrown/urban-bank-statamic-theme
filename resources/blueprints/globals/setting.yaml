@@ -136,6 +136,18 @@ tabs:
             type: text
             display: Career button
         -
+          handle: careers_other_roles_heading
+          field:
+            type: text
+            display: Career detail — other roles heading
+            instructions: Heading above related open roles on a career detail page.
+        -
+          handle: careers_join_heading
+          field:
+            type: text
+            display: Career detail — newsletter heading
+            instructions: Heading above the newsletter form on a career detail page.
+        -
           handle: learn_more_label
           field:
             type: text

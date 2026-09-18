@@ -33,6 +33,8 @@ data:
   comment_button: Post Comment
   career_success: 'Thanks — we received your application and will reply if there is a match.'
   career_button: Apply Now
+  careers_other_roles_heading: Other open roles
+  careers_join_heading: Stay on our hiring list
   learn_more_label: Learn more
   error_title: Page not found
   error_text: That address is not a page on this Urban Bank site. Use the menu or go back to the home page.

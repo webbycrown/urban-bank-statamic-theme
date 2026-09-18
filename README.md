@@ -117,6 +117,7 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 - Ship kit logic in `UrbanBankServiceProvider` so installs no longer replace your `AppServiceProvider`
 - Store blog comments as unpublished **Comments** entries editors can publish in the Control Panel (form submissions stay read-only)
 - Private career résumé disk with server-side PDF/DOC/DOCX and 5 MB checks
+- Replace team and offer stock-style photos with original WebbyCrown brand graphics; document sources in THIRD_PARTY.md
 - Document provider registration and point to the live demo
 
 ### v1.0.0

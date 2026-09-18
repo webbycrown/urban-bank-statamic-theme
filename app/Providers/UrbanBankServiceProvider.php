@@ -3,20 +3,20 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Event;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Validation\ValidationException;
 use Statamic\Events\FormSubmitted;
-use Statamic\Events\FormSubmitting;
 use Statamic\Facades\Entry;
 use Statamic\Facades\Site;
 use Statamic\Support\Str;
 
 /**
- * Urban Bank kit bootstrapping (Rule 06 / 07 / 05 / 03).
+ * Urban Bank kit bootstrapping (Rule 06 / 07 / 03).
  *
  * Shipped separately so starter-kit installs do not overwrite the site's
  * AppServiceProvider. Register in bootstrap/providers.php — see README.
+ *
+ * Career uploads are validated by the form blueprint and resumes asset
+ * container (mimes + max). There is no FormSubmitting event in Statamic 5.
  */
 class UrbanBankServiceProvider extends ServiceProvider
 {
@@ -47,30 +47,6 @@ class UrbanBankServiceProvider extends ServiceProvider
                 ['doc', 'docx']
             ))),
         ]);
-
-        // Belt-and-suspenders: blueprint + container validate, and reject bad career files here.
-        Event::listen(FormSubmitting::class, function (FormSubmitting $event) {
-            if ($event->submission->form()->handle() !== 'career') {
-                return;
-            }
-
-            $file = request()->file('resume');
-
-            $validator = Validator::make(
-                ['resume' => $file],
-                [
-                    'resume' => ['required', 'file', 'mimes:pdf,doc,docx', 'max:5120'],
-                ],
-                [
-                    'resume.mimes' => 'The resume must be a PDF, DOC, or DOCX file.',
-                    'resume.max' => 'The resume may not be greater than 5 MB.',
-                ]
-            );
-
-            if ($validator->fails()) {
-                throw ValidationException::withMessages($validator->errors()->toArray());
-            }
-        });
 
         // Blog comments → unpublished Comments entries (Rule 03).
         // Form submissions are read-only in the CP, so editors publish via Collections → Comments.
