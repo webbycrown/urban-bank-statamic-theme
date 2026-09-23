@@ -12,4 +12,3 @@ export_paths:
   - public/assets
   - README.md
   - THIRD_PARTY.md
-  - optional/legacy-html-redirects.php

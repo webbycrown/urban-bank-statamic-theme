@@ -3,7 +3,7 @@
 /**
  * Generate original Urban Bank demo media (Rule 08).
  * Overwrites photographic / third-party-branded files with WebbyCrown brand art only.
- * No stock photographs, no Square/Visa/Apple marks, no Shutterstock.
+ * No stock photographs, no real bank partner trademarks, no Square/Visa marks, no Shutterstock.
  */
 
 $root = dirname(__DIR__);
@@ -446,6 +446,92 @@ foreach ($frameLabels as $i => [$t, $s, $v]) {
     imagejpeg($im, $path, 92);
     imagedestroy($im);
     echo "wrote {$path}\n";
+}
+
+// ---------------------------------------------------------------------------
+// Partner placeholders — fictional marks only (no real bank trademarks)
+// ---------------------------------------------------------------------------
+function partnerMark(int $w, int $h, string $label, string $shape, bool $card = false): GdImage
+{
+    global $font, $fontReg;
+
+    $im = imagecreatetruecolor($w, $h);
+    imagealphablending($im, true);
+    imagesavealpha($im, true);
+
+    if ($card) {
+        imagefilledrectangle($im, 0, 0, $w, $h, fill($im, '#1a1f2e'));
+        // mint edge highlight
+        imagefilledrectangle($im, 0, 0, $w - 1, 2, fill($im, '#64DCB6'));
+        imagefilledrectangle($im, $w - 3, 0, $w - 1, $h - 1, fill($im, '#64DCB6'));
+        $ink = fill($im, '#c8d0dc');
+    } else {
+        imagefilledrectangle($im, 0, 0, $w, $h, fill($im, '#000000'));
+        $ink = fill($im, '#b8c0cc');
+    }
+
+    $cx = (int) ($w * 0.18);
+    $cy = (int) ($h / 2);
+    $r = (int) min($h * 0.28, $w * 0.12);
+
+    if ($shape === 'circle') {
+        imagefilledellipse($im, $cx, $cy, $r * 2, $r * 2, $ink);
+        imagefilledellipse($im, $cx, $cy, (int) ($r * 1.2), (int) ($r * 1.2), fill($im, $card ? '#1a1f2e' : '#000000'));
+    } elseif ($shape === 'bars') {
+        for ($i = 0; $i < 3; $i++) {
+            imagefilledrectangle($im, $cx - $r + $i * 10, $cy - $r, $cx - $r + 6 + $i * 10, $cy + $r, $ink);
+        }
+    } elseif ($shape === 'diamond') {
+        imagefilledpolygon($im, [
+            $cx, $cy - $r,
+            $cx + $r, $cy,
+            $cx, $cy + $r,
+            $cx - $r, $cy,
+        ], $ink);
+    } else { // square
+        imagefilledrectangle($im, $cx - $r, $cy - $r, $cx + $r, $cy + $r, $ink);
+    }
+
+    $fs = max(9, (int) min(16, $h * 0.28));
+    $bbox = imagettfbbox($fs, 0, $font, $label);
+    $tw = $bbox[2] - $bbox[0];
+    $textX = (int) ($w * 0.32);
+    $textY = (int) (($h + ($bbox[1] - $bbox[7])) / 2);
+    // If label is long, use smaller font
+    if ($textX + $tw > $w - 8) {
+        $fs = max(8, $fs - 2);
+    }
+    imagettftext($im, $fs, 0, $textX, $textY, $ink, $font, $label);
+
+    return $im;
+}
+
+$partnerStrip = [
+    ['logo_slider_1.png', 200, 70, 'NORTHLINE', 'circle'],
+    ['logo_slider_2.png', 200, 70, 'HARBOR', 'bars'],
+    ['logo_slider_3.png', 200, 70, 'CLEARBAY', 'diamond'],
+    ['logo_slider_4.png', 200, 70, 'RIVERFIELD', 'square'],
+    ['logo_slider_5.png', 200, 70, 'SUMMIT', 'circle'],
+    ['logo_slider_6.png', 200, 70, 'APEX CO', 'bars'],
+    ['logo_slider_7.png', 200, 70, 'BRIDGE', 'diamond'],
+    ['logo_slider_8.png', 200, 70, 'CORAL', 'square'],
+];
+
+foreach ($partnerStrip as [$name, $w, $h, $label, $shape]) {
+    savePng(partnerMark($w, $h, $label, $shape, false), "{$img}/{$name}");
+}
+
+$partnerCards = [
+    ['Group 998.png', 180, 70, 'NORTHLINE', 'circle'],
+    ['Group 1000.png', 200, 80, 'HARBOR', 'bars'],
+    ['Group 1002.png', 180, 70, 'CLEARBAY', 'diamond'],
+    ['Group 1003.png', 200, 80, 'RIVERFIELD', 'square'],
+    ['Group 1003 (1).png', 200, 80, 'RIVERFIELD', 'square'],
+    ['Group 1004.png', 180, 70, 'SUMMIT', 'circle'],
+];
+
+foreach ($partnerCards as [$name, $w, $h, $label, $shape]) {
+    savePng(partnerMark($w, $h, $label, $shape, true), "{$img}/{$name}");
 }
 
 echo "done\n";

@@ -1,7 +1,7 @@
 ---
 id: partner-2
 blueprint: partner
-title: Partner 2
+title: Harbor Trust
 image: image/logo_slider_2.png
 placement: strip
 order: 2

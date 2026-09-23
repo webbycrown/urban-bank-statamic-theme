@@ -102,7 +102,46 @@ Your existing `AppServiceProvider` is left alone. Register `UrbanBankServiceProv
 
 This kit does **not** export `routes/`. Your `routes/web.php` and `routes/console.php` (including scheduled commands) are left unchanged.
 
-Optional: if you still need redirects from the original HTML template URLs (`/index-2.html`, `/login.html`, and so on), copy lines from `optional/legacy-html-redirects.php` into your own `routes/web.php`. New sites do not need them.
+Optional: only if you still receive traffic on old HTML template paths, add redirects to your own `routes/web.php`. New Statamic sites do not need these.
+
+```php
+use Illuminate\Support\Facades\Route;
+
+Route::redirect('/index.html', '/');
+Route::redirect('/index-2.html', '/home-two');
+Route::redirect('/index-3.html', '/home-three');
+Route::redirect('/about.html', '/about');
+Route::redirect('/feature.html', '/feature');
+Route::redirect('/feature-detail.html', '/feature/multi-device');
+Route::redirect('/feature-credit-cards.html', '/feature/credit-cards');
+Route::redirect('/feature-credit-cards', '/feature/credit-cards');
+Route::redirect('/feature-business-loans.html', '/feature/business-loans');
+Route::redirect('/feature-business-loans', '/feature/business-loans');
+Route::redirect('/feature-mobile-banking.html', '/feature/mobile-banking');
+Route::redirect('/feature-mobile-banking', '/feature/mobile-banking');
+Route::redirect('/team.html', '/team');
+Route::redirect('/team-detail.html', '/team/dale-baryant');
+Route::redirect('/career.html', '/career');
+Route::redirect('/career-detail.html', '/career/react-native-developer');
+Route::redirect('/contact.html', '/contact');
+Route::redirect('/pricing.html', '/pricing');
+Route::redirect('/login.html', '/contact');
+Route::redirect('/login', '/contact');
+Route::redirect('/blog-grid-1.html', '/blog');
+Route::redirect('/blog-grid-2.html', '/blog-two');
+Route::redirect('/blog-grid-3.html', '/blog-three');
+Route::redirect('/blog-detail-1.html', '/blog/clear-fees-before-you-send');
+Route::redirect('/blog-detail-2.html', '/blog/cards-that-show-the-rate');
+Route::redirect('/bank-special-offers.html', '/offers');
+Route::redirect('/offer-detail.html', '/offers/checking-perks');
+Route::redirect('/faq.html', '/faq');
+Route::redirect('/faq-2.html', '/faq-two');
+Route::redirect('/privacy-policy.html', '/privacy-policy');
+Route::redirect('/terms.html', '/terms');
+Route::redirect('/presentation.html', '/presentation');
+Route::redirect('/banner.html', '/banner');
+Route::redirect('/error.html', '/404');
+```
 
 ### Installing via the Statamic CLI Tool
 
@@ -116,10 +155,16 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 
 ## Changelog
 
+### v1.1.2
+
+- Replace real bank partner logos with fictional placeholder marks; partners heading no longer implies endorsement
+- Move optional HTML redirects into the README (no longer exported as a project-root file)
+- Shorten THIRD_PARTY.md to a plain customer-facing media notice
+
 ### v1.1.1
 
 - Replace remaining stock photographs and the Shutterstock demo video with original brand art; rewrite THIRD_PARTY.md to match every file under `public/assets/image/`
-- Stop exporting `routes/` so existing `web.php` / `console.php` survive install; HTML redirects live in `optional/legacy-html-redirects.php`
+- Stop exporting `routes/` so existing `web.php` / `console.php` survive install; optional HTML redirects are documented in the README
 - Distinct insight covers per blog post; pricing plans in ₹; comments link to blogs by entry ID
 - Drop legacy `content/sites.yaml` (Statamic 5 uses `resources/sites.yaml`)
 - Center team monograms and offer art in circular/cover crops
