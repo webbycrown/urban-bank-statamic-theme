@@ -1,4 +1,5 @@
-<p><strong>Name:</strong> {{ first_name }} {{ last_name }}</p>
-<p><strong>Email:</strong> {{ email }}</p>
-<p><strong>Phone:</strong> {{ phone }}</p>
-<p>{{ message }}</p>
+{{ fields }}
+{{ if value }}
+<p><strong>{{ display }}:</strong> {{ value | entities }}</p>
+{{ /if }}
+{{ /fields }}

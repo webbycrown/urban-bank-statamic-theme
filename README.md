@@ -41,7 +41,7 @@ The starter kit includes a complete set of pages for a bank marketing site:
 - **Offers**: Checking perks and seasonal plans.
 - **Testimonials**, **FAQs**, **Plans**, **Partners**
 
-Site name, phone, email, logos, mega-menu column titles, branch hours, map embed, and social links live in the **Setting** global. Footer copy lives in the **Footer** global. Header and footer menus are Statamic navigations (entry links).
+Site name, phone, email, logos, mega-menu column titles, branch hours, map embed, and social links live in the **Setting** global. **Contact**, **Careers**, and **Team** page pickers (and the header CTA link) use Pages entries so buttons survive slug renames. Footer copy lives in the **Footer** global. Header and footer menus are Statamic navigations (entry links).
 
 ## Features of Urban Bank
 
@@ -59,6 +59,8 @@ Site name, phone, email, logos, mega-menu column titles, branch hours, map embed
 - Newsletter
 - Comment (creates an unpublished Comments entry for CP review)
 - Career (private résumé container)
+
+**Statamic Core includes one form.** Use **[Statamic Pro](https://statamic.com/pricing)** if you keep all four.
 
 Set each form’s email recipient in **CP → Forms** after install (defaults use `admin@example.com`).
 
@@ -154,6 +156,15 @@ statamic new my-site webbycrown/urban-bank-statamic-theme
 Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](https://github.com/webbycrown/urban-bank-statamic-theme/issues) or [WebbyCrown](https://www.webbycrown.com/custom-statamic-development-services-company/).
 
 ## Changelog
+
+### v1.1.3
+
+- Upgrade bundled jQuery to 3.7.1; remove unused / non-commercial MixItUp and other unloaded scripts
+- Escape visitor-submitted fields in notification emails with `| entities` (via `{{ fields }}` so `message` does not clash with Laravel’s Mail Message)
+- Correct Counter-Up licence (GPL v2) and align THIRD_PARTY.md with every remaining library
+- Reject comment posts whose entry ID is not in the **blogs** collection
+- Contact / careers / team buttons use Setting entries (and section link fields) instead of hard-coded paths
+- Marketplace listing summary notes Statamic Pro for four forms
 
 ### v1.1.2
 

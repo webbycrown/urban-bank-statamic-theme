@@ -31,7 +31,7 @@
 					{{ /if }}
 				</div>
 				<div class="bw_faq_page_btn">
-					<a class="bw_custom_buttom bw_flex_btn" href="{{ setting:cta_url ?? '/contact' }}">Choose plan <span class="material-symbols-sharp">chevron_right</span></a>
+					<a class="bw_custom_buttom bw_flex_btn" href="{{ setting:contact_page:url ?? setting:cta_url ?? '/contact' }}">Choose plan <span class="material-symbols-sharp">chevron_right</span></a>
 				</div>
 			</div>
 			{{ /collection:plans }}

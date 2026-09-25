@@ -12,7 +12,7 @@ page_builder:
     confirm. Products and offers come first on this page.
   image: image/bank_img.jpg
   button_label: Talk to us
-  button_url: /contact
+  button_url: 'entry::contact'
 - id: fb1bf01bac52
   type: features
   style: page

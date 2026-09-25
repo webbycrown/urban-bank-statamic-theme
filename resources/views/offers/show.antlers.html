@@ -19,7 +19,7 @@
 									{{ if content_sections or content }}
 									<div class="bw_grid_contain_wrap bw_feature_detail_copy" data-aos="fade-up" data-aos-duration="1500">
 										{{ partial:partials/content-sections }}
-										<p><a class="bw_custom_buttom" href="{{ setting:cta_url ?? '/contact' }}">{{ setting:cta_label ?? 'Talk to us' }}</a></p>
+										<p><a class="bw_custom_buttom" href="{{ setting:contact_page:url ?? setting:cta_url ?? '/contact' }}">{{ setting:cta_label ?? 'Talk to us' }}</a></p>
 									</div>
 									{{ /if }}
 								</div>

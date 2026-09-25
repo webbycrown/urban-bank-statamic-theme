@@ -1,1 +1,5 @@
-<p><strong>Email:</strong> {{ email }}</p>
+{{ fields }}
+{{ if value }}
+<p><strong>{{ display }}:</strong> {{ value | entities }}</p>
+{{ /if }}
+{{ /fields }}

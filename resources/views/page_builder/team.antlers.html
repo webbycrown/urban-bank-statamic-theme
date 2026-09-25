@@ -19,7 +19,7 @@
 			{{ /collection:team }}
 		</div>
 		<div class="bw_team_btn" data-aos="fade-up" data-aos-duration="1500">
-			<a class="bw_custom_buttom bw_flex_btn" href="/career">Open roles <span class="material-symbols-outlined">refresh</span></a>
+			<a class="bw_custom_buttom bw_flex_btn" href="{{ button_url ?? setting:careers_page:url ?? '/career' }}">{{ button_label ?? 'Open roles' }} <span class="material-symbols-outlined">refresh</span></a>
 		</div>
 	</div>
 </section>

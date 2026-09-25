@@ -10,7 +10,7 @@ page_builder:
   heading: Urban Bank
   text: Everyday accounts, cards, and loans from one desk.
   button_label: Talk to us
-  button_url: /contact
+  button_url: 'entry::contact'
 - id: 26c2a96f506c
   type: contact_form
   kicker: Visit us

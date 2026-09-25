@@ -7,7 +7,10 @@ data:
   email: support@urbanbank.com
   copyright: '@Urban Bank. All rights reserved.'
   cta_label: Talk to us
-  cta_url: /contact
+  cta_url: 'entry::contact'
+  contact_page: contact
+  careers_page: career
+  team_page: team
   mega_home_title: Banking
   mega_company_title: Company
   mega_features_title: Products

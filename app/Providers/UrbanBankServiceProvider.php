@@ -65,13 +65,14 @@ class UrbanBankServiceProvider extends ServiceProvider
             }
 
             // Prefer entry ID (entries field); fall back to slug for older forms.
+            // Only accept blogs — a stray ID from another collection must not create Comments.
             $blog = Entry::find($postRef)
                 ?? Entry::query()
                     ->where('collection', 'blogs')
                     ->where('slug', $postRef)
                     ->first();
 
-            if (! $blog) {
+            if (! $blog || $blog->collectionHandle() !== 'blogs') {
                 return;
             }
 

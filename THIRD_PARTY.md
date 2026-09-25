@@ -4,14 +4,18 @@ This starter kit bundles or loads the following front-end libraries. Each remain
 
 | Library | Version in this kit | License | Source |
 |---|---|---|---|
-| jQuery | 1.11.0 (`public/assets/js/jquery.min.js`) | MIT | [jquery.org/license](https://jquery.org/license) |
-| Swiper | 8.0.6 | MIT | [swiperjs.com](https://swiperjs.com) |
-| Chart.js | 3.3.2 | MIT | [chartjs.org](https://www.chartjs.org) |
-| AOS | bundled `aos.js` | MIT | [michalsnik/aos](https://github.com/michalsnik/aos) |
-| Font Awesome Free | 6.0.0 | Icons: CC BY 4.0; Fonts: SIL OFL 1.1; Code: MIT | [fontawesome.com/license/free](https://fontawesome.com/license/free) |
-| Material Icons / Material Symbols | Google Fonts CDN in `resources/views/partials/head.antlers.html` | Apache License 2.0 | [fonts.google.com](https://fonts.google.com/icons) |
+| jQuery | 3.7.1 (`public/assets/js/jquery.min.js`) | MIT | [jquery.org/license](https://jquery.org/license) |
+| Swiper | 8.0.6 (`swiper-bundle.min.js` / CSS) | MIT | [swiperjs.com](https://swiperjs.com) |
+| Chart.js | 3.3.2 (`chart.min.js`) | MIT | [chartjs.org](https://www.chartjs.org) |
+| AOS | bundled `aos.js` / `aos.css` | MIT | [michalsnik/aos](https://github.com/michalsnik/aos) |
+| Magnific Popup | 1.1.0 (`jquery.magnific-popup.min.js` / CSS) | MIT | [dimsemenov/Magnific-Popup](https://github.com/dimsemenov/Magnific-Popup) |
+| jQuery Waypoints | 2.0.3 (`waypoints.min.js`) | MIT or GPL | [imakewebthings/waypoints](https://github.com/imakewebthings/waypoints) |
+| Counter-Up | 1.0 (`jquery.counterup.min.js`) | GPL v2 | [bfintal/Counter-Up](https://github.com/bfintal/Counter-Up) |
+| IMask | 2.5.5 (`imask.min.js`) | MIT | [uNmAnNeR/imaskjs](https://github.com/uNmAnNeR/imaskjs) |
+| Font Awesome Free | 6.0.0 (`all.min.js` / `all.min.css`) | Icons: CC BY 4.0; Fonts: SIL OFL 1.1; Code: MIT | [fontawesome.com/license/free](https://fontawesome.com/license/free) |
+| Material Icons / Material Symbols | Google Fonts CDN in `resources/views/partials/head.antlers.html` | Apache License 2.0 | [fonts.google.com/icons](https://fonts.google.com/icons) |
 
-Also bundled (MIT unless noted): Magnific Popup 1.1.0, Waypoints, Counter-Up, IMask. Urbanist and Mulish webfonts are under the SIL Open Font License 1.1; see `public/assets/font/LICENSE.txt`.
+Also bundled: Urbanist and Mulish webfonts under the SIL Open Font License 1.1; see `public/assets/font/LICENSE.txt`. Theme scripts `custom.js` and `theme-forms.js` are original WebbyCrown code.
 
 ## Demo media under `public/assets/image/`
 

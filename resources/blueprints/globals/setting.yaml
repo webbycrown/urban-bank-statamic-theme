@@ -80,6 +80,33 @@ tabs:
           field:
             type: text
             display: Talk to us label
+        -
+          handle: contact_page
+          field:
+            type: entries
+            display: Contact page
+            instructions: Used by branch cards and as the default Talk to us target. Survives slug renames.
+            max_items: 1
+            collections:
+              - pages
+        -
+          handle: careers_page
+          field:
+            type: entries
+            display: Careers page
+            instructions: Team section “Open roles” button. Survives slug renames.
+            max_items: 1
+            collections:
+              - pages
+        -
+          handle: team_page
+          field:
+            type: entries
+            display: Team page
+            instructions: “Back to team” on team detail. Survives slug renames.
+            max_items: 1
+            collections:
+              - pages
       -
         display: Forms
         instructions: Success messages and button labels for newsletter, contact, comment, and career forms.
@@ -164,8 +191,11 @@ tabs:
         -
           handle: cta_url
           field:
-            type: text
-            display: Header CTA URL
+            type: link
+            display: Header CTA link
+            instructions: Prefer a Pages entry so the URL follows renames.
+            collections:
+              - pages
         -
           handle: facebook
           field:

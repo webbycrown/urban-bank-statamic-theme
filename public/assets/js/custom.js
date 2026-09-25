@@ -542,18 +542,9 @@ function bwInitLoadMore() {
     });
 
     //===== End all animation js =====//
-    //===== start ripples js =====//
-    if (jQuery.fn.ripples && jQuery(".bw_ripples").length) {
-      jQuery(".bw_ripples").ripples({
-        resolution: 256,
-        dropRadius: 12,
-        perturbance: 0.04,
-      });
-    }
 
     var CurrentUrl = document.URL;
     var CurrentUrlEnd = CurrentUrl.split("/").filter(Boolean).pop();
-    console.log(CurrentUrlEnd);
     $(".bw_all_menu li a").each(function () {
       var ThisUrl = $(this).attr("href");
       var ThisUrlEnd = ThisUrl.split("/").filter(Boolean).pop();
@@ -563,7 +554,6 @@ function bwInitLoadMore() {
       }
     });
   });
-  //===== End ripples js =====//
 
 
 $(document).ready(function () {

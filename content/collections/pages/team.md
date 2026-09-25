@@ -9,6 +9,8 @@ page_builder:
   style: grid
   kicker: Team
   heading: Meet the team
+  button_label: Open roles
+  button_url: 'entry::career'
 seo_title: Urban Bank team
 seo_description: 'People who explain fees, holds, and product pages. Each person is a team entry.'
 seo_keywords: urban bank team

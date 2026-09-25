@@ -187,8 +187,10 @@ fields:
                 -
                   handle: button_url
                   field:
-                    type: text
-                    display: Button URL
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
                 -
                   handle: body
                   field:
@@ -238,8 +240,10 @@ fields:
                 -
                   handle: button_url
                   field:
-                    type: text
-                    display: Button URL
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
 
             text_section:
               display: Text section
@@ -407,8 +411,10 @@ fields:
                 -
                   handle: button_url
                   field:
-                    type: text
-                    display: Button URL
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
 
             pages_index:
               display: Pages index
@@ -512,6 +518,20 @@ fields:
                       grid: Grid
                 -
                   import: section_heading
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Grid button label
+                    instructions: Shown on the grid layout only (e.g. Open roles).
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Grid button link
+                    instructions: Prefer a Pages entry (e.g. Careers). Falls back to Setting → Careers page.
+                    collections:
+                      - pages
 
             pricing:
               display: Pricing

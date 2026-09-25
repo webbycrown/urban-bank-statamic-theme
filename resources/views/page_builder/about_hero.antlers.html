@@ -11,7 +11,7 @@
 				<h2 class="bw_sub_title" data-aos="fade-up" data-aos-duration="1500">{{ heading ?? 'About Urban Bank' }}</h2>
 				{{ if text }}<p data-aos="fade-up" data-aos-duration="1500">{{ text }}</p>{{ /if }}
 				{{ if button_label }}
-				<p data-aos="fade-up" data-aos-duration="1500"><a class="bw_custom_buttom" href="{{ button_url ?? setting:cta_url ?? '/contact' }}">{{ button_label }}</a></p>
+				<p data-aos="fade-up" data-aos-duration="1500"><a class="bw_custom_buttom" href="{{ button_url ?? setting:contact_page:url ?? setting:cta_url ?? '/contact' }}">{{ button_label }}</a></p>
 				{{ /if }}
 				{{ if body }}
 				<div data-aos="fade-up" data-aos-duration="1500">{{ body }}</div>
