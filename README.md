@@ -160,7 +160,7 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 ### v1.1.3
 
 - Upgrade bundled jQuery to 3.7.1; remove unused / non-commercial MixItUp and other unloaded scripts
-- Escape visitor-submitted fields in notification emails with `| entities` (via `{{ fields }}` so `message` does not clash with Laravel’s Mail Message)
+- Escape visitor-submitted fields in notification emails with the entities modifier (via the fields loop, so a form field named message does not clash with Laravel’s Mail Message)
 - Correct Counter-Up licence (GPL v2) and align THIRD_PARTY.md with every remaining library
 - Reject comment posts whose entry ID is not in the **blogs** collection
 - Contact / careers / team buttons use Setting entries (and section link fields) instead of hard-coded paths

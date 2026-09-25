@@ -35,3 +35,5 @@ https://github.com/webbycrown/urban-bank-statamic-theme
 - Marketing site only (no internet-banking dashboard or live payment gateway).
 - Theme sections on one Page template; private résumé uploads; moderated blog comments.
 - **Forms:** Contact, newsletter, comment, and career. Statamic Core includes one form; use Statamic Pro if you keep all four.
+
+Do not paste Antlers tags (double curly braces) into marketplace Summary or Main content — the listing page is a Vue app and will throw `ReferenceError: … is not defined`. Keep Main content as **Use README.md** after the README is free of those tags.
