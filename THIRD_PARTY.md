@@ -9,9 +9,8 @@ This starter kit bundles or loads the following front-end libraries. Each remain
 | Chart.js | 3.3.2 (`chart.min.js`) | MIT | [chartjs.org](https://www.chartjs.org) |
 | AOS | bundled `aos.js` / `aos.css` | MIT | [michalsnik/aos](https://github.com/michalsnik/aos) |
 | Magnific Popup | 1.1.0 (`jquery.magnific-popup.min.js` / CSS) | MIT | [dimsemenov/Magnific-Popup](https://github.com/dimsemenov/Magnific-Popup) |
-| jQuery Waypoints | 2.0.3 (`waypoints.min.js`) | MIT or GPL | [imakewebthings/waypoints](https://github.com/imakewebthings/waypoints) |
+| jQuery Waypoints | 4.0.1 (`waypoints.min.js`; file banner still reads 4.0.0) | MIT | [imakewebthings/waypoints](https://github.com/imakewebthings/waypoints) |
 | Counter-Up | 1.0 (`jquery.counterup.min.js`) | GPL v2 | [bfintal/Counter-Up](https://github.com/bfintal/Counter-Up) |
-| IMask | 2.5.5 (`imask.min.js`) | MIT | [uNmAnNeR/imaskjs](https://github.com/uNmAnNeR/imaskjs) |
 | Font Awesome Free | 6.0.0 (`all.min.js` / `all.min.css`) | Icons: CC BY 4.0; Fonts: SIL OFL 1.1; Code: MIT | [fontawesome.com/license/free](https://fontawesome.com/license/free) |
 | Material Icons / Material Symbols | Google Fonts CDN in `resources/views/partials/head.antlers.html` | Apache License 2.0 | [fonts.google.com/icons](https://fonts.google.com/icons) |
 

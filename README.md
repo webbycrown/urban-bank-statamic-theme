@@ -157,6 +157,11 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 
 ## Changelog
 
+### v1.1.4
+
+- Replace Waypoints 2.0.3 with 4.0.1 so the home counters work with jQuery 3 (no `.load()` TypeError)
+- Remove unused IMask (`imask.min.js` was loaded on every page)
+
 ### v1.1.3
 
 - Upgrade bundled jQuery to 3.7.1; remove unused / non-commercial MixItUp and other unloaded scripts
