@@ -161,6 +161,9 @@ Questions and issues: [github.com/webbycrown/urban-bank-statamic-theme/issues](h
 
 - Replace Waypoints 2.0.3 with 4.0.1 so the home counters work with jQuery 3 (no `.load()` TypeError)
 - Remove unused IMask (`imask.min.js` was loaded on every page)
+- FAQ questions are buttons with `aria-expanded`, so answers open from the keyboard
+- Self-host a Material Symbols subset so icon names are not shown as text
+- Careers page copy is written for visitors, not for editors
 
 ### v1.1.3
 

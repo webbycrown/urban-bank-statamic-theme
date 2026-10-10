@@ -48,5 +48,5 @@ content_sections:
     type: text_section
     heading: 'How to apply'
     body: |-
-      Use **Apply now** on this page. Send a CV and a one-page example of a launch plan you ran (dates and roles can be anonymised). Tell us one thing that slipped and how you changed the next launch. We will reply if there is a match.
+      Send a CV and a one-page example of a launch plan you ran (dates and roles can be anonymised). Tell us one thing that slipped and how you changed the next launch. We will reply if there is a match.
 ---

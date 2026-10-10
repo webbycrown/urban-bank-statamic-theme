@@ -471,28 +471,22 @@ function bwInitLoadMore() {
     //===== start accordian js =====//
 
     jQuery("body").on("click", ".accordion .accordion-tabs", function () {
-      console.log('fgf');
       jQuery(".accordion-content").slideUp(),
       jQuery(this).hasClass("acco-active")
       ? (jQuery(this).next(".accordion-content").slideUp(),
         jQuery(this).removeClass("acco-active"))
-       //jQuery('.accordion-item').removeClass('bw-active-tab'),
-        //jQuery(this).parent().addClass('bw-active-tab'),
       : (jQuery(".accordion .accordion-tabs").removeClass("acco-active"),
         jQuery('.accordion-item').removeClass('bw-active-tab'),
         jQuery(this).parent().addClass('bw-active-tab'),
         jQuery(this).addClass("acco-active"),
         jQuery(this).next(".accordion-content").slideDown());
-      jQuery(".accordion .accordion-tabs h5 span.accordion_icon").text("add");
-      jQuery(
-        ".accordion .accordion-tabs.acco-active h5 span.accordion_icon"
-        ).text("remove");
-
-      jQuery(".bw_faq_page_section_2 .accordion .accordion-tabs h5 span.accordion_icon").text("expand_more");
-      jQuery(
-        ".bw_faq_page_section_2 .accordion .accordion-tabs.acco-active h5 span.accordion_icon"
-        ).text("expand_less");
-
+      jQuery(".accordion .accordion-tabs .accordion_icon").text("add");
+      jQuery(".accordion .accordion-tabs.acco-active .accordion_icon").text("remove");
+      jQuery(".bw_faq_page_section_2 .accordion .accordion-tabs .accordion_icon").text("expand_more");
+      jQuery(".bw_faq_page_section_2 .accordion .accordion-tabs.acco-active .accordion_icon").text("expand_less");
+      jQuery(".accordion .accordion-tabs").each(function () {
+        jQuery(this).attr("aria-expanded", jQuery(this).hasClass("acco-active") ? "true" : "false");
+      });
     });
 
     //===== End accordian js =====//

@@ -63,37 +63,70 @@
    font-display: swap;
 }
 /*Mulish_font*/
-/*Materialicon*/
+/*Material Symbols (self-hosted ligature subset)*/
 @font-face {
-   font-family: 'Material Icons';
+   font-family: 'Material Symbols Sharp';
    font-style: normal;
    font-weight: 400;
-   src: url(https://example.com/MaterialIcons-Regular.eot);
-   src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+   font-display: block;
+   src: url('../font/MaterialSymbolsSharp.ttf') format('truetype');
 }
+@font-face {
+   font-family: 'Material Symbols Outlined';
+   font-style: normal;
+   font-weight: 400;
+   font-display: block;
+   src: url('../font/MaterialSymbolsOutlined.ttf') format('truetype');
+}
+.material-symbols-sharp,
 .material-icons {
-   font-family: 'Material Icons';
+   font-family: 'Material Symbols Sharp';
    font-weight: normal;
    font-style: normal;
    font-size: 24px;
-/* Preferred icon size */
-display: inline-block;
-line-height: 1;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
-direction: ltr;
--webkit-font-smoothing: antialiased;
-/* Support for all WebKit browsers. */
-text-rendering: optimizeLegibility;
-/* Support for Safari and Chrome. */
--moz-osx-font-smoothing: grayscale;
-/* Support for Firefox. */
-font-feature-settings: 'liga';
-/* Support for IE. */
+   display: inline-block;
+   line-height: 1;
+   text-transform: none;
+   letter-spacing: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+   direction: ltr;
+   -webkit-font-smoothing: antialiased;
+   text-rendering: optimizeLegibility;
+   -moz-osx-font-smoothing: grayscale;
+   font-feature-settings: 'liga';
 }
-/*Materialicon*/
+.material-symbols-outlined {
+   font-family: 'Material Symbols Outlined';
+   font-weight: normal;
+   font-style: normal;
+   font-size: 24px;
+   display: inline-block;
+   line-height: 1;
+   text-transform: none;
+   letter-spacing: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+   direction: ltr;
+   -webkit-font-smoothing: antialiased;
+   text-rendering: optimizeLegibility;
+   -moz-osx-font-smoothing: grayscale;
+   font-feature-settings: 'liga';
+}
+button.accordion-tabs {
+   display: block;
+   width: 100%;
+   margin: 0;
+   padding: 0 35px 10px 0;
+   border: 0;
+   background: none;
+   color: inherit;
+   font: inherit;
+   text-align: left;
+   cursor: pointer;
+   position: relative;
+}
+/*Material Symbols*/
 :root {
    --font_family_1: Mulish, sans-serif;
    --font_family_2: Urbanist, sans-serif;

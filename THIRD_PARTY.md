@@ -12,7 +12,7 @@ This starter kit bundles or loads the following front-end libraries. Each remain
 | jQuery Waypoints | 4.0.1 (`waypoints.min.js`; file banner still reads 4.0.0) | MIT | [imakewebthings/waypoints](https://github.com/imakewebthings/waypoints) |
 | Counter-Up | 1.0 (`jquery.counterup.min.js`) | GPL v2 | [bfintal/Counter-Up](https://github.com/bfintal/Counter-Up) |
 | Font Awesome Free | 6.0.0 (`all.min.js` / `all.min.css`) | Icons: CC BY 4.0; Fonts: SIL OFL 1.1; Code: MIT | [fontawesome.com/license/free](https://fontawesome.com/license/free) |
-| Material Icons / Material Symbols | Google Fonts CDN in `resources/views/partials/head.antlers.html` | Apache License 2.0 | [fonts.google.com/icons](https://fonts.google.com/icons) |
+| Material Symbols Sharp / Outlined | `public/assets/font/MaterialSymbolsSharp.ttf`, `public/assets/font/MaterialSymbolsOutlined.ttf` (ligature subset) | Apache License 2.0 | [fonts.google.com/icons](https://fonts.google.com/icons) |
 
 Also bundled: Urbanist and Mulish webfonts under the SIL Open Font License 1.1; see `public/assets/font/LICENSE.txt`. Theme scripts `custom.js` and `theme-forms.js` are original WebbyCrown code.
 

@@ -32,8 +32,8 @@ content_sections:
     body: |-
       Urban Bank hires people who can explain fees, holds, and product pages in plain language. The desk and the app share one customer record. We hire for the public site, the app, and the branch desk.
       
-      Roles below are full files in the Careers collection. Open a role for the work, the team, and how to apply. Use **Apply now** on that page. We reply if there is a match.
+      Open a role to read the work and the team, then send an application from that page. We reply if there is a match.
 ---
 Urban Bank hires people who can explain fees, holds, and product pages in plain language. The desk and the app share one customer record. We hire for the public site, the app, and the branch desk.
 
-Roles below are full files in the Careers collection. Open a role for the work, the team, and how to apply. Use **Apply now** on that page. We reply if there is a match.
+Open a role to read the work and the team, then send an application from that page. We reply if there is a match.

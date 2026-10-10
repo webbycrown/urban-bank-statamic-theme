@@ -48,5 +48,5 @@ content_sections:
     type: text_section
     heading: 'How to apply'
     body: |-
-      Use **Apply now** on this page. Send a CV and a link or screenshots of a marketing site you built. Mention any CMS work. We will reply if there is a match.
+      Send a CV and a link or screenshots of a marketing site you built. Mention any CMS work. We will reply if there is a match.
 ---

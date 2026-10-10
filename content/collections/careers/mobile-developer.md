@@ -48,5 +48,5 @@ content_sections:
     type: text_section
     heading: 'How to apply'
     body: |-
-      Use **Apply now** on this page. Send a CV and a note about a native feature you shipped (freeze, push, biometrics, or a similar control). We will reply if there is a match.
+      Send a CV and a note about a native feature you shipped (freeze, push, biometrics, or a similar control). We will reply if there is a match.
 ---

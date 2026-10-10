@@ -48,5 +48,5 @@ content_sections:
     type: text_section
     heading: 'How to apply'
     body: |-
-      Use **Apply now** on this page. Send a CV and two URLs or screenshots of campaigns you owned. Tell us how you kept the public figure in line with the product figure. We will reply if there is a match.
+      Send a CV and two URLs or screenshots of campaigns you owned. Tell us how you kept the public figure in line with the product figure. We will reply if there is a match.
 ---

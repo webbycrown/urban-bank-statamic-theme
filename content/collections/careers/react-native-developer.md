@@ -48,5 +48,5 @@ content_sections:
     type: text_section
     heading: 'How to apply'
     body: |-
-      Use **Apply now** on this page. Send a CV and a short note about a banking or payments screen you shipped. Say how the fee or the wait was shown before the user confirmed. We will reply if there is a match.
+      Send a CV and a short note about a banking or payments screen you shipped. Say how the fee or the wait was shown before the user confirmed. We will reply if there is a match.
 ---
